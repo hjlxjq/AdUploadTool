@@ -3,6 +3,6 @@
     "database": "talefun_ad",
     "username": "root",
     "password": "823234",
-    "host": "localhost",
+    "host": "47.90.214.193",
     "port": 3306
 }

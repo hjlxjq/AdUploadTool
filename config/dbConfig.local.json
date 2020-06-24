@@ -1,6 +1,6 @@
 {
     "dialect": "mysql",
-    "database": "nodejs",
+    "database": "talefun_ad",
     "username": "root",
     "password": "823234",
     "host": "localhost",

@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Microsoft Office 用户</Author>
+  <LastAuthor>talefun</LastAuthor>
+  <Created>2017-06-26T06:43:12Z</Created>
+  <LastSaved>2017-10-26T07:04:01Z</LastSaved>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-10.1.0.6875</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8970</WindowHeight>
+  <WindowWidth>19440</WindowWidth>
+  <WindowTopX>120</WindowTopX>
+  <WindowTopY>135</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat ss:Format="@"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="工作表1">
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="10" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65.25" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="93.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="126.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="345"/>
+   <Column ss:AutoFitWidth="0" ss:Width="84"/>
+   <Column ss:StyleID="s62" ss:Width="104.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="168"/>
+   <Column ss:AutoFitWidth="0" ss:Width="102"/>
+   <Column ss:AutoFitWidth="0" ss:Width="93.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="102.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">title</Data></Cell>
+    <Cell><Data ss:Type="String">image</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">fbId</Data></Cell>
+    <Cell><Data ss:Type="String">facebookFanUrl</Data></Cell>
+    <Cell><Data ss:Type="String">iosURL</Data></Cell>
+    <Cell><Data ss:Type="String">androidURL</Data></Cell>
+    <Cell><Data ss:Type="String">normalURL</Data></Cell>
+    <Cell><Data ss:Type="String">status</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">Boolean</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">wordTailor</Data></Cell>
+    <Cell><Data ss:Type="String">Word Shuffle: Words Puzzle</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060_wordTailor_Share.jpg</Data></Cell>
+    <Cell><Data ss:Type="String">Fun and Exciting Words Scramble Puzzle Game for Everyone!</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060</Data></Cell>
+    <Cell><Data ss:Type="String">https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share</Data></Cell>
+    <Cell ss:HRef="https://app.appsflyer.com/word.tailor.match.game.en?pid=SocialFacebook"><Data
+      ss:Type="String">https://app.appsflyer.com/word.tailor.match.game.en?pid=SocialFacebook</Data></Cell>
+    <Cell ss:HRef="https://app.appsflyer.com/word.tailor.match.game.en?pid=SocialFacebook"><Data
+      ss:Type="String">https://app.appsflyer.com/word.tailor.match.game.en?pid=SocialFacebook</Data></Cell>
+    <Cell ss:HRef="https://app.appsflyer.com/word.tailor.match.game.en?pid=SocialFacebook"><Data
+      ss:Type="String">https://app.appsflyer.com/word.tailor.match.game.en?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">wordTailor_fr</Data></Cell>
+    <Cell><Data ss:Type="String">Maître des Mots</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060_wordTailor_fr_Share.jpg</Data></Cell>
+    <Cell><Data ss:Type="String">Jeu de Mots Simple et Addictif!</Data></Cell>
+    <Cell><Data ss:Type="String">462254787473609</Data></Cell>
+    <Cell ss:HRef="https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share"><Data
+      ss:Type="String">https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share</Data></Cell>
+    <Cell ss:HRef="https://app.appsflyer.com/word.tailor.match.game.fr?pid=SocialFacebook"><Data
+      ss:Type="String">https://app.appsflyer.com/word.tailor.match.game.fr?pid=SocialFacebook</Data></Cell>
+    <Cell ss:HRef="https://app.appsflyer.com/word.tailor.match.game.fr?pid=SocialFacebook"><Data
+      ss:Type="String">https://app.appsflyer.com/word.tailor.match.game.fr?pid=SocialFacebook</Data></Cell>
+    <Cell ss:HRef="https://app.appsflyer.com/word.tailor.match.game.fr?pid=SocialFacebook"><Data
+      ss:Type="String">https://app.appsflyer.com/word.tailor.match.game.fr?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">wordTailor_de</Data></Cell>
+    <Cell><Data ss:Type="String">Wort Manie</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060_wordTailor_de_Share.jpg</Data></Cell>
+    <Cell><Data ss:Type="String">Schlichtes und süchtig machendes Buchstabenspiel.</Data></Cell>
+    <Cell><Data ss:Type="String">1819073655019829</Data></Cell>
+    <Cell ss:HRef="https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share"><Data
+      ss:Type="String">https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.de?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.de?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.de?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">wordTailor_es</Data></Cell>
+    <Cell><Data ss:Type="String">Manía de Palabras</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060_wordTailor_es_Share.jpg</Data></Cell>
+    <Cell><Data ss:Type="String">Juego de palabras simple y adictivo.</Data></Cell>
+    <Cell><Data ss:Type="String">515505502127479</Data></Cell>
+    <Cell ss:HRef="https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share"><Data
+      ss:Type="String">https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.es?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.es?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.es?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">wordTailor_it</Data></Cell>
+    <Cell><Data ss:Type="String">Parola Mania</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060_wordTailor_it_Share.jpg</Data></Cell>
+    <Cell><Data ss:Type="String">Semplice e coinvolgente gioco di parole.</Data></Cell>
+    <Cell><Data ss:Type="String">1277244469064140</Data></Cell>
+    <Cell ss:HRef="https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share"><Data
+      ss:Type="String">https://www.facebook.com/Word-Tailor-1977443292499680/?fb_source=game_share</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.it?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.it?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.it?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">wordTailor_flat</Data></Cell>
+    <Cell><Data ss:Type="String">Word Charm</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060_wordTailor_flat_Share.jpg</Data></Cell>
+    <Cell><Data ss:Type="String">Take some mind exercise in Word Charm, the ultimate word puzzle game for all.&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">1476967042399521</Data></Cell>
+    <Cell><Data ss:Type="String">https://www.facebook.com/Word-Charm-133742894017470/?business_id=723982047769668</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/id1300058820?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.flat.en?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.flat.en?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">wordBoard</Data></Cell>
+    <Cell><Data ss:Type="String">Wrod Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1915827571988892_wordBoard_Share.jpg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Take some mind exercise in Word Cross, the ultimate word puzzle game for all.&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">1915827571988892</Data></Cell>
+    <Cell ss:HRef="https://www.facebook.com/Word-Cross-143420286283943/?fb_source=game_share"
+     x:HRefScreenTip="https://www.facebook.com/Word-Cross-143420286283943/?fb_source=game_share"><Data
+      ss:Type="String">https://www.facebook.com/Word-Cross-143420286283943/?fb_source=game_share</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.board.en?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.board.en?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.board.en?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">wordflat_ios</Data></Cell>
+    <Cell><Data ss:Type="String">Word Charm</Data></Cell>
+    <Cell><Data ss:Type="String">479157242416060_wordTailor_flat_Share_ios.jpg</Data></Cell>
+    <Cell><Data ss:Type="String">Take some mind exercise in Word Charm, the ultimate word puzzle game for all.&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">182639042299460</Data></Cell>
+    <Cell><Data ss:Type="String">https://www.facebook.com/Word-Charm-133742894017470/?business_id=723982047769668</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/id1300058820?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/com.wordgame.puzzle.flat.en?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="String">https://app.appsflyer.com/id1300058820?pid=SocialFacebook</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>10</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

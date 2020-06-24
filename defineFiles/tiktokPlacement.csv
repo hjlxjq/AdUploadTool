@@ -1,0 +1,55 @@
+placementId,siteName,appName,status
+String,String,String,Boolean
+5015196$915196808,Word Swipe-CN_ios_全屏视频_1,Word Swipe_CN-IOS,TRUE
+5015196$915196128,Word Swipe-CN_ios_激励视频_1,Word Swipe_CN-IOS,TRUE
+5012592$912592022,Tap Color_ios_激励视频_1,Tap Color-IOS,TRUE
+5012592$912592016,Tap Color_ios_全屏视频_2,Tap Color-IOS,TRUE
+5012592$912592463,Tap Color_ios_全屏视频_3,Tap Color-IOS,TRUE
+5012592$912592766,Tap Color_ios_全屏视频_4,Tap Color-IOS,TRUE
+5012592$912592601,Tap Color_ios_激励视频_3,Tap Color-IOS,TRUE
+5012592$912592138,Tap Color_ios_激励视频_4,Tap Color-IOS,TRUE
+5015865$915865554,Sudoku_ios_全屏视频_04_24_21:22,Sudoku-IOS,TRUE
+5015865$915865724,Sudoku_ios_激励视频_04_24_21:22,Sudoku-IOS,TRUE
+5015189$915189399,Foodie Fill_ios_全屏视频_1,Foodie Fill-IOS,TRUE
+5015189$915189049,Foodie Fill_ios_激励视频_1,Foodie Fill-IOS,TRUE
+5011364$911364489,Ordet Kors_ios_全屏视频_1,Word Cross_SV-IOS,TRUE
+5011364$911364045,Ordet Kors_ios_激励视频_1,Word Cross_SV-IOS,TRUE
+5021095$921095957,B3-Interstitial-001,Word Cross_JA,TRUE
+5021095$921095415,B3-Interstitial-003,Word Cross_JA,TRUE
+5021095$921095311,B3-RewardVideo-001,Word Cross_JA,TRUE
+5021095$921095202,B3-Interstitial-002,Word Cross_JA,TRUE
+5021095$921095466,B3-RewardVideo-002,Word Cross_JA,TRUE
+5021095$921095704,B3-RewardVideo-003,Word Cross_JA,TRUE
+5021095$921095950,B3-RewardVideo-004,Word Cross_JA,TRUE
+5011364$911364296,Word Cross_SV_ios_全屏视频_A1,Word Cross_SV-IOS,TRUE
+5011364$911364424,Word Cross_SV_ios_激励视频_A1,Word Cross_SV-IOS,TRUE
+5027414$927414915,Solitaire Fun_CN_android_Banner_01,Solitaire Fun_CN,TRUE
+5027415$927414920,Solitaire Fun_CN_android_全屏视频_01,Solitaire Fun_CN,TRUE
+5027416$927414970,Solitaire Fun_CN_android_激励视频_01,Solitaire Fun_CN,TRUE
+5027197$927197104,Tap Color_CN_Banner_01,Tap Color_CN,TRUE
+5027198$927197514,Tap Color_CN_全屏视频_01,Tap Color_CN,TRUE
+5027199$927197881,Tap Color_CN_激励视频_01,Tap Color_CN,TRUE
+5027197$927197808,A1-RewardVideo-001,Tap Color_CN,TRUE
+5027197$927197645,A1-Interstitial-001,Tap Color_CN,TRUE
+5027197$927197298,A1-Banner-001,Tap Color_CN,TRUE
+5027197$927197488,B1-RewardVideo-001,Tap Color_CN,TRUE
+5027197$927197525,B1-Interstitial-001,Tap Color_CN,TRUE
+5027197$927197161,B1-Banner-001,Tap Color_CN,TRUE
+5027197$927197633,B1-Lockscreen-001,Tap Color_CN,TRUE
+5021095$921095643,A4-Interstitial-001,Word Cross_JA,TRUE
+5021095$921095607,A4-Interstitial-002,Word Cross_JA,TRUE
+5021095$921095212,A4-Interstitial-003,Word Cross_JA,TRUE
+5021095$921095181,B4-Interstitial-001,Word Cross_JA,TRUE
+5021095$921095155,B4-Interstitial-002,Word Cross_JA,TRUE
+5021095$921095164,B4-Interstitial-003,Word Cross_JA,TRUE
+5052098$945068754,Interstitial-001,Cats Cup-IOS,TRUE
+5052098$945068752,RewardVideo-001,Cats Cup-IOS,TRUE
+5052430$945070874,lockscreen-001,Cats Cup,TRUE
+5052430$945070711,Interstitial-001,Cats Cup,TRUE
+5052430$945070706,RewardVideo-001,Cats Cup,TRUE
+5052098$945071311,Banner-002,Cats Cup-IOS,TRUE
+5052430$945071310,Banner-002,Cats Cup,TRUE
+5052098$945068755,Banner-001,Cats Cup-IOS,TRUE
+5052430$945070703,Banner-001,Cats Cup,TRUE
+5077488$945239714,Interstitial-001,Bricks VS Balls-CN,TRUE
+5077488$945239717,RewardVideo-001,Bricks VS Balls-CN,TRUE

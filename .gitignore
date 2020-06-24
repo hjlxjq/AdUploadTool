@@ -1,0 +1,8 @@
+# Logs
+logs
+*.log
+#
+node_modules/
+
+# config/
+# package-lock.json

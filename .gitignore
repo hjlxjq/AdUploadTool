@@ -4,5 +4,4 @@ logs
 #
 node_modules/
 
-# config/
-# package-lock.json
+package-lock.json

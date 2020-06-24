@@ -84,7 +84,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R232C9"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="289" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="308" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="65.25" ss:DefaultRowHeight="15.9375">
    <Column ss:AutoFitWidth="0" ss:Width="113.25"/>
    <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="233.25"/>
@@ -5386,6 +5386,234 @@
     <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_NL</Data></Cell>
     <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_288</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820_938314616581836</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A10-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_FR</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_289</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820_938316866581611</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B10-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_FR</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_290</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820_938317083248256</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B10-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_FR</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_291</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820</Data></Cell>
+    <Cell><Data ss:Type="String">377744832638820_938317313248233</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B10-HB-Native Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_FR</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_292</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412_665998914130719</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A3-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_SV</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_293</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412_665999287464015</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A3-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_SV</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_294</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412_666000684130542</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B3-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_SV</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_295</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412_666000944130516</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B3-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_SV</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_296</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412</Data></Cell>
+    <Cell><Data ss:Type="String">154352035295412_666008220796455</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B3-HB-Native Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_SV</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_297</Data></Cell>
+    <Cell><Data ss:Type="String">309352379566511</Data></Cell>
+    <Cell><Data ss:Type="String">309352379566511</Data></Cell>
+    <Cell><Data ss:Type="String">309352379566511_902560360245707</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B5-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_FR-IOS</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_298</Data></Cell>
+    <Cell><Data ss:Type="String">309352379566511</Data></Cell>
+    <Cell><Data ss:Type="String">309352379566511</Data></Cell>
+    <Cell><Data ss:Type="String">309352379566511_902560506912359</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B5-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_FR-IOS</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_299</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093_2631940293742409</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B2-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Bible Word Cross</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_300</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093_2631940553742383</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B2-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Bible Word Cross</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_301</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093</Data></Cell>
+    <Cell><Data ss:Type="String">2165236833746093_2631941297075642</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B2-HB-Native Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Bible Word Cross</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_302</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120_2707583256228510</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B7-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_CS</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_303</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120_2707583689561800</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B7-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_CS</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_304</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120</Data></Cell>
+    <Cell><Data ss:Type="String">1953267231660120_2707583999561769</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B7-HB-Native Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_CS</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_305</Data></Cell>
+    <Cell><Data ss:Type="String">980816392116841</Data></Cell>
+    <Cell><Data ss:Type="String">980816392116841</Data></Cell>
+    <Cell><Data ss:Type="String">980816392116841_1379298745601935</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B10-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_JA-IOS</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_306</Data></Cell>
+    <Cell><Data ss:Type="String">980816392116841</Data></Cell>
+    <Cell><Data ss:Type="String">980816392116841</Data></Cell>
+    <Cell><Data ss:Type="String">980816392116841_1379298875601922</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B10-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_JA-IOS</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -5401,11 +5629,10 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <LeftColumnVisible>3</LeftColumnVisible>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>276</TopRowBottomPane>
+   <TopRowBottomPane>291</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
@@ -5413,9 +5640,9 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>285</ActiveRow>
+     <ActiveRow>305</ActiveRow>
      <ActiveCol>9</ActiveCol>
-     <RangeSelection>R286C10:R289C10</RangeSelection>
+     <RangeSelection>R306C10:R308C10</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

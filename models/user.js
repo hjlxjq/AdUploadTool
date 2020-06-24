@@ -7,7 +7,7 @@ module.exports = db.defineModel('user', {
         unique: true
     },
     name: {
-        type: db.STRING(5),
+        type: db.STRING(10),
         allowNull: false,
         unique: true
     },

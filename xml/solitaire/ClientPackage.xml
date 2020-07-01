@@ -8,9 +8,9 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Microsoft Office 用户</Author>
-  <LastAuthor>fushuang</LastAuthor>
+  <LastAuthor>建龙 胡</LastAuthor>
   <Created>2016-07-28T12:41:31Z</Created>
-  <LastSaved>2020-06-10T06:18:37Z</LastSaved>
+  <LastSaved>2020-06-28T10:03:16Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -24,6 +24,7 @@
   <WindowWidth>28240</WindowWidth>
   <WindowTopX>5080</WindowTopX>
   <WindowTopY>1860</WindowTopY>
+  <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -56,10 +57,10 @@
  </Styles>
  <Worksheet ss:Name="工作表1">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R232C7"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R231C7"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="232" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="231" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="60" ss:DefaultRowHeight="16">
    <Column ss:AutoFitWidth="0" ss:Width="248"/>
    <Column ss:Width="157"/>
@@ -82,7 +83,7 @@
     <Cell ss:StyleID="s63"><Data ss:Type="String">condition</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s64"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">String</Data><NamedCell
@@ -98,7 +99,7 @@
     <Cell ss:StyleID="s64"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -110,7 +111,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">default</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.solitaire.full</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -122,7 +123,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">default</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire.dailyChallenge</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a3</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -144,7 +145,7 @@
     <Cell><Data ss:Type="String">s28</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.freecell</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a14</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -178,7 +179,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.spider</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a13</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -271,7 +272,7 @@
     <Cell><Data ss:Type="String">s9</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.collection</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a12</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -452,7 +453,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.solitaire.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a200</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -462,7 +463,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.collection.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a200</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -472,7 +473,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.spider.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a200</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -482,7 +483,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.pyramid.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a200</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -492,7 +493,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.freecell.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a200</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -502,7 +503,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.tripeaks.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a200</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -534,10 +535,6 @@
     <Cell><Data ss:Type="String">s3</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
-    <Cell><Data ss:Type="String">com.tale.plugins.test-CN</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-   </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgames.classic.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -550,7 +547,7 @@
     <Cell><Data ss:Type="String">condition21</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmob</Data><NamedCell
@@ -598,7 +595,7 @@
     <Cell><Data ss:Type="String">condition28</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7AB1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -609,7 +606,7 @@
     <Cell><Data ss:Type="String">condition35</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.collection</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a12NewAdmob</Data><NamedCell
@@ -621,7 +618,7 @@
     <Cell><Data ss:Type="String">condition39</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmob1B</Data><NamedCell
@@ -633,7 +630,7 @@
     <Cell><Data ss:Type="String">condition45</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -643,7 +640,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmob</Data><NamedCell
@@ -655,7 +652,7 @@
     <Cell><Data ss:Type="String">condition22</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmobT1B</Data><NamedCell
@@ -667,7 +664,7 @@
     <Cell><Data ss:Type="String">condition45</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-CA</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -677,7 +674,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-CA</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmob</Data><NamedCell
@@ -689,7 +686,7 @@
     <Cell><Data ss:Type="String">condition22</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-CA</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmobT1B</Data><NamedCell
@@ -757,7 +754,7 @@
     <Cell><Data ss:Type="String">s21new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.cardgame.pyramid.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a200</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -802,7 +799,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmobB3</Data><NamedCell
@@ -814,7 +811,7 @@
     <Cell><Data ss:Type="String">condition70</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmobT1B3</Data><NamedCell
@@ -826,7 +823,7 @@
     <Cell><Data ss:Type="String">condition70</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.solitaire-CA</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a7NewAdmobB3</Data><NamedCell
@@ -838,7 +835,7 @@
     <Cell><Data ss:Type="String">condition70</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.freecell</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a14</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -849,7 +846,7 @@
     <Cell><Data ss:Type="String">condition71</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.collection</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a12NewAdmob</Data><NamedCell
@@ -861,7 +858,7 @@
     <Cell><Data ss:Type="String">condition72</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.queensgame.spider</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a13</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -2694,9 +2691,8 @@
    <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
-   <FilterOn/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>5</TopRowBottomPane>
+   <TopRowBottomPane>44</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
@@ -2704,17 +2700,16 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>235</ActiveRow>
+     <ActiveRow>253</ActiveRow>
+     <ActiveCol>7</ActiveCol>
+     <RangeSelection>R45C1:R254C8</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
-  <AutoFilter x:Range="R1C1:R232C7"
+  <AutoFilter x:Range="R1C1:R231C7"
    xmlns="urn:schemas-microsoft-com:office:excel">
-   <AutoFilterColumn x:Index="3" x:Type="Custom">
-    <AutoFilterCondition x:Operator="Equals" x:Value="android"/>
-   </AutoFilterColumn>
   </AutoFilter>
  </Worksheet>
 </Workbook>

@@ -98,7 +98,7 @@ async function readProduct(DefineDir, XMLDir, project) {
 
         }
         if (device === 'wx') {
-            platform = 'wenxin';
+            platform = 'weixin';
 
         }
         // 数据库应用表对象

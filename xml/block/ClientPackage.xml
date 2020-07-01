@@ -16,10 +16,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>8916</WindowHeight>
-  <WindowWidth>23040</WindowWidth>
-  <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
+  <WindowHeight>17440</WindowHeight>
+  <WindowWidth>28240</WindowWidth>
+  <WindowTopX>5080</WindowTopX>
+  <WindowTopY>1860</WindowTopY>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -42,14 +42,14 @@
  </Styles>
  <Worksheet ss:Name="工作表1">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R4C6"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R5C6"
     ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="5" x:FullColumns="1"
-   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.05">
-   <Column ss:AutoFitWidth="0" ss:Width="329.40000000000003"/>
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16">
+   <Column ss:AutoFitWidth="0" ss:Width="329"/>
    <Column ss:Width="105"/>
-   <Column ss:Index="7" ss:Width="69.599999999999994"/>
+   <Column ss:Index="7" ss:Width="70"/>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s62"><Data ss:Type="String">packageName</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -65,7 +65,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">condition</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
@@ -90,7 +90,7 @@
     <Cell><Data ss:Type="String">Block1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.puzzlegames.block.puzzle</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Block2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -101,12 +101,14 @@
     <Cell><Data ss:Type="String">default</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.puzzlegames.block.puzzle</Data></Cell>
-    <Cell><Data ss:Type="String">Block1</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">Block1new</Data></Cell>
+    <Cell><Data ss:Type="String">com.puzzlegames.block.puzzle</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Block1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Block1new</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">condition1</Data></Cell>
    </Row>
   </Table>
@@ -124,7 +126,6 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <FilterOn/>
    <Panes>
     <Pane>
      <Number>3</Number>
@@ -136,14 +137,7 @@
    <ProtectScenarios>False</ProtectScenarios>
    <x:PageLayoutZoom>0</x:PageLayoutZoom>
   </WorksheetOptions>
-  <AutoFilter x:Range="R1C1:R4C6" xmlns="urn:schemas-microsoft-com:office:excel">
-   <AutoFilterColumn x:Type="Custom">
-    <AutoFilterCondition x:Operator="Equals"
-     x:Value="com.puzzlegames.block.puzzle"/>
-   </AutoFilterColumn>
-   <AutoFilterColumn x:Index="3" x:Type="Custom">
-    <AutoFilterCondition x:Operator="Equals" x:Value="android"/>
-   </AutoFilterColumn>
+  <AutoFilter x:Range="R1C1:R5C6" xmlns="urn:schemas-microsoft-com:office:excel">
   </AutoFilter>
  </Worksheet>
 </Workbook>

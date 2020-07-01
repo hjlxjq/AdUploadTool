@@ -16,10 +16,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>9000</WindowHeight>
-  <WindowWidth>23040</WindowWidth>
-  <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
+  <WindowHeight>17440</WindowHeight>
+  <WindowWidth>28240</WindowWidth>
+  <WindowTopX>5080</WindowTopX>
+  <WindowTopY>1860</WindowTopY>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -33,10 +33,10 @@
    <NumberFormat/>
    <Protection/>
   </Style>
-  <Style ss:ID="s64">
+  <Style ss:ID="s62">
    <Interior ss:Color="#FCF305" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s65">
+  <Style ss:ID="s63">
    <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
   </Style>
  </Styles>
@@ -46,40 +46,40 @@
     ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="2" x:FullColumns="1"
-   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.05">
-   <Column ss:AutoFitWidth="0" ss:Width="329.40000000000003"/>
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16">
+   <Column ss:AutoFitWidth="0" ss:Width="329"/>
    <Column ss:Width="105"/>
    <Column ss:Index="6" ss:Width="63"/>
-   <Column ss:Width="69.599999999999994"/>
+   <Column ss:Width="70"/>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s64"><Data ss:Type="String">packageName</Data><NamedCell
+    <Cell ss:StyleID="s62"><Data ss:Type="String">packageName</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">groupName</Data><NamedCell
+    <Cell ss:StyleID="s62"><Data ss:Type="String">groupName</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">device</Data><NamedCell
+    <Cell ss:StyleID="s62"><Data ss:Type="String">device</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">status</Data><NamedCell
+    <Cell ss:StyleID="s62"><Data ss:Type="String">status</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">lockscreen</Data><NamedCell
+    <Cell ss:StyleID="s62"><Data ss:Type="String">lockscreen</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">config</Data><NamedCell
+    <Cell ss:StyleID="s62"><Data ss:Type="String">config</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">condition</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">condition</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
-    <Cell ss:StyleID="s65"><Data ss:Type="String">String</Data><NamedCell
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">String</Data><NamedCell
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">String</Data><NamedCell
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">Boolean</Data><NamedCell
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Boolean</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">String</Data><NamedCell
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">String</Data><NamedCell
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">String</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -96,7 +96,6 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <FilterOn/>
    <Panes>
     <Pane>
      <Number>3</Number>
@@ -108,10 +107,6 @@
    <x:PageLayoutZoom>0</x:PageLayoutZoom>
   </WorksheetOptions>
   <AutoFilter x:Range="R1C1:R2C6" xmlns="urn:schemas-microsoft-com:office:excel">
-   <AutoFilterColumn x:Type="Custom">
-    <AutoFilterCondition x:Operator="Equals"
-     x:Value="com.idle.games.letsjump.flip"/>
-   </AutoFilterColumn>
   </AutoFilter>
  </Worksheet>
 </Workbook>

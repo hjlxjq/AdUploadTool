@@ -216,6 +216,21 @@ async function readNativeTmplConfGroup(XMLDir, project) {
             }
 
         }
+        // 查找或创建 native 模板配置组
+        const [currentNativeTmplConfGroupVo, created] = await NativeTmplConfGroupModel.findOrCreate({
+            where: {
+                name: 'default', productId
+            }, defaults: { name: 'default', description: '默认组', productId, active: 1 }
+        });
+        // 如果首次，则创建 native 模板配置
+        if (created) {
+            const currentNativeTmplConfGroupId = currentNativeTmplConfGroupVo.id;
+            const nativeTmplConfDataList = nativeTmplConfHash['default'];
+
+            await createNativeTmplConf(
+                currentNativeTmplConfGroupId, nativeTmplHash, nativeTmplConfDataList
+            );
+        }
 
     }
     // console.log('nativeTmplConfGroupNameList uniq name：' + _.uniq(nativeTmplConfGroupNameList));

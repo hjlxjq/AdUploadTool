@@ -253,14 +253,21 @@ async function createAdAbTestGroup(
 
     const { toGroup } = groupWeight;
 
-    // 查找或创建 native 模板配置组
+    // 查找 native 模板配置组
     const nativeTmplConfGroupVo = await NativeTmplConfGroupModel.findOne({
         where: {
             name: toGroup, productId
         }
     });
+    // 查找默认 native 模板配置组
+    const defaultNativeTmplConfGroupVo = await NativeTmplConfGroupModel.findOne({
+        where: {
+            name: 'default', productId
+        }
+    });
+
     // 获取 native 模板配置组主键
-    let nativeTmplConfGroupId = null;
+    let nativeTmplConfGroupId = defaultNativeTmplConfGroupVo.id;
     if (!_.isEmpty(nativeTmplConfGroupVo)) {
         nativeTmplConfGroupId = nativeTmplConfGroupVo.id;
 

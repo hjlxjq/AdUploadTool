@@ -73,7 +73,7 @@ async function getProductId(platform, packageName) {
 
     }
     if (platform === 'wx') {
-        platform = 'wenxin';
+        platform = 'weixin';
 
     }
     // 数据里库该应用 主键
@@ -244,6 +244,7 @@ async function createAd(
         const adChannelId = adChannelHash[adChannel];
         if (!adChannelId) {
             console.log(`adChannel: ${adChannel}`);
+
         }
         let name = placementID;
 

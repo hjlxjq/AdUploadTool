@@ -26,7 +26,7 @@ async function getProductId(platform, packageName) {
 
     }
     if (platform === 'wx') {
-        platform = 'wenxin';
+        platform = 'weixin';
 
     }
     // 数据里库该应用 主键
@@ -136,36 +136,29 @@ async function readConfigGroup(XMLDir, project) {
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的常量组，值为 ab 分组数组
     const groupWeightHash = await getGroupWeightHash(XMLDir, project);
 
-    // 不存在的常量组
-    const configGroupNameList = [];
-
     // 创建默认常量组和默认常量组下常量
     for (const item of clientPackage) {
         if (!item.status) continue;
 
         let packageName = item.packageName;
-        const { device, config } = item;
+        const { device } = item;
 
-        // 如果该应用存在默认组
-        if (config === 'default') {
-            const productId = await getProductId(device, packageName);
+        const productId = await getProductId(device, packageName);
 
-            // 每个应用都存在的默认组
-            const defaultConfigGroupVo = {
-                name: 'default', description: '默认游戏常量组', type: 1, productId, active: 1
-            };
-            // 查找或创建默认常量组
-            const [currentDefaultConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
-                where: {
-                    name: 'default', type: 1, productId
-                }, defaults: defaultConfigGroupVo
-            });
+        // 每个应用都存在的默认组
+        const defaultConfigGroupVo = {
+            name: 'default', description: '默认游戏常量组', type: 1, productId, active: 1
+        };
+        // 查找或创建默认常量组
+        const [currentDefaultConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
+            where: {
+                name: 'default', type: 1, productId
+            }, defaults: defaultConfigGroupVo
+        });
 
-            // 如果首次，则创建常量
-            if (created) {
-                await createConfig(currentDefaultConfigGroupVo.id, configConstantHash['default']);
-
-            }
+        // 如果首次，则创建常量
+        if (created) {
+            await createConfig(currentDefaultConfigGroupVo.id, configConstantHash['default']);
 
         }
 

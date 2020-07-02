@@ -26,7 +26,7 @@ async function getProductId(platform, packageName) {
 
     }
     if (platform === 'wx') {
-        platform = 'wenxin';
+        platform = 'weixin';
 
     }
     // 数据里库该应用 主键
@@ -487,6 +487,10 @@ async function readAdVersionGroup(XMLDir, project) {
 
                 // 存在 null，表示存在没有国家分组
                 if (_.indexOf(nationCodeList, null) !== -1) {
+                    if (_.isEmpty(nationCodeList)) {
+                        console.log(`nationCodeList: `, nationCodeList);
+
+                    }
                     nationCodeList = [];
 
                 }

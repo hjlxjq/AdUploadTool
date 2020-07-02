@@ -64,7 +64,6 @@ async function getConfigConstantHash(XMLDir, project) {
 
     } catch (e) { }
 
-    // console.log('configConstantHash: ', configConstantHash);
     return configConstantHash;
 
 }
@@ -98,10 +97,9 @@ async function getGroupWeightHash(XMLDir, project) {
 }
 
 // 批量创建常量组下常量
-async function createConfig(configGroupId, configDataList) {
+async function createConfig(configGroupId, configDataList = []) {
     const ConfigModel = model.config;    // 常量表模型
 
-    // console.log(`configDataList: `, configDataList);
     // 批量创建常量
     for (const configData of configDataList) {
         const { key, value, description } = configData;
@@ -115,6 +113,7 @@ async function createConfig(configGroupId, configDataList) {
 
         } catch (e) {
             if (e.name !== 'SequelizeUniqueConstraintError') {
+                console.log(e);
                 throw e;
             }
 
@@ -140,7 +139,7 @@ async function readConfigGroup(XMLDir, project) {
     // 不存在的常量组
     const configGroupNameList = [];
 
-    // 创建默认常量组
+    // 创建默认常量组和默认常量组下常量
     for (const item of clientPackage) {
         if (!item.status) continue;
 
@@ -155,42 +154,19 @@ async function readConfigGroup(XMLDir, project) {
             const defaultConfigGroupVo = {
                 name: 'default', description: '默认游戏常量组', type: 1, productId, active: 1
             };
+            // 查找或创建默认常量组
+            const [currentDefaultConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
+                where: {
+                    name: 'default', type: 1, productId
+                }, defaults: defaultConfigGroupVo
+            });
 
-            try {
-                await ConfigGroupModel.create(defaultConfigGroupVo);
-
-            } catch (e) {
-                if (e.name !== 'SequelizeUniqueConstraintError') {
-                    throw e;
-                }
+            // 如果首次，则创建常量
+            if (created) {
+                await createConfig(currentDefaultConfigGroupVo.id, configConstantHash['default']);
 
             }
 
-        }
-
-    }
-
-    // 创建所有默认常量组下常量
-    for (const item of clientPackage) {
-        if (!item.status) continue;
-
-        let packageName = item.packageName;
-        const { device } = item;
-
-        const productId = await getProductId(device, packageName);
-
-        // 查找或创建默认组
-        const currentDefaultConfigGroupVo = await ConfigGroupModel.findOne({
-            where: {
-                name: 'default', type: 1, productId
-            }
-        });
-
-        if (!_.isEmpty(currentDefaultConfigGroupVo)) {
-            // 默认组主键 id，其他组依赖默认组
-            defaultConfigGroupId = currentDefaultConfigGroupVo.id;
-            // 创建所有默认组常量
-            await createConfig(defaultConfigGroupId, configConstantHash['default']);
         }
 
     }
@@ -215,6 +191,7 @@ async function readConfigGroup(XMLDir, project) {
 
         if (!_.isEmpty(currentDefaultConfigGroupVo)) {
             defaultConfigGroupId = currentDefaultConfigGroupVo.id;
+
         }
 
         // xml 表中未配置，则取默认值
@@ -225,28 +202,24 @@ async function readConfigGroup(XMLDir, project) {
 
         for (const groupWeight of groupWeightList) {
             const configGroupName = groupWeight.toGroup;
+
             if (configGroupName !== 'default') {
                 const configDataList = configConstantHash[configGroupName];
 
-                if (!_.isEmpty(configDataList)) {
-                    const configGroupVo = {
-                        name: configGroupName, description: configGroupName,
-                        dependentId: defaultConfigGroupId, type: 1, productId, active: 1
-                    };
-                    // 查找或创建常量组
-                    const [currentConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
-                        where: {
-                            name: configGroupName, type: 1, productId
-                        }, defaults: configGroupVo
-                    });
+                const configGroupVo = {
+                    name: configGroupName, description: configGroupName,
+                    dependentId: defaultConfigGroupId, type: 1, productId, active: 1
+                };
+                // 查找或创建常量组
+                const [currentConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
+                    where: {
+                        name: configGroupName, type: 1, productId
+                    }, defaults: configGroupVo
+                });
 
-                    // 如果首次，则创建常量
-                    if (created) {
-                        await createConfig(currentConfigGroupVo.id, configConstantHash[configGroupName]);
-                    }
-
-                } else {
-                    configGroupNameList.push(configGroupName);
+                // 如果首次，则创建常量
+                if (created) {
+                    await createConfig(currentConfigGroupVo.id, configDataList);
 
                 }
 
@@ -255,10 +228,9 @@ async function readConfigGroup(XMLDir, project) {
         }
 
     }
-    console.log('configGroupNameList uniq name：' + _.uniq(configGroupNameList));
-    console.log('configGroupNameList uniq name length: ' + _.uniq(configGroupNameList).length);
 
 }
+
 
 module.exports = {
     readConfigGroup

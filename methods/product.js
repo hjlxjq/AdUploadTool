@@ -44,6 +44,7 @@ async function readProduct(DefineDir, XMLDir, project) {
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
     const productDataList = await _readXLSXFile('产品列表.xlsx', DefineDir);
 
+    const noNameList = [];
     const packageNameList = [];
     const platformList = [];
 
@@ -66,6 +67,7 @@ async function readProduct(DefineDir, XMLDir, project) {
             packageName = packageNameArr.join('-');
 
         }
+        packageNameList.push(packageName + device);
 
         let name = null;
         for (const productData of productDataList) {
@@ -87,7 +89,7 @@ async function readProduct(DefineDir, XMLDir, project) {
         }
         if (!name) {
             name = packageName;
-            packageNameList.push(packageName + device);
+            noNameList.push(packageName + device);
 
         }
 
@@ -120,7 +122,8 @@ async function readProduct(DefineDir, XMLDir, project) {
     }, { concurrency: 2 });
 
     // 输出 福超提供的 产品列表.xlsx 中不存在的包名
-    console.log('packageNameList: ' + _.uniq(packageNameList));
+    console.log('noNameList: ' + _.uniq(noNameList));
+    console.log('packageNameList: ' + _.uniq(packageNameList).length);
     // 输出平台名 
     console.log('platformList: ' + _.uniq(platformList));
 

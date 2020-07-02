@@ -181,7 +181,6 @@ function TraversalObject(obj, flattenObj = {}) {
 // 解析读到的 XML 对象，返回一个 xml 表的行数据对象列表
 async function _readXMLFile(xmlName, XMLDir, project) {
   const filePath = `${XMLDir}/${project}/${xmlName}`;
-
   const xmlObject = await readXML(filePath);
   const rowDataList = parseXMLInfo(xmlObject);
 

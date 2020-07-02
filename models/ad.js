@@ -17,11 +17,11 @@ module.exports = db.defineModel('ad', {
     subloader: db.STRING(10),
     interval: {
         type: db.SMALLINT.UNSIGNED,
-        allowNull: false,
+        allowNull: true,
     },
     weight: {
         type: db.TINYINT.UNSIGNED,
-        allowNull: false,
+        allowNull: true,
     },
     bidding: {
         type: db.BOOLEAN,

@@ -145,20 +145,24 @@ async function readConfigGroup(XMLDir, project) {
 
         const productId = await getProductId(device, packageName);
 
-        // 每个应用都存在的默认组
-        const defaultConfigGroupVo = {
-            name: 'default', description: '默认游戏常量组', type: 1, productId, active: 1
-        };
-        // 查找或创建默认常量组
-        const [currentDefaultConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
-            where: {
-                name: 'default', type: 1, productId
-            }, defaults: defaultConfigGroupVo
-        });
+        // facebook 小游戏没有依赖默认组
+        if (device !== 'web') {
+            // 每个应用都存在的默认组
+            const defaultConfigGroupVo = {
+                name: 'default', description: '默认游戏常量组', type: 1, productId, active: 1
+            };
+            // 查找或创建默认常量组
+            const [currentDefaultConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
+                where: {
+                    name: 'default', type: 1, productId
+                }, defaults: defaultConfigGroupVo
+            });
 
-        // 如果首次，则创建常量
-        if (created) {
-            await createConfig(currentDefaultConfigGroupVo.id, configConstantHash['default']);
+            // 如果首次，则创建常量
+            if (created) {
+                await createConfig(currentDefaultConfigGroupVo.id, configConstantHash['default']);
+
+            }
 
         }
 
@@ -175,15 +179,20 @@ async function readConfigGroup(XMLDir, project) {
 
         // 默认组主键 id，其他组依赖默认组
         let defaultConfigGroupId = null;
-        // 查找或创建默认组
-        const currentDefaultConfigGroupVo = await ConfigGroupModel.findOne({
-            where: {
-                name: 'default', type: 1, productId
-            }
-        });
 
-        if (!_.isEmpty(currentDefaultConfigGroupVo)) {
-            defaultConfigGroupId = currentDefaultConfigGroupVo.id;
+        // facebook 小游戏没有依赖默认组
+        if (device !== 'web') {
+            // 查找默认组
+            const currentDefaultConfigGroupVo = await ConfigGroupModel.findOne({
+                where: {
+                    name: 'default', type: 1, productId
+                }
+            });
+
+            if (!_.isEmpty(currentDefaultConfigGroupVo)) {
+                defaultConfigGroupId = currentDefaultConfigGroupVo.id;
+
+            }
 
         }
 

@@ -4,6 +4,7 @@
 const _ = require('lodash');
 const bluebird = require('bluebird');
 const _readXMLFile = require('../tools/excelXMLutils');
+const _readXLSXFile = require('../tools/excelXLSXutils');
 const model = require('../tools/model');
 
 const defaultPreview = 'http://adtest.weplayer.cc/opt/upload/preview/1/upload_8635bd7ad2b69b8627d79f33705238c1.jpg';
@@ -131,13 +132,13 @@ async function readChannelAndType(XMLDir, project) {
 
         try {
             await AdTypeModel.create(adTypeVo);
-    
+
         } catch (e) {
             if (e.name !== 'SequelizeUniqueConstraintError') {
                 throw e;
-    
+
             }
-    
+
         }
 
     }
@@ -149,13 +150,13 @@ async function readChannelAndType(XMLDir, project) {
 
         try {
             await AdChannelModel.create(adChannelVo);
-    
+
         } catch (e) {
             if (e.name !== 'SequelizeUniqueConstraintError') {
                 throw e;
-    
+
             }
-    
+
         }
 
     }
@@ -195,13 +196,46 @@ async function readNativeTmpl(XMLDir, project) {
 
         try {
             await NativeTmplModel.create(nativeTmplVo);
-    
+
         } catch (e) {
             if (e.name !== 'SequelizeUniqueConstraintError') {
                 throw e;
-    
+
             }
-    
+
+        }
+
+    }
+
+}
+
+// 创建常规配置基础常量
+async function readBaseConfig(DefineDir) {
+    console.log('begin execute function: readBaseConfig()');
+
+    const BaseConfigModel = model.baseConfig;
+
+    // 解析基础常量
+    const baseConfigList = await _readXLSXFile('常规常量.xlsx', DefineDir);
+
+    // 保存基础常量
+    for (const baseConfig of baseConfigList) {
+        const { key, value, description } = baseConfig;
+
+        // 基础常量对象
+        const baseConfigVo = {
+            key, value: value || '', description, test: 0, active: 1
+        };
+
+        try {
+            await BaseConfigModel.create(baseConfigVo);
+
+        } catch (e) {
+            if (e.name !== 'SequelizeUniqueConstraintError') {
+                throw e;
+
+            }
+
         }
 
     }
@@ -210,5 +244,6 @@ async function readNativeTmpl(XMLDir, project) {
 
 module.exports = {
     readChannelAndType,
-    readNativeTmpl
+    readNativeTmpl,
+    readBaseConfig
 };

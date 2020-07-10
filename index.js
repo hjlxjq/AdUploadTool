@@ -3,7 +3,7 @@ const _ = require('lodash');
 const XMLDir = process.cwd() + '/xml';
 const DefineDir = process.cwd() + '/defineFiles';
 
-const { readChannelAndType, readNativeTmpl } = require('./methods/common');
+const { readChannelAndType, readNativeTmpl, readBaseConfig } = require('./methods/common');
 const { readProductGroup, readProduct } = require('./methods/product');
 const { readConfigGroup } = require('./methods/configGroup');
 const { readAdGroup } = require('./methods/adGroup');
@@ -25,6 +25,7 @@ const project = argv[2] || 'word';
 async function init() {
     await readChannelAndType(XMLDir, project);
     await readNativeTmpl(XMLDir, project);
+    await readBaseConfig(DefineDir, project);
     await readProductGroup(project);
     await readProduct(DefineDir, XMLDir, project);
     await readConfigGroup(XMLDir, project);

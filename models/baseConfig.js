@@ -11,7 +11,7 @@ module.exports = db.defineModel('baseConfig', {
         allowNull: false
     },
     description: {
-        type: db.STRING(50),
+        type: db.STRING(150),
         allowNull: false,
     },
     test: {

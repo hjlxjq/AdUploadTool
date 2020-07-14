@@ -16,8 +16,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>8916</WindowHeight>
-  <WindowWidth>23040</WindowWidth>
+  <WindowHeight>4848</WindowHeight>
+  <WindowWidth>21936</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -56,15 +56,15 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R1C9"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="20" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="28" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="64.8" ss:DefaultRowHeight="16.05">
-   <Column ss:AutoFitWidth="0" ss:Width="124.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="124.80000000000001"/>
    <Column ss:StyleID="s62" ss:Width="115.80000000000001" ss:Span="1"/>
-   <Column ss:Index="4" ss:Width="235.2"/>
+   <Column ss:Index="4" ss:Width="235.79999999999998"/>
    <Column ss:Width="114" ss:Span="1"/>
-   <Column ss:Index="7" ss:Width="268.2"/>
+   <Column ss:Index="7" ss:Width="268.8"/>
    <Column ss:Width="124.80000000000001"/>
-   <Column ss:Width="97.800000000000011"/>
+   <Column ss:AutoFitWidth="0" ss:Width="109.19999999999999"/>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s63"><Data ss:Type="String">hbkey</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -314,6 +314,102 @@
     <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
     <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_19</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104_995470730870854</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">New-B4-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_20</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104_995470040870923</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">New-B4-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_21</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_892372137949482</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A5-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_22</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_892372251282804</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A5-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_23</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_892372614616101</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A5-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_24</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_892372721282757</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B5-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_25</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_892372834616079</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B5-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_26</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_892372897949406</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B5-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -329,10 +425,13 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
+   <TopRowVisible>9</TopRowVisible>
+   <LeftColumnVisible>3</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>12</ActiveRow>
+     <ActiveRow>23</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -341,5 +440,12 @@
   </WorksheetOptions>
   <AutoFilter x:Range="R1C1:R1C9" xmlns="urn:schemas-microsoft-com:office:excel">
   </AutoFilter>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R23C4:R28C4</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R23C4:R28C4, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE'/>
+   </Condition>
+  </ConditionalFormatting>
  </Worksheet>
 </Workbook>

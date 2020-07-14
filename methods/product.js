@@ -10,7 +10,7 @@ const model = require('../tools/model');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
-    const productDataList = await _readXLSXFile('广告配置导入测试.xlsx', DefineDir);
+    const productDataList = await _readXLSXFile('广告配置导入模板.xlsx', DefineDir);
     // 去掉第一行的描述
     productDataList.shift();
 
@@ -87,10 +87,6 @@ async function readProduct(DefineDir, XMLDir, project) {
             return;
 
         }
-        if (!productNameHashHash[device]) {
-            return;
-
-        }
         if (!productNameHashHash[device][packageName]) {
             return;
 
@@ -132,7 +128,6 @@ async function readProduct(DefineDir, XMLDir, project) {
     }, { concurrency: 2 });
 
     console.log('packageNameList length: ' + _.uniq(packageNameList).length);
-    console.log('packageNameList: ' + _.uniq(packageNameList));
     // 输出平台名 
     console.log('platformList: ' + _.uniq(platformList));
 

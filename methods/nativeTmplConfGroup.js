@@ -9,7 +9,7 @@ const model = require('../tools/model');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
-    const productDataList = await _readXLSXFile('广告配置导入测试.xlsx', DefineDir);
+    const productDataList = await _readXLSXFile('广告配置导入模板.xlsx', DefineDir);
     // 去掉第一行的描述
     productDataList.shift();
 
@@ -202,7 +202,7 @@ async function readNativeTmplConfGroup(DefineDir, XMLDir, project) {
         }
         // 导入指定包
         if (!productNameHashHash[device]) {
-            return;
+            continue;
 
         }
         if (!productNameHashHash[device][packageName]) {

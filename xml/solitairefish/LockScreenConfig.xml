@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Microsoft Office 用户</Author>
+  <LastAuthor>Microsoft Office 用户</LastAuthor>
+  <Created>2018-09-13T09:26:39Z</Created>
+  <Version>15.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+  <PixelsPerInch>96</PixelsPerInch>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>21140</WindowHeight>
+  <WindowWidth>38400</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>460</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="LockScreenConfig">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="2" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="16">
+   <Row>
+    <Cell><Data ss:Type="String">groupName</Data></Cell>
+    <Cell><Data ss:Type="String">status</Data></Cell>
+    <Cell><Data ss:Type="String">isOpen</Data></Cell>
+    <Cell><Data ss:Type="String">openTime</Data></Cell>
+    <Cell><Data ss:Type="String">expressCD</Data></Cell>
+    <Cell><Data ss:Type="String">refreshTime</Data></Cell>
+    <Cell><Data ss:Type="String">firstRefreshTime</Data></Cell>
+    <Cell><Data ss:Type="String">delayTime</Data></Cell>
+    <Cell><Data ss:Type="String">subGroup</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+    <Cell><Data ss:Type="String">Boolean</Data></Cell>
+    <Cell><Data ss:Type="String">Boolean</Data></Cell>
+    <Cell><Data ss:Type="String">Number</Data></Cell>
+    <Cell><Data ss:Type="String">Number</Data></Cell>
+    <Cell><Data ss:Type="String">Number</Data></Cell>
+    <Cell><Data ss:Type="String">Number</Data></Cell>
+    <Cell><Data ss:Type="String">Number</Data></Cell>
+    <Cell><Data ss:Type="String">String</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

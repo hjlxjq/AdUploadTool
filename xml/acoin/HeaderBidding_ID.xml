@@ -8,9 +8,9 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Microsoft Office 用户</Author>
-  <LastAuthor>Microsoft Office 用户</LastAuthor>
+  <LastAuthor>Microsoft Office User</LastAuthor>
   <Created>2018-09-14T01:26:24Z</Created>
-  <LastSaved>2019-12-03T20:36:29Z</LastSaved>
+  <LastSaved>2020-07-06T09:31:59Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -20,10 +20,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>15500</WindowHeight>
-  <WindowWidth>27440</WindowWidth>
-  <WindowTopX>4660</WindowTopX>
-  <WindowTopY>2500</WindowTopY>
+  <WindowHeight>13040</WindowHeight>
+  <WindowWidth>25440</WindowWidth>
+  <WindowTopX>8120</WindowTopX>
+  <WindowTopY>1000</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -57,7 +57,7 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="HeaderBidding_ID">
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="9" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="22" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s62" ss:DefaultColumnWidth="65"
    ss:DefaultRowHeight="16">
    <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="112"/>
@@ -176,6 +176,162 @@
     <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
     <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_927025067739204</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">BallzBricks_Interstitial_Bid_02</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_9</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_927025297739181</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">BallzBricks_Interstitial_Bid_03</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_927025547739156</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">BallzBricks_Interstitial_Bid_04</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_11</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_748768319265475</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-Interstitial-Bid-A13</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_12</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_748768639265443</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-RewardVideo-Bid-A13</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_13</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_748768485932125</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-Interstitial-Bid-B13</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_14</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_748769082598732</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-RewardVideo-Bid-B13</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_933504673757910</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_RewardVideo_Bid_A14</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_933504837091227</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_RewardVideo_Bid_B14</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_17</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_753602705448703</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-Interstitial-Bid-A14</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_18</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_753602842115356</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-Interstitial-Bid-B14</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_19</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_753602978782009</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-RewardVideo-Bid-A14</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_20</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">460551244753852</Data></Cell>
+    <Cell><Data ss:Type="String">460551244753852_753603072115333</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BricksBalls-ios-RewardVideo-Bid-B14</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -185,10 +341,11 @@
    </PageSetup>
    <Unsynced/>
    <Selected/>
+   <LeftColumnVisible>2</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>7</ActiveRow>
+     <ActiveRow>21</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

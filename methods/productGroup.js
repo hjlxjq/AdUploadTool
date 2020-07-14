@@ -10,7 +10,7 @@ async function readProductGroup(DefineDir) {
 
     const ProductGroupModel = model.productGroup;
 
-    const productDataList = await _readXLSXFile('广告配置导入测试.xlsx', DefineDir);
+    const productDataList = await _readXLSXFile('广告配置导入模板.xlsx', DefineDir);
     // 去掉第一行的描述
     productDataList.shift();
 

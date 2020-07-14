@@ -9,17 +9,17 @@
   <Author>Microsoft Office 用户</Author>
   <LastAuthor>fushuang</LastAuthor>
   <Created>2016-07-28T12:41:31Z</Created>
-  <LastSaved>2020-06-18T10:21:33Z</LastSaved>
+  <LastSaved>2020-06-29T07:14:35Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>17440</WindowHeight>
-  <WindowWidth>28240</WindowWidth>
-  <WindowTopX>5080</WindowTopX>
-  <WindowTopY>1860</WindowTopY>
+  <WindowHeight>8928</WindowHeight>
+  <WindowWidth>23040</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -49,17 +49,20 @@
   <Style ss:ID="s67">
    <Alignment ss:Vertical="Center" ss:WrapText="1"/>
   </Style>
+  <Style ss:ID="s68">
+   <Alignment ss:Vertical="Center"/>
+  </Style>
  </Styles>
  <Worksheet ss:Name="工作表1">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R2C1:R92C7"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R2C1:R95C7"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="92" x:FullColumns="1"
-   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="16">
-   <Column ss:AutoFitWidth="0" ss:Width="395"/>
-   <Column ss:Width="104"/>
-   <Column ss:Index="7" ss:Width="74"/>
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="95" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="64.8" ss:DefaultRowHeight="16.05">
+   <Column ss:AutoFitWidth="0" ss:Width="394.8"/>
+   <Column ss:Width="103.8"/>
+   <Column ss:Index="7" ss:Width="73.8"/>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s63"><Data ss:Type="String">packageName</Data></Cell>
     <Cell ss:StyleID="s63"><Data ss:Type="String">groupName</Data></Cell>
@@ -85,7 +88,7 @@
     <Cell ss:StyleID="s64"><Data ss:Type="String">String</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.queensgame.solitaire.journey</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">G1</Data><NamedCell
@@ -118,7 +121,7 @@
     <Cell><Data ss:Type="String">J4</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.solitaire.discovery</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">G3</Data><NamedCell
@@ -129,7 +132,7 @@
     <Cell><Data ss:Type="String">J4</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.classic.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">G4</Data><NamedCell
@@ -161,7 +164,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">J7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.classic.solitaire.world</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">G5</Data><NamedCell
@@ -182,7 +185,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">J9</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G7new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -192,7 +195,7 @@
     <Cell><Data ss:Type="String">J9</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.classic.solitaire.world</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">G5NewB1</Data><NamedCell
@@ -214,7 +217,7 @@
     <Cell><Data ss:Type="String">J9ios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.klondike.classic.tt</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G8</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -267,7 +270,7 @@
     <Cell><Data ss:Type="String">Fcios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.freecell.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">G9new</Data><NamedCell
@@ -289,7 +292,7 @@
     <Cell><Data ss:Type="String">Spios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B1new</Data><NamedCell
@@ -300,7 +303,7 @@
     <Cell><Data ss:Type="String">Sp</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.classic.solitaire.world-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G5NewB2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -311,7 +314,7 @@
     <Cell><Data ss:Type="String">condition6</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.classic.solitaire.world-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -351,7 +354,7 @@
     <Cell><Data ss:Type="String">Pyios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.pyramid.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G12</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -371,7 +374,7 @@
     <Cell><Data ss:Type="String">Tpios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.tripeaks.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G13</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -392,7 +395,7 @@
     <Cell><Data ss:Type="String">condition9</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.freecell.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G9new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -403,7 +406,7 @@
     <Cell><Data ss:Type="String">condition10</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B1new</Data><NamedCell
@@ -415,7 +418,7 @@
     <Cell><Data ss:Type="String">condition11</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.pyramid.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G12</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -426,7 +429,7 @@
     <Cell><Data ss:Type="String">condition12</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.classic.solitaire.world</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G5NewB1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -437,7 +440,7 @@
     <Cell><Data ss:Type="String">condition13</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.classic.solitaire.world-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G5NewB2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -448,7 +451,7 @@
     <Cell><Data ss:Type="String">condition14</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G7new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -516,7 +519,7 @@
     <Cell><Data ss:Type="String">condition20</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.tripeaks.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G13</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -527,7 +530,7 @@
     <Cell><Data ss:Type="String">condition21</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G7new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -537,7 +540,7 @@
     <Cell><Data ss:Type="String">J9</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G7new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -559,7 +562,7 @@
     <Cell><Data ss:Type="String">condition24</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.patience.free.klondike.spider.collection.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G14</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -569,7 +572,7 @@
     <Cell><Data ss:Type="String">SCP</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.patience.free.klondike.spider.collection.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G14US</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -584,7 +587,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">default</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B1new</Data><NamedCell
@@ -600,7 +603,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition25</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.patience.free.klondike.spider.collection.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G14</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -615,7 +618,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition26</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.patience.free.klondike.spider.collection.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G14US</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -630,7 +633,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition26</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.freecell.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G9new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -645,7 +648,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition27</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B1new</Data><NamedCell
@@ -664,7 +667,8 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11AB2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11B1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Boolean">1</Data><NamedCell
@@ -676,7 +680,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.pyramid.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G12</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -691,7 +695,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition30</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.tripeaks.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G13</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -822,7 +826,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition34</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.solitaire.tripeaks.free.card.games.dream.farm.animal</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">null</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -834,7 +838,7 @@
     <Cell><Data ss:Type="String">condition37</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B2new</Data><NamedCell
@@ -845,7 +849,7 @@
     <Cell><Data ss:Type="String">Sp</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B2new</Data><NamedCell
@@ -857,7 +861,7 @@
     <Cell><Data ss:Type="String">condition11</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B2new</Data><NamedCell
@@ -873,7 +877,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition25</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B2new</Data><NamedCell
@@ -889,7 +893,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition28</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.patience.free.klondike.spider.collection.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G14new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -904,7 +908,7 @@
     <Cell><Data ss:Type="String">condition39</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.patience.free.klondike.spider.collection.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G14USnew</Data><NamedCell
@@ -920,7 +924,7 @@
     <Cell><Data ss:Type="String">condition39</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.classic.solitaire</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G4</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -934,7 +938,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11USAB2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11USB1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -947,7 +951,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.solitaire.tripeaks.free.card.games.dream.farm.animal</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">null</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1009,7 +1013,7 @@
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G10IOSAB5</Data><NamedCell
+    <Cell><Data ss:Type="String">G10IOSB5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">ios</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1025,7 +1029,7 @@
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G10USIOSAB5</Data><NamedCell
+    <Cell><Data ss:Type="String">G10USIOSB5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">ios</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1038,11 +1042,10 @@
     <Cell><Data ss:Type="String">condition44</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G10B1newAB3</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">G10A5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Boolean">1</Data><NamedCell
@@ -1054,10 +1057,10 @@
     <Cell><Data ss:Type="String">condition45</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2USAB3</Data><NamedCell
+    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2USA5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1070,10 +1073,10 @@
     <Cell><Data ss:Type="String">condition45</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-GB</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2USAB3</Data><NamedCell
+    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2USA5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1086,10 +1089,10 @@
     <Cell><Data ss:Type="String">condition45</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-CA</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2USAB3</Data><NamedCell
+    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2USA5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1102,10 +1105,10 @@
     <Cell><Data ss:Type="String">condition45</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-JP</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2T2AB3</Data><NamedCell
+    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2T2A5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1118,10 +1121,26 @@
     <Cell><Data ss:Type="String">condition45</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-FR</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2T2AB3</Data><NamedCell
+    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2T2A5</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Boolean">1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">default</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Sp2new</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition45</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-DE</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2T2A5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1135,9 +1154,9 @@
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-DE</Data><NamedCell
+    <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">G10B2T2AB3</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1145,15 +1164,31 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">default</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Sp2new</Data><NamedCell
+    <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">condition45</Data><NamedCell
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-US</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11USA2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Boolean">1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">default</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-AU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11AUAB2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1163,13 +1198,13 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-DE</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11DEAB2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1179,13 +1214,13 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-JP</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11T2AB2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1195,13 +1230,13 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-GB</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11T2AB2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1211,13 +1246,13 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-FR</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11FRAB2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1227,13 +1262,13 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-RU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">G11RUAB2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1243,7 +1278,23 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-CA</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Boolean">1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">default</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition46</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
   </Table>
@@ -1265,15 +1316,20 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>90</ActiveRow>
+     <ActiveRow>87</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
    <x:PageLayoutZoom>0</x:PageLayoutZoom>
   </WorksheetOptions>
-  <AutoFilter x:Range="R2C1:R92C7"
+  <AutoFilter x:Range="R2C1:R95C7"
    xmlns="urn:schemas-microsoft-com:office:excel">
+   <AutoFilterColumn x:Type="Custom">
+    <AutoFilterCondition x:Operator="Equals"
+     x:Value="com.cardgames.solitaire.fun.free.collection.classic"/>
+   </AutoFilterColumn>
    <AutoFilterColumn x:Index="3" x:Type="Custom">
     <AutoFilterCondition x:Operator="Equals" x:Value="android"/>
    </AutoFilterColumn>

@@ -9,7 +9,7 @@ const model = require('../tools/model');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
-    const productDataList = await _readXLSXFile('广告配置导入测试.xlsx', DefineDir);
+    const productDataList = await _readXLSXFile('广告配置导入模板.xlsx', DefineDir);
     // 去掉第一行的描述
     productDataList.shift();
 
@@ -331,6 +331,10 @@ async function createAdAbTestGroup(
                     name, adTypeId, productId
                 }
             });
+            if (_.isEmpty(adGroupVo)) {
+                console.log(`name: ${name}`);
+                console.log(`productId: ${productId}`);
+            }
             const adGroupId = adGroupVo.id;
             // 默认 ab 测试下的广告位信息
             const abTestMapVo = {

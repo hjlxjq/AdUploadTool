@@ -18,11 +18,14 @@ async function getProductNameHash(DefineDir) {
 
     _.each(productDataList, (productData) => {
         const { app_name, platform, group, package } = productData;
-        if (!productNameHashHash[platform]) {
-            productNameHashHash[platform] = {};
+        const device = platform.toLowerCase();
+        const packageName = package.toLowerCase();
+
+        if (!productNameHashHash[device]) {
+            productNameHashHash[device] = {};
 
         }
-        productNameHashHash[platform][package] = { productName: app_name, productGroupName: group };
+        productNameHashHash[device][packageName] = { productName: app_name, productGroupName: group };
 
     });
     return productNameHashHash;
@@ -118,7 +121,7 @@ async function createConfig(configGroupId, configDataList = []) {
         const { key, value, description } = configData;
 
         const configVo = {
-            key, value, description, configGroupId, active: 1
+            key, value: value || '', description, configGroupId, active: 1
         };
 
         try {

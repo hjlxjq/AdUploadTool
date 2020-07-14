@@ -4,15 +4,28 @@
 const _ = require('lodash');
 const _readXMLFile = require('../tools/excelXMLutils');
 const _readCSVFile = require('../tools/excelCSVutils');
+const _readXLSXFile = require('../tools/excelXLSXutils');
 const model = require('../tools/model');
 
-// 获取指定导入的包名列表
-async function getPackageNameList(DefineDir) {
-    const needPackageNameList = await _readCSVFile('packageName.csv', DefineDir);
-    return _.map(needPackageNameList, (needPackageNameVo) => {
-        return needPackageNameVo.packageName;
+// 获取指定导入的应用哈希表
+async function getProductNameHash(DefineDir) {
+    const productDataList = await _readXLSXFile('广告配置导入测试.xlsx', DefineDir);
+    // 去掉第一行的描述
+    productDataList.shift();
+
+    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+    const productNameHashHash = {};
+
+    _.each(productDataList, (productData) => {
+        const { app_name, platform, group, package } = productData;
+        if (!productNameHashHash[platform]) {
+            productNameHashHash[platform] = {};
+
+        }
+        productNameHashHash[platform][package] = { productName: app_name, productGroupName: group };
 
     });
+    return productNameHashHash;
 
 }
 
@@ -285,8 +298,8 @@ async function readAdGroup(DefineDir, XMLDir, project) {
 
     // 读取 ClientPackage xml 表
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 获取指定导入的包名列表
-    const needPackageNameList = await getPackageNameList(DefineDir);
+    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+    const productNameHashHash = await getProductNameHash(DefineDir);
     // 广告名称哈希表，键为广告平台，值为广告 placementId 对应 广告名称的哈希表
     const adNameHashHash = await getAdNameHash(DefineDir);
     // 广告 xml 表读取的哈希表，键为广告组，值为广告数据
@@ -319,7 +332,11 @@ async function readAdGroup(DefineDir, XMLDir, project) {
 
         }
         // 导入指定包
-        if (_.indexOf(needPackageNameList, packageName) === -1) {
+        if (!productNameHashHash[device]) {
+            return;
+
+        }
+        if (!productNameHashHash[device][packageName]) {
             continue;
 
         }

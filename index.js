@@ -4,7 +4,7 @@ const XMLDir = process.cwd() + '/xml';
 const DefineDir = process.cwd() + '/defineFiles';
 
 const { readChannelAndType, readNativeTmpl, readBaseConfig } = require('./methods/common');
-const { readProductGroup, readProduct } = require('./methods/product');
+const { readProduct } = require('./methods/product');
 const { readConfigGroup } = require('./methods/configGroup');
 const { readAdGroup } = require('./methods/adGroup');
 const { readNativeTmplConfGroup } = require('./methods/nativeTmplConfGroup');
@@ -28,7 +28,6 @@ async function init() {
     await readChannelAndType(XMLDir, project);
     await readNativeTmpl(XMLDir, project);
     await readBaseConfig(DefineDir, project);
-    await readProductGroup(project);
     await readProduct(DefineDir, XMLDir, project);
     await readConfigGroup(DefineDir, XMLDir, project);
     await readAdGroup(DefineDir, XMLDir, project);

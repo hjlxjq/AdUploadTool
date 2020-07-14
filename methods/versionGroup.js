@@ -4,15 +4,28 @@
 const _ = require('lodash');
 const _readXMLFile = require('../tools/excelXMLutils');
 const _readCSVFile = require('../tools/excelCSVutils');
+const _readXLSXFile = require('../tools/excelXLSXutils');
 const model = require('../tools/model');
 
-// 获取指定导入的包名列表
-async function getPackageNameList(DefineDir) {
-    const needPackageNameList = await _readCSVFile('packageName.csv', DefineDir);
-    return _.map(needPackageNameList, (needPackageNameVo) => {
-        return needPackageNameVo.packageName;
+// 获取指定导入的应用哈希表
+async function getProductNameHash(DefineDir) {
+    const productDataList = await _readXLSXFile('广告配置导入测试.xlsx', DefineDir);
+    // 去掉第一行的描述
+    productDataList.shift();
+
+    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+    const productNameHashHash = {};
+
+    _.each(productDataList, (productData) => {
+        const { app_name, platform, group, package } = productData;
+        if (!productNameHashHash[platform]) {
+            productNameHashHash[platform] = {};
+
+        }
+        productNameHashHash[platform][package] = { productName: app_name, productGroupName: group };
 
     });
+    return productNameHashHash;
 
 }
 
@@ -60,7 +73,7 @@ async function getAdTypeHash() {
 }
 
 // 获取版本条件分组哈希
-async function getVersionGroupHash(clientPackage, needPackageNameList, type) {
+async function getVersionGroupHash(clientPackage, productNameHashHash, type) {
     const versionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
 
     for (const item of clientPackage) {
@@ -88,7 +101,11 @@ async function getVersionGroupHash(clientPackage, needPackageNameList, type) {
 
         }
         // 导入指定包
-        if (_.indexOf(needPackageNameList, packageName) === -1) {
+        if (!productNameHashHash[device]) {
+            continue;
+
+        }
+        if (!productNameHashHash[device][packageName]) {
             continue;
 
         }
@@ -455,8 +472,8 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
 
     // 读取 ClientPackage xml 表
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 获取指定导入的包名列表
-    const needPackageNameList = await getPackageNameList(DefineDir);
+    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+    const productNameHashHash = await getProductNameHash(DefineDir);
     // 广告 xml 表读取的哈希表，键为广告组，值为广告数据
     const ad_IDControlHashHash = await getAd_IDControlHash(XMLDir, project);
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
@@ -464,7 +481,7 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
     // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
     const conditionHash = await getConditionHash(XMLDir, project);
     // ClientPackage xml 表读取的广告版本条件分组哈希
-    const versionGroupHashHash = await getVersionGroupHash(clientPackage, needPackageNameList, 0);
+    const versionGroupHashHash = await getVersionGroupHash(clientPackage, productNameHashHash, 0);
     // 获取所有的广告类型哈希表
     const adTypeHash = await getAdTypeHash();
 
@@ -549,14 +566,14 @@ async function readConfigVersionGroup(DefineDir, XMLDir, project) {
 
     // 读取 ClientPackage xml 表
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 获取指定导入的包名列表
-    const needPackageNameList = await getPackageNameList(DefineDir);
+    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+    const productNameHashHash = await getProductNameHash(DefineDir);
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
     const groupWeightHash = await getGroupWeightHash(XMLDir, project);
     // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
     const conditionHash = await getConditionHash(XMLDir, project);
     // ClientPackage xml 表读取的广告版本条件分组哈希
-    const versionGroupHashHash = await getVersionGroupHash(clientPackage, needPackageNameList, 1);
+    const versionGroupHashHash = await getVersionGroupHash(clientPackage, productNameHashHash, 1);
 
     // 应用主键列表
     const productIdList = _.keys(versionGroupHashHash);

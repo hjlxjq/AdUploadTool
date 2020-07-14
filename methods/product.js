@@ -98,7 +98,7 @@ async function readProduct(DefineDir, XMLDir, project) {
         }
         if (!name) {
             for (const productData of productDataList) {
-                if (productData.applovin === packageName) {
+                if (productData.platform === device && productData.applovin === packageName) {
                     name = productData.appName;
                     break;
                 }

@@ -263,9 +263,13 @@ async function readNativeTmplConfGroup(DefineDir, XMLDir, project) {
             const currentNativeTmplConfGroupId = currentNativeTmplConfGroupVo.id;
             const nativeTmplConfDataList = nativeTmplConfHash['default'];
 
-            await createNativeTmplConf(
-                currentNativeTmplConfGroupId, nativeTmplHash, nativeTmplConfDataList
-            );
+            if (!_.isEmpty(nativeTmplConfDataList)) {
+                await createNativeTmplConf(
+                    currentNativeTmplConfGroupId, nativeTmplHash, nativeTmplConfDataList
+                );
+
+            }
+
         }
 
     }

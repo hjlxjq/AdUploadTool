@@ -6,6 +6,16 @@ const _readXMLFile = require('../tools/excelXMLutils');
 const _readCSVFile = require('../tools/excelCSVutils');
 const model = require('../tools/model');
 
+// 获取指定导入的包名列表
+async function getPackageNameList(DefineDir) {
+    const needPackageNameList = await _readCSVFile('packageName.csv', DefineDir);
+    return _.map(needPackageNameList, (needPackageNameVo) => {
+        return needPackageNameVo.packageName;
+
+    });
+
+}
+
 // 获取广告名称哈希表
 async function getAdNameHash(DefineDir) {
     const admobDataList = await _readCSVFile('admob.csv', DefineDir);
@@ -55,17 +65,6 @@ async function getAdNameHash(DefineDir) {
 // 根据 平台和包名获取应用在数据里的主键
 async function getProductId(platform, packageName) {
     const ProductModel = model.product;    // 应用表模型
-
-    // 纸牌有个例外的包名
-    if (packageName !== 'Classic-5xing') {
-        const packageNameArr = _.split(packageName, '-');
-        if (packageNameArr.length > 1) {
-            packageNameArr.pop();
-
-        }
-        packageName = packageNameArr.join('-');
-
-    }
 
     // 广告平台的平台名，android, ios, wenxin, instant
     if (platform === 'web') {
@@ -286,6 +285,8 @@ async function readAdGroup(DefineDir, XMLDir, project) {
 
     // 读取 ClientPackage xml 表
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
+    // 获取指定导入的包名列表
+    const needPackageNameList = await getPackageNameList(DefineDir);
     // 广告名称哈希表，键为广告平台，值为广告 placementId 对应 广告名称的哈希表
     const adNameHashHash = await getAdNameHash(DefineDir);
     // 广告 xml 表读取的哈希表，键为广告组，值为广告数据
@@ -306,6 +307,22 @@ async function readAdGroup(DefineDir, XMLDir, project) {
 
         let packageName = item.packageName;
         const { device, groupName } = item;
+
+        // 纸牌有个例外的包名
+        if (packageName !== 'Classic-5xing') {
+            const packageNameArr = _.split(packageName, '-');
+            if (packageNameArr.length > 1) {
+                packageNameArr.pop();
+
+            }
+            packageName = packageNameArr.join('-');
+
+        }
+        // 导入指定包
+        if (_.indexOf(needPackageNameList, packageName) === -1) {
+            continue;
+
+        }
 
         // 获取应用主键
         const productId = await getProductId(device, packageName);

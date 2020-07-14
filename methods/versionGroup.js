@@ -3,22 +3,22 @@
  */
 const _ = require('lodash');
 const _readXMLFile = require('../tools/excelXMLutils');
+const _readCSVFile = require('../tools/excelCSVutils');
 const model = require('../tools/model');
+
+// 获取指定导入的包名列表
+async function getPackageNameList(DefineDir) {
+    const needPackageNameList = await _readCSVFile('packageName.csv', DefineDir);
+    return _.map(needPackageNameList, (needPackageNameVo) => {
+        return needPackageNameVo.packageName;
+
+    });
+
+}
 
 // 根据 平台和包名获取应用在数据里的主键
 async function getProductId(platform, packageName) {
     const ProductModel = model.product;    // 应用表模型
-
-    // 纸牌有个例外的包名
-    if (packageName !== 'Classic-5xing') {
-        const packageNameArr = _.split(packageName, '-');
-        if (packageNameArr.length > 1) {
-            packageNameArr.pop();
-
-        }
-        packageName = packageNameArr.join('-');
-
-    }
 
     // 广告平台的平台名，android, ios, wenxin, instant
     if (platform === 'web') {
@@ -60,7 +60,7 @@ async function getAdTypeHash() {
 }
 
 // 获取版本条件分组哈希
-async function getVersionGroupHash(clientPackage, type) {
+async function getVersionGroupHash(clientPackage, needPackageNameList, type) {
     const versionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
 
     for (const item of clientPackage) {
@@ -84,6 +84,12 @@ async function getVersionGroupHash(clientPackage, type) {
                 nationCode = packageNameArr.pop();
 
             }
+            packageName = packageNameArr.join('-');
+
+        }
+        // 导入指定包
+        if (_.indexOf(needPackageNameList, packageName) === -1) {
+            continue;
 
         }
 
@@ -441,7 +447,7 @@ async function createConfigAbTestGroupList(productId, versionGroupId, groupWeigh
 }
 
 // 导入广告版本条件分组
-async function readAdVersionGroup(XMLDir, project) {
+async function readAdVersionGroup(DefineDir, XMLDir, project) {
     console.log('begin execute function: readAdVersionGroup()');
 
     // 版本条件分组表模型
@@ -449,6 +455,8 @@ async function readAdVersionGroup(XMLDir, project) {
 
     // 读取 ClientPackage xml 表
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
+    // 获取指定导入的包名列表
+    const needPackageNameList = await getPackageNameList(DefineDir);
     // 广告 xml 表读取的哈希表，键为广告组，值为广告数据
     const ad_IDControlHashHash = await getAd_IDControlHash(XMLDir, project);
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
@@ -456,7 +464,7 @@ async function readAdVersionGroup(XMLDir, project) {
     // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
     const conditionHash = await getConditionHash(XMLDir, project);
     // ClientPackage xml 表读取的广告版本条件分组哈希
-    const versionGroupHashHash = await getVersionGroupHash(clientPackage, 0);
+    const versionGroupHashHash = await getVersionGroupHash(clientPackage, needPackageNameList, 0);
     // 获取所有的广告类型哈希表
     const adTypeHash = await getAdTypeHash();
 
@@ -533,7 +541,7 @@ async function readAdVersionGroup(XMLDir, project) {
 }
 
 // 导入游戏常量版本条件分组
-async function readConfigVersionGroup(XMLDir, project) {
+async function readConfigVersionGroup(DefineDir, XMLDir, project) {
     console.log('begin execute function: readConfigVersionGroup()');
 
     // 版本条件分组表模型
@@ -541,12 +549,14 @@ async function readConfigVersionGroup(XMLDir, project) {
 
     // 读取 ClientPackage xml 表
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
+    // 获取指定导入的包名列表
+    const needPackageNameList = await getPackageNameList(DefineDir);
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
     const groupWeightHash = await getGroupWeightHash(XMLDir, project);
     // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
     const conditionHash = await getConditionHash(XMLDir, project);
     // ClientPackage xml 表读取的广告版本条件分组哈希
-    const versionGroupHashHash = await getVersionGroupHash(clientPackage, 1);
+    const versionGroupHashHash = await getVersionGroupHash(clientPackage, needPackageNameList, 1);
 
     // 应用主键列表
     const productIdList = _.keys(versionGroupHashHash);

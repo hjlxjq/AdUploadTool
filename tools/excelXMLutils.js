@@ -79,7 +79,7 @@ function checkRowData(row, rowIndex, titleList, typeList) {
     if (element['ss:Index']) {
       const pos = element['ss:Index'] - 1;
 
-      console.error('第' + rowIndex + '行, 第' + pos + '列' + titleList[pos - 1] + '数据有缺失');
+      // console.error('第' + rowIndex + '行, 第' + pos + '列' + titleList[pos - 1] + '数据有缺失');
       // console.log(`titleIndex: ${titleIndex}`);
 
       // 行名称 index 跳到该行

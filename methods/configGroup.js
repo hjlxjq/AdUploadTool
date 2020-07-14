@@ -1,24 +1,24 @@
 /**
- * 导入 常量组和常量
+ * 导入常量组和常量
  */
 const _ = require('lodash');
 const _readXMLFile = require('../tools/excelXMLutils');
+const _readCSVFile = require('../tools/excelCSVutils');
 const model = require('../tools/model');
+
+// 获取指定导入的包名列表
+async function getPackageNameList(DefineDir) {
+    const needPackageNameList = await _readCSVFile('packageName.csv', DefineDir);
+    return _.map(needPackageNameList, (needPackageNameVo) => {
+        return needPackageNameVo.packageName;
+
+    });
+
+}
 
 // 根据 平台和包名获取应用在数据里的主键
 async function getProductId(platform, packageName) {
     const ProductModel = model.product;    // 应用表模型
-
-    // 纸牌有个例外的包名
-    if (packageName !== 'Classic-5xing') {
-        const packageNameArr = _.split(packageName, '-');
-        if (packageNameArr.length > 1) {
-            packageNameArr.pop();
-
-        }
-        packageName = packageNameArr.join('-');
-
-    }
 
     // 广告平台的平台名，android, ios, wenxin, instant
     if (platform === 'web') {
@@ -123,14 +123,16 @@ async function createConfig(configGroupId, configDataList = []) {
 
 }
 
-// 导入 常量组和常量
-async function readConfigGroup(XMLDir, project) {
+// 导入常量组和常量
+async function readConfigGroup(DefineDir, XMLDir, project) {
     console.log('begin execute function: readConfigGroup()');
 
     // 常量组表模型
     const ConfigGroupModel = model.configGroup;
     // 读取 ClientPackage xml 表
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
+    // 获取指定导入的包名列表
+    const needPackageNameList = await getPackageNameList(DefineDir);
     // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
     const configConstantHash = await getConfigConstantHash(XMLDir, project);
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的常量组，值为 ab 分组数组
@@ -142,6 +144,22 @@ async function readConfigGroup(XMLDir, project) {
 
         let packageName = item.packageName;
         const { device } = item;
+
+        // 纸牌有个例外的包名
+        if (packageName !== 'Classic-5xing') {
+            const packageNameArr = _.split(packageName, '-');
+            if (packageNameArr.length > 1) {
+                packageNameArr.pop();
+
+            }
+            packageName = packageNameArr.join('-');
+
+        }
+        // 导入指定包
+        if (_.indexOf(needPackageNameList, packageName) === -1) {
+            continue;
+
+        }
 
         const productId = await getProductId(device, packageName);
 
@@ -174,6 +192,22 @@ async function readConfigGroup(XMLDir, project) {
 
         let packageName = item.packageName;
         const { device } = item;
+
+        // 纸牌有个例外的包名
+        if (packageName !== 'Classic-5xing') {
+            const packageNameArr = _.split(packageName, '-');
+            if (packageNameArr.length > 1) {
+                packageNameArr.pop();
+
+            }
+            packageName = packageNameArr.join('-');
+
+        }
+        // 导入指定包
+        if (_.indexOf(needPackageNameList, packageName) === -1) {
+            continue;
+
+        }
 
         const productId = await getProductId(device, packageName);
 

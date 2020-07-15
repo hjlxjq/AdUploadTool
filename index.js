@@ -8,7 +8,8 @@ const { readProduct } = require('./methods/product');
 const { readConfigGroup } = require('./methods/configGroup');
 const { readAdGroup } = require('./methods/adGroup');
 const { readNativeTmplConfGroup } = require('./methods/nativeTmplConfGroup');
-const { readConfigVersionGroup, readAdVersionGroup } = require('./methods/versionGroup');
+const { readConfigVersionGroup, readAdVersionGroup, testVersionGroup } = require('./methods/versionGroup');
+const { readProductGroup } = require('./methods/productGroup');
 
 // 命令行输入 node index ${project}
 // 读取 project
@@ -25,15 +26,17 @@ const project = argv[2] || 'word';
 console.log(`project: ${project}`);
 
 async function init() {
-    // await readChannelAndType(XMLDir, project);
-    // await readNativeTmpl(XMLDir, project);
-    // await readBaseConfig(DefineDir, project);
-    // await readProduct(DefineDir, XMLDir, project);
-    // await readConfigGroup(DefineDir, XMLDir, project);
-    // await readAdGroup(DefineDir, XMLDir, project);
-    // await readNativeTmplConfGroup(DefineDir, XMLDir, project);
-    // await readConfigVersionGroup(DefineDir, XMLDir, project);
+    await readChannelAndType(XMLDir, project);
+    await readNativeTmpl(XMLDir, project);
+    await readBaseConfig(DefineDir, project);
+    await readProductGroup(DefineDir);
+    await readProduct(DefineDir, XMLDir, project);
+    await readConfigGroup(DefineDir, XMLDir, project);
+    await readAdGroup(DefineDir, XMLDir, project);
+    await readNativeTmplConfGroup(DefineDir, XMLDir, project);
+    await readConfigVersionGroup(DefineDir, XMLDir, project);
     await readAdVersionGroup(DefineDir, XMLDir, project);
+    // await testVersionGroup(XMLDir, project);
 }
 
 init();

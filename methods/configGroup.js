@@ -57,7 +57,7 @@ async function getProductId(platform, packageName) {
 }
 
 // 获取常量组哈希，键为常量组，值为常量数据
-async function getConfigConstantHash(XMLDir, project) {
+async function getConfigConstantHash(DefineDir, XMLDir, project) {
     const gameConfigConstantHash = {};    // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
     const adConfigConstantHash = {};    // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
 
@@ -70,7 +70,6 @@ async function getConfigConstantHash(XMLDir, project) {
             return baseConfig.key;
 
         });
-        console.log('baseConfigKeys: ', baseConfigKeys);
 
         _.each(configConstant, (item) => {
             if (item.status) {
@@ -200,7 +199,7 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
     const productNameHashHash = await getProductNameHash(DefineDir);
     // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
-    const { adConfigConstantHash, gameConfigConstantHash } = await getConfigConstantHash(XMLDir, project);
+    const { adConfigConstantHash, gameConfigConstantHash } = await getConfigConstantHash(DefineDir, XMLDir, project);
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的常量组，值为 ab 分组数组
     const groupWeightHash = await getGroupWeightHash(XMLDir, project);
 
@@ -220,11 +219,6 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
 
             }
             packageName = packageNameArr.join('-');
-
-        }
-        // 只导入不分国家的常量
-        if (nationCode) {
-            continue;
 
         }
         // 导入指定包
@@ -264,11 +258,6 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
 
             }
             packageName = packageNameArr.join('-');
-
-        }
-        // 只导入不分国家的常量
-         if (nationCode) {
-            continue;
 
         }
         // 导入指定包

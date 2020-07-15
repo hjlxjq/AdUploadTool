@@ -76,7 +76,60 @@ async function getAdTypeHash() {
 }
 
 // 获取版本条件分组哈希
-async function getVersionGroupHash(clientPackage, productNameHashHash) {
+async function getConfigVersionGroupHash(clientPackage, productNameHashHash) {
+    const versionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
+
+    for (const item of clientPackage) {
+        if (!item.status) continue;
+
+        const { device, condition, config } = item;
+        let packageName = item.packageName;
+        let nationCode = null;
+
+        // 纸牌有个例外的包名
+        if (packageName !== 'Classic-5xing') {
+            const packageNameArr = _.split(packageName, '-');
+            if (packageNameArr.length > 1) {
+                nationCode = packageNameArr.pop();
+
+            }
+            packageName = packageNameArr.join('-');
+
+        }
+        // 导入指定包
+        if (!productNameHashHash[device]) {
+            continue;
+
+        }
+        if (!productNameHashHash[device][packageName]) {
+            continue;
+
+        }
+
+        // 获取应用主键
+        const productId = await getProductId(device, packageName);
+
+        if (!versionGroupHashHash[productId]) {
+            versionGroupHashHash[productId] = {};
+
+        }
+        if (!versionGroupHashHash[productId][condition]) {
+            versionGroupHashHash[productId][condition] = {};
+
+        }
+        if (!versionGroupHashHash[productId][condition][config]) {
+            versionGroupHashHash[productId][condition][config] = [];
+
+        }
+        versionGroupHashHash[productId][condition][config].push(nationCode);
+
+    }
+    return versionGroupHashHash;
+
+}
+
+// 获取版本条件分组哈希
+async function getAdVersionGroupHash(clientPackage, productNameHashHash) {
     const adVersionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
     const gameVersionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
 
@@ -132,18 +185,7 @@ async function getVersionGroupHash(clientPackage, productNameHashHash) {
             gameVersionGroupHashHash[productId][condition] = {};
 
         }
-        if (!gameVersionGroupHashHash[productId][condition][config]) {
-            gameVersionGroupHashHash[productId][condition][config] = [];
-
-        }
-        gameVersionGroupHashHash[productId][condition][config].push(nationCode);
-        // if (!gameVersionGroupHashHash[productId]) {
-        //     gameVersionGroupHashHash[productId] = {};
-
-        // }
-        // if (nationCode === null) {
-        //     gameVersionGroupHashHash[productId][condition] = config;
-        // }
+        gameVersionGroupHashHash[productId][condition][groupName] = config;
 
     }
     return { adVersionGroupHashHash, gameVersionGroupHashHash };
@@ -179,25 +221,9 @@ async function getAd_IDControlHash(XMLDir, project) {
             const channel = item.channel.toLowerCase();
             const adType = item.adType.toLowerCase();
 
-            const channelList = [
-                'facebook', 'unity', 'aol', 'fbhb', 'admob', 'mopub', 'tiktok', 'vungle', 'applovin',
-                'ironsource', 'mobvista', 'fyber', 'tapjoy', 'chartboost', 'inmobi', 'adcolony',
-            ];
-
-            let newChannel = channel;
             // 忽略广告平台后面的数字
-            _.each(channelList, (channelItem) => {
-                if (channel.indexOf(channelItem) !== -1) {
-                    newChannel = channelItem;
+            const newChannel = channel.replace(/\d+$/, '');
 
-                }
-
-            });
-            // fbhb 渠道即为 facebook
-            if (newChannel === 'fbhb') {
-                newChannel = 'facebook';
-
-            }
             // adomb 是拼写错误，即 admob
             if (newChannel !== 'adomb') {
                 // 广告 placementID
@@ -359,10 +385,6 @@ async function createAdAbTestGroup(
                     name, adTypeId, productId
                 }
             });
-            if (_.isEmpty(adGroupVo)) {
-                console.log(`name: ${name}`);
-                console.log(`productId: ${productId}`);
-            }
             const adGroupId = adGroupVo.id;
             // 默认 ab 测试下的广告位信息
             const abTestMapVo = {
@@ -526,7 +548,7 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
     const conditionHash = await getConditionHash(XMLDir, project);
     // ClientPackage xml 表读取的版本条件分组哈希
     const { adVersionGroupHashHash, gameVersionGroupHashHash }
-        = await getVersionGroupHash(clientPackage, productNameHashHash);
+        = await getAdVersionGroupHash(clientPackage, productNameHashHash);
 
     // 获取所有的广告类型哈希表
     const adTypeHash = await getAdTypeHash();
@@ -542,23 +564,23 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
         for (const condition of conditionList) {
             const groupNameList = _.keys(adVersionGroupHashHash[productId][condition]);
 
-            const configGroupName = gameVersionGroupHashHash[productId][condition];
-            if (!configGroupName) {
-                console.log('productId: ', productId);
-                console.log('condition: ', condition);
-
-            }
-
-            const gameGroupWeightList = (_.cloneDeep(groupWeightHash[configGroupName])) || [{
-                toGroup: configGroupName,
-                weightGroup: '-1'
-            }];
             // 遍历 ab 分组
             for (let groupName of groupNameList) {
                 // xml 表中未配置，则取默认值
                 // 克隆数组，后面更改了数组
                 const groupWeightList = (_.cloneDeep(groupWeightHash[groupName])) || [{
                     toGroup: groupName,
+                    weightGroup: '-1'
+                }];
+
+                const configGroupName = gameVersionGroupHashHash[productId][condition][groupName];
+                if (!configGroupName) {
+                    console.log('productId: ', productId);
+                    console.log('condition: ', condition);
+
+                }
+                const gameGroupWeightList = (_.cloneDeep(groupWeightHash[configGroupName])) || [{
+                    toGroup: configGroupName,
                     weightGroup: '-1'
                 }];
 
@@ -582,11 +604,6 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
                         noVersionGroupVo.description = '默认组';
 
                     }
-
-                    if (!noVersionGroupVo.name) {
-                        console.log('noVersionGroupVo: ', noVersionGroupVo);
-                    }
-
                     // 查找或创建版本条件分组
                     const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
                         where: {
@@ -615,9 +632,6 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
                     const versionGroupVo = {
                         name, begin, description, type: 0, code, include: 1, productId, active: 1
                     };
-                    if (!name) {
-                        console.log('versionGroupVo: ', versionGroupVo);
-                    }
                     // 查找或创建版本条件分组
                     const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
                         where: {
@@ -661,101 +675,20 @@ async function readConfigVersionGroup(DefineDir, XMLDir, project) {
     const groupWeightHash = await getGroupWeightHash(XMLDir, project);
     // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
     const conditionHash = await getConditionHash(XMLDir, project);
-    // ClientPackage xml 表读取的广告版本条件分组哈希
-    const { gameVersionGroupHashHash } = await getVersionGroupHash(clientPackage, productNameHashHash);
+    // ClientPackage xml 表读取的游戏版本条件分组哈希
+    const versionGroupHashHash = await getConfigVersionGroupHash(clientPackage, productNameHashHash);
 
     // 应用主键列表
-    const productIdList = _.keys(gameVersionGroupHashHash);
+    const productIdList = _.keys(versionGroupHashHash);
 
     // 遍历应用
     for (const productId of productIdList) {
-        const conditionList = _.keys(gameVersionGroupHashHash[productId]);
+        const conditionList = _.keys(versionGroupHashHash[productId]);
 
         // 遍历版本
         for (const condition of conditionList) {
-            const configGroupName = gameVersionGroupHashHash[productId][condition];
-            // xml 表中未配置，则取默认值
-            // 克隆数组，后面更改了数组
-            const groupWeightList = (_.cloneDeep(groupWeightHash[configGroupName])) || [{
-                toGroup: configGroupName,
-                weightGroup: '-1'
-            }];
+            const groupNameList = _.keys(versionGroupHashHash[productId][condition]);
 
-            let name = `${condition}`;
-            let description = name;
-            const begin = conditionHash[condition] || conditionHash['default'];
-
-            if (condition === 'default') {
-                name = 'default';
-                description = '默认组';
-
-            }
-
-            // 版本条件分组表对象
-            const versionGroupVo = {
-                name, begin, description, type: 1, code: '[]', include: 1, productId, active: 1
-            };
-            // 查找或创建版本条件分组
-            const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
-                where: {
-                    name, type: 1, productId
-                }, defaults: versionGroupVo
-            });
-
-            // 如果首次，则创建广告
-            if (created) {
-                const versionGroupId = currentVersionGroupVo.id;
-                await createConfigAbTestGroupList(productId, versionGroupId, _.cloneDeep(groupWeightList));
-
-            }
-
-        }
-
-    }
-
-}
-
-// 导入广告版本条件分组
-async function testVersionGroup(DefineDir, XMLDir, project) {
-    console.log('begin execute function: readAdVersionGroup()');
-
-    // 版本条件分组表模型
-    const VersionGroupModel = model.versionGroup;
-
-    // 读取 ClientPackage xml 表
-    const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
-    const productNameHashHash = await getProductNameHash(DefineDir);
-    // 广告 xml 表读取的哈希表，键为广告组，值为广告数据
-    const ad_IDControlHashHash = await getAd_IDControlHash(XMLDir, project);
-    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
-    const groupWeightHash = await getGroupWeightHash(XMLDir, project);
-    // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
-    const conditionHash = await getConditionHash(XMLDir, project);
-    // ClientPackage xml 表读取的版本条件分组哈希
-    const { adVersionGroupHashHash, gameVersionGroupHashHash }
-        = await getVersionGroupHash(clientPackage, productNameHashHash);
-
-    // 获取所有的广告类型哈希表
-    const adTypeHash = await getAdTypeHash();
-
-    // 应用主键列表
-    const productIdList = _.keys(adVersionGroupHashHash);
-
-    // 遍历应用
-    for (const productId of productIdList) {
-        const conditionList = _.keys(adVersionGroupHashHash[productId]);
-
-        // 遍历版本
-        for (const condition of conditionList) {
-            const groupNameList = _.keys(adVersionGroupHashHash[productId][condition]);
-            const configGroupNameList = gameVersionGroupHashHash[productId][condition];
-
-
-            const gameGroupWeightList = (_.cloneDeep(groupWeightHash[configGroupName])) || [{
-                toGroup: configGroupName,
-                weightGroup: '-1'
-            }];
             // 遍历 ab 分组
             for (let groupName of groupNameList) {
                 // xml 表中未配置，则取默认值
@@ -765,7 +698,7 @@ async function testVersionGroup(DefineDir, XMLDir, project) {
                     weightGroup: '-1'
                 }];
 
-                let nationCodeList = _.cloneDeep(adVersionGroupHashHash[productId][condition][groupName]);
+                let nationCodeList = _.cloneDeep(versionGroupHashHash[productId][condition][groupName]);
                 const name = `${condition}_${groupName}`;
                 const description = name;
                 const begin = conditionHash[condition] || conditionHash['default'];
@@ -776,7 +709,7 @@ async function testVersionGroup(DefineDir, XMLDir, project) {
 
                     // 版本条件分组表对象
                     const noVersionGroupVo = {
-                        name: name + `_native`, begin, description, type: 0,
+                        name: name + `_native`, begin, description, type: 1,
                         code: '[]', include: 1, productId, active: 1
                     };
 
@@ -786,14 +719,10 @@ async function testVersionGroup(DefineDir, XMLDir, project) {
 
                     }
 
-                    if (!noVersionGroupVo.name) {
-                        console.log('noVersionGroupVo: ', noVersionGroupVo);
-                    }
-
                     // 查找或创建版本条件分组
                     const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
                         where: {
-                            name: noVersionGroupVo.name, type: 0, productId
+                            name: noVersionGroupVo.name, type: 1, productId
                         }, defaults: noVersionGroupVo
                     });
 
@@ -801,9 +730,8 @@ async function testVersionGroup(DefineDir, XMLDir, project) {
                     if (created) {
                         const versionGroupId = currentVersionGroupVo.id;
 
-                        await createAdAbTestGroupList(
-                            productId, versionGroupId, _.cloneDeep(groupWeightList),
-                            _.cloneDeep(gameGroupWeightList), adTypeHash, ad_IDControlHashHash
+                        await createConfigAbTestGroupList(
+                            productId, versionGroupId, _.cloneDeep(groupWeightList)
                         );
 
                     }
@@ -816,15 +744,12 @@ async function testVersionGroup(DefineDir, XMLDir, project) {
 
                     // 版本条件分组表对象
                     const versionGroupVo = {
-                        name, begin, description, type: 0, code, include: 1, productId, active: 1
+                        name, begin, description, type: 1, code, include: 1, productId, active: 1
                     };
-                    if (!name) {
-                        console.log('versionGroupVo: ', versionGroupVo);
-                    }
                     // 查找或创建版本条件分组
                     const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
                         where: {
-                            name, type: 0, productId
+                            name, type: 1, productId
                         }, defaults: versionGroupVo
                     });
 
@@ -832,9 +757,8 @@ async function testVersionGroup(DefineDir, XMLDir, project) {
                     if (created) {
                         const versionGroupId = currentVersionGroupVo.id;
 
-                        await createAdAbTestGroupList(
-                            productId, versionGroupId, _.cloneDeep(groupWeightList), _.cloneDeep(gameGroupWeightList),
-                            adTypeHash, ad_IDControlHashHash
+                        await createConfigAbTestGroupList(
+                            productId, versionGroupId, _.cloneDeep(groupWeightList)
                         );
 
                     }
@@ -849,7 +773,103 @@ async function testVersionGroup(DefineDir, XMLDir, project) {
 
 }
 
+async function testVersionGroup(XMLDir, project) {
+    console.log('begin execute function: testVersionGroup()');
+
+    // 读取 ClientPackage xml 表
+    const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
+    const ad_IDControl = await _readXMLFile('Ad_IDControl.xml', XMLDir, project);
+    const configConstant = await _readXMLFile('ConfigConstant.xml', XMLDir, project);
+    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
+    const groupWeightHash = await getGroupWeightHash(XMLDir, project);
+
+    let configGroupList = [];
+    _.each(configConstant, (item) => {
+        if (item.status) {
+            configGroupList.push(item.groupName);
+
+        }
+
+    });
+    configGroupList = _.uniq(configGroupList);
+
+    let adGroupList = [];
+    _.each(ad_IDControl, (item) => {
+        if (item.status) {
+            adGroupList.push(item.groupName);
+
+        }
+
+    });
+    adGroupList = _.uniq(adGroupList);
+
+    for (const item of clientPackage) {
+        if (!item.status) continue;
+
+        const { groupName, config, packageName, device } = item;
+
+
+        // xml 表中未配置，则取默认值
+        const adGroupWeightList = groupWeightHash[groupName] || [{
+            toGroup: groupName,
+            weightGroup: '-1'
+        }];
+
+        // xml 表中未配置，则取默认值
+        const configGroupWeightList = groupWeightHash[config] || [{
+            toGroup: config,
+            weightGroup: '-1'
+        }];
+
+        if (adGroupWeightList.length === 1 || configGroupWeightList.length === 1) continue;
+
+        if (adGroupWeightList.length !== configGroupWeightList.length) {
+            console.log('packageName1: ', packageName);
+            console.log('device1: ', device);
+            console.log('configGroupWeightList.length: ', configGroupWeightList.length);
+            console.log('adGroupWeightList.length: ', adGroupWeightList.length);
+
+        }
+
+        const adGroupNameList = _.map(adGroupWeightList, (adGroupWeight) => {
+            return adGroupWeight.toGroup;
+        });
+        const configGroupNameList = _.map(configGroupWeightList, (configGroupWeight) => {
+            return configGroupWeight.toGroup;
+        });
+
+        let adLength = adGroupNameList.length;
+        let configLength = configGroupNameList.length;
+
+        // 循环 ab 分组创建广告组和广告
+        for (const adGroupName of adGroupNameList) {
+            if (_.indexOf(adGroupList, adGroupName) === -1) {
+                adLength--;
+
+            }
+
+        }
+        // 循环 ab 分组创建广告组和广告
+        for (const configGroupName of configGroupNameList) {
+            // 广告组和广告类型组合为新后台的新广告组
+            if (_.indexOf(configGroupList, configGroupName) === -1) {
+                configLength--;
+
+            }
+
+        }
+
+        if (adLength !== configLength) {
+            console.log('packageName2: ', packageName);
+            console.log('device2: ', device);
+        }
+
+    }
+
+}
+
 module.exports = {
     readConfigVersionGroup,
-    readAdVersionGroup
+    readAdVersionGroup,
+    testVersionGroup
 };

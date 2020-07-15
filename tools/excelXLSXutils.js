@@ -13,6 +13,7 @@ function readXLSX(path) {
 // 解析读到的 XLSX 对象，返回一个 XLSX 表的行数据对象列表
 async function _readXLSXFile(xlsxName, XLSXDir) {
     const filePath = `${XLSXDir}/${xlsxName}`;
+    // console.log('filePath：' + filePath);
   
     const rowDataList = await readXLSX(filePath);
   

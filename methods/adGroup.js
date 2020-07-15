@@ -168,26 +168,9 @@ async function getAd_IDControlHash(XMLDir, project) {
 
             const channel = item.channel.toLowerCase();
             const adType = item.adType.toLowerCase();
-
-            const channelList = [
-                'facebook', 'unity', 'aol', 'fbhb', 'admob', 'mopub', 'tiktok', 'vungle', 'applovin',
-                'ironsource', 'mobvista', 'fyber', 'tapjoy', 'chartboost', 'inmobi', 'adcolony',
-            ];
-
-            let newChannel = channel;
             // 忽略广告平台后面的数字
-            _.each(channelList, (channelItem) => {
-                if (channel.indexOf(channelItem) !== -1) {
-                    newChannel = channelItem;
+            const newChannel = channel.replace(/\d+$/, '');
 
-                }
-
-            });
-            // fbhb 渠道即为 facebook
-            if (newChannel === 'fbhb') {
-                newChannel = 'facebook';
-
-            }
             // adomb 是拼写错误，即 admob
             if (newChannel !== 'adomb') {
                 // 广告 placementID

@@ -24,6 +24,7 @@ async function readProductGroup(DefineDir) {
         }
     
         try {
+            // console.log('productGroupVo: ', productGroupVo);
             await ProductGroupModel.create(productGroupVo);
     
         } catch (e) {

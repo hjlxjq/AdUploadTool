@@ -223,9 +223,15 @@ async function readBaseConfig(DefineDir) {
     for (const baseConfig of baseConfigList) {
         const { key, value, description } = baseConfig;
 
+        let newValue = value;
+        if (_.isUndefined(value)) {
+            newValue = '';
+        }
+
+
         // 基础常量对象
         const baseConfigVo = {
-            key, value: value || '', description, test: 0, active: 1
+            key, value: newValue, description, test: 0, active: 1
         };
 
         try {

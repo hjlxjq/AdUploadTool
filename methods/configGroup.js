@@ -143,8 +143,13 @@ async function createConfig(configGroupId, configDataList = []) {
     for (const configData of configDataList) {
         const { key, value, description } = configData;
 
+        let newValue = value;
+        if (_.isUndefined(value)) {
+            newValue = '';
+        }
+
         const configVo = {
-            key, value: value || '', description, configGroupId, active: 1
+            key, value: newValue, description, configGroupId, active: 1
         };
 
         try {

@@ -76,8 +76,9 @@ async function getAdTypeHash() {
 }
 
 // 获取版本条件分组哈希
-async function getVersionGroupHash(clientPackage, productNameHashHash, type) {
-    const versionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
+async function getVersionGroupHash(clientPackage, productNameHashHash) {
+    const adVersionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
+    const gameVersionGroupHashHash = {};    // 键为 应用主键，值为版本条件分组哈希
 
     for (const item of clientPackage) {
         if (!item.status) continue;
@@ -85,13 +86,6 @@ async function getVersionGroupHash(clientPackage, productNameHashHash, type) {
         const { device, condition, groupName, config } = item;
         let packageName = item.packageName;
         let nationCode = null;
-
-        let group = groupName;
-        // type 为 0 为广告，1 为游戏常量
-        if (type === 1) {
-            group = config;
-
-        }
 
         // 纸牌有个例外的包名
         if (packageName !== 'Classic-5xing') {
@@ -116,22 +110,43 @@ async function getVersionGroupHash(clientPackage, productNameHashHash, type) {
         // 获取应用主键
         const productId = await getProductId(device, packageName);
 
-        if (!versionGroupHashHash[productId]) {
-            versionGroupHashHash[productId] = {};
+        if (!adVersionGroupHashHash[productId]) {
+            adVersionGroupHashHash[productId] = {};
 
         }
-        if (!versionGroupHashHash[productId][condition]) {
-            versionGroupHashHash[productId][condition] = {};
+        if (!adVersionGroupHashHash[productId][condition]) {
+            adVersionGroupHashHash[productId][condition] = {};
 
         }
-        if (!versionGroupHashHash[productId][condition][group]) {
-            versionGroupHashHash[productId][condition][group] = [];
+        if (!adVersionGroupHashHash[productId][condition][groupName]) {
+            adVersionGroupHashHash[productId][condition][groupName] = [];
 
         }
-        versionGroupHashHash[productId][condition][group].push(nationCode);
+        adVersionGroupHashHash[productId][condition][groupName].push(nationCode);
+
+        if (!gameVersionGroupHashHash[productId]) {
+            gameVersionGroupHashHash[productId] = {};
+
+        }
+        if (!gameVersionGroupHashHash[productId][condition]) {
+            gameVersionGroupHashHash[productId][condition] = {};
+
+        }
+        if (!gameVersionGroupHashHash[productId][condition][config]) {
+            gameVersionGroupHashHash[productId][condition][config] = [];
+
+        }
+        gameVersionGroupHashHash[productId][condition][config].push(nationCode);
+        // if (!gameVersionGroupHashHash[productId]) {
+        //     gameVersionGroupHashHash[productId] = {};
+
+        // }
+        // if (nationCode === null) {
+        //     gameVersionGroupHashHash[productId][condition] = config;
+        // }
 
     }
-    return versionGroupHashHash;
+    return { adVersionGroupHashHash, gameVersionGroupHashHash };
 
 }
 
@@ -265,7 +280,7 @@ async function getConditionHash(XMLDir, project) {
 
 // 创建 ab 测试分组表
 async function createAdAbTestGroup(
-    productId, versionGroupId, groupWeight, adTypeHash, ad_IDControlHashHash,
+    productId, versionGroupId, groupWeight, gameGroupWeight, adTypeHash, ad_IDControlHashHash,
     name = 'default', begin = -1, end = -1
 ) {
     // ab 测试分组表模型
@@ -274,10 +289,13 @@ async function createAdAbTestGroup(
     const AbTestMapModel = model.abTestMap;
     // native 模板配置组表模型
     const NativeTmplConfGroupModel = model.nativeTmplConfGroup;
+    // 常量组表模型
+    const ConfigGroupModel = model.configGroup;
     // 广告组表模型
     const AdGroupModel = model.adGroup;
 
     const { toGroup } = groupWeight;
+    const { toGroup: configGroupName } = gameGroupWeight
 
     // 查找 native 模板配置组
     const nativeTmplConfGroupVo = await NativeTmplConfGroupModel.findOne({
@@ -289,6 +307,13 @@ async function createAdAbTestGroup(
     const defaultNativeTmplConfGroupVo = await NativeTmplConfGroupModel.findOne({
         where: {
             name: 'default', productId
+        }
+    });
+
+    // 查找常量组
+    const configGroupVo = await ConfigGroupModel.findOne({
+        where: {
+            name: configGroupName, type: 0, productId
         }
     });
 
@@ -307,7 +332,7 @@ async function createAdAbTestGroup(
 
     const abTestGroupVo = {
         name, begin, end, description,
-        configGroupId: undefined, nativeTmplConfGroupId, versionGroupId, active: 1
+        configGroupId: configGroupVo.id, nativeTmplConfGroupId, versionGroupId, active: 1
     }
     // 查找或创建 ab 测试分组
     const [currentAbTestGroupVo] = await AbTestGroupModel.findOrCreate({
@@ -353,15 +378,26 @@ async function createAdAbTestGroup(
 
 // 批量创建 ab 测试分组表
 async function createAdAbTestGroupList(
-    productId, versionGroupId, groupWeightList, adTypeHash, ad_IDControlHashHash
+    productId, versionGroupId, groupWeightList, gameGroupWeightList, adTypeHash, ad_IDControlHashHash
 ) {
     // 创建默认 ab 测试分组
     const defaultGroupWeight = groupWeightList.shift();
-    await createAdAbTestGroup(productId, versionGroupId, defaultGroupWeight, adTypeHash, ad_IDControlHashHash);
+    const defaultGameGroupWeight = gameGroupWeightList.shift();
+    await createAdAbTestGroup(
+        productId, versionGroupId, defaultGroupWeight, defaultGameGroupWeight, adTypeHash, ad_IDControlHashHash
+    );
 
     // 创建所有 ab 测试分组
     const groupNum = groupWeightList.length;
     if (groupNum > 1) {
+
+        // 获取广告常量分组
+        let gameGroupWeight = defaultGameGroupWeight;
+        if (!_.isEmpty(gameGroupWeightList)) {
+            gameGroupWeight = gameGroupWeightList[0];
+
+        }
+
         // 分组后缀，默认最大 26 个字母
         const nameList = [
             'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
@@ -379,7 +415,8 @@ async function createAdAbTestGroupList(
             const abTestGroupName = 'group_' + nameList[i];
 
             await createAdAbTestGroup(
-                productId, versionGroupId, groupWeight, adTypeHash, ad_IDControlHashHash, abTestGroupName, begin, end
+                productId, versionGroupId, groupWeight, gameGroupWeight, adTypeHash,
+                ad_IDControlHashHash, abTestGroupName, begin, end
             );
 
             // 范围叠加
@@ -487,22 +524,35 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
     const groupWeightHash = await getGroupWeightHash(XMLDir, project);
     // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
     const conditionHash = await getConditionHash(XMLDir, project);
-    // ClientPackage xml 表读取的广告版本条件分组哈希
-    const versionGroupHashHash = await getVersionGroupHash(clientPackage, productNameHashHash, 0);
+    // ClientPackage xml 表读取的版本条件分组哈希
+    const { adVersionGroupHashHash, gameVersionGroupHashHash }
+        = await getVersionGroupHash(clientPackage, productNameHashHash);
+
     // 获取所有的广告类型哈希表
     const adTypeHash = await getAdTypeHash();
 
     // 应用主键列表
-    const productIdList = _.keys(versionGroupHashHash);
+    const productIdList = _.keys(adVersionGroupHashHash);
 
     // 遍历应用
     for (const productId of productIdList) {
-        const conditionList = _.keys(versionGroupHashHash[productId]);
+        const conditionList = _.keys(adVersionGroupHashHash[productId]);
 
         // 遍历版本
         for (const condition of conditionList) {
-            const groupNameList = _.keys(versionGroupHashHash[productId][condition]);
+            const groupNameList = _.keys(adVersionGroupHashHash[productId][condition]);
 
+            const configGroupName = gameVersionGroupHashHash[productId][condition];
+            if (!configGroupName) {
+                console.log('productId: ', productId);
+                console.log('condition: ', condition);
+
+            }
+
+            const gameGroupWeightList = (_.cloneDeep(groupWeightHash[configGroupName])) || [{
+                toGroup: configGroupName,
+                weightGroup: '-1'
+            }];
             // 遍历 ab 分组
             for (let groupName of groupNameList) {
                 // xml 表中未配置，则取默认值
@@ -512,47 +562,79 @@ async function readAdVersionGroup(DefineDir, XMLDir, project) {
                     weightGroup: '-1'
                 }];
 
-                let nationCodeList = versionGroupHashHash[productId][condition][groupName];
-                let name = `${condition}_${groupName}`;
-                let description = `${condition}_${groupName}`;
+                let nationCodeList = _.cloneDeep(adVersionGroupHashHash[productId][condition][groupName]);
+                const name = `${condition}_${groupName}`;
+                const description = name;
                 const begin = conditionHash[condition] || conditionHash['default'];
 
                 // 存在 null，表示存在没有国家分组
                 if (_.indexOf(nationCodeList, null) !== -1) {
-                    if (_.isEmpty(nationCodeList)) {
-                        console.log(`nationCodeList: `, nationCodeList);
+                    nationCodeList = _.compact(nationCodeList);
+
+                    // 版本条件分组表对象
+                    const noVersionGroupVo = {
+                        name: name + `_native`, begin, description, type: 0,
+                        code: '[]', include: 1, productId, active: 1
+                    };
+
+                    if (condition === 'default') {
+                        noVersionGroupVo.name = 'default';
+                        noVersionGroupVo.description = '默认组';
 
                     }
-                    nationCodeList = [];
+
+                    if (!noVersionGroupVo.name) {
+                        console.log('noVersionGroupVo: ', noVersionGroupVo);
+                    }
+
+                    // 查找或创建版本条件分组
+                    const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
+                        where: {
+                            name: noVersionGroupVo.name, type: 0, productId
+                        }, defaults: noVersionGroupVo
+                    });
+
+                    // 如果首次，则创建广告
+                    if (created) {
+                        const versionGroupId = currentVersionGroupVo.id;
+
+                        await createAdAbTestGroupList(
+                            productId, versionGroupId, _.cloneDeep(groupWeightList),
+                            _.cloneDeep(gameGroupWeightList), adTypeHash, ad_IDControlHashHash
+                        );
+
+                    }
 
                 }
-                // 版本条件分组的国家代码列表 json 字符串
-                const code = JSON.stringify(nationCodeList);
 
-                if (condition === 'default' && _.isEmpty(nationCodeList)) {
-                    name = 'default';
-                    description = '默认组';
+                if (!_.isEmpty(nationCodeList)) {
+                    // 版本条件分组的国家代码列表 json 字符串
+                    const code = JSON.stringify(nationCodeList);
 
-                }
+                    // 版本条件分组表对象
+                    const versionGroupVo = {
+                        name, begin, description, type: 0, code, include: 1, productId, active: 1
+                    };
+                    if (!name) {
+                        console.log('versionGroupVo: ', versionGroupVo);
+                    }
+                    // 查找或创建版本条件分组
+                    const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
+                        where: {
+                            name, type: 0, productId
+                        }, defaults: versionGroupVo
+                    });
 
-                // 版本条件分组表对象
-                const versionGroupVo = {
-                    name, begin, description, type: 0, code, include: 1, productId, active: 1
-                };
-                // 查找或创建版本条件分组
-                const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
-                    where: {
-                        name, type: 0, productId
-                    }, defaults: versionGroupVo
-                });
+                    // 如果首次，则创建广告
+                    if (created) {
+                        const versionGroupId = currentVersionGroupVo.id;
 
-                // 如果首次，则创建广告
-                if (created) {
-                    const versionGroupId = currentVersionGroupVo.id;
+                        await createAdAbTestGroupList(
+                            productId, versionGroupId, _.cloneDeep(groupWeightList), _.cloneDeep(gameGroupWeightList),
+                            adTypeHash, ad_IDControlHashHash
+                        );
 
-                    await createAdAbTestGroupList(
-                        productId, versionGroupId, groupWeightList, adTypeHash, ad_IDControlHashHash
-                    );
+                    }
 
                 }
 
@@ -580,21 +662,102 @@ async function readConfigVersionGroup(DefineDir, XMLDir, project) {
     // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
     const conditionHash = await getConditionHash(XMLDir, project);
     // ClientPackage xml 表读取的广告版本条件分组哈希
-    const versionGroupHashHash = await getVersionGroupHash(clientPackage, productNameHashHash, 1);
+    const { gameVersionGroupHashHash } = await getVersionGroupHash(clientPackage, productNameHashHash);
 
     // 应用主键列表
-    const productIdList = _.keys(versionGroupHashHash);
+    const productIdList = _.keys(gameVersionGroupHashHash);
 
     // 遍历应用
     for (const productId of productIdList) {
-        const conditionList = _.keys(versionGroupHashHash[productId]);
+        const conditionList = _.keys(gameVersionGroupHashHash[productId]);
 
         // 遍历版本
         for (const condition of conditionList) {
-            const groupNameList = _.keys(versionGroupHashHash[productId][condition]);
+            const configGroupName = gameVersionGroupHashHash[productId][condition];
+            // xml 表中未配置，则取默认值
+            // 克隆数组，后面更改了数组
+            const groupWeightList = (_.cloneDeep(groupWeightHash[configGroupName])) || [{
+                toGroup: configGroupName,
+                weightGroup: '-1'
+            }];
 
+            let name = `${condition}`;
+            let description = name;
+            const begin = conditionHash[condition] || conditionHash['default'];
+
+            if (condition === 'default') {
+                name = 'default';
+                description = '默认组';
+
+            }
+
+            // 版本条件分组表对象
+            const versionGroupVo = {
+                name, begin, description, type: 1, code: '[]', include: 1, productId, active: 1
+            };
+            // 查找或创建版本条件分组
+            const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
+                where: {
+                    name, type: 1, productId
+                }, defaults: versionGroupVo
+            });
+
+            // 如果首次，则创建广告
+            if (created) {
+                const versionGroupId = currentVersionGroupVo.id;
+                await createConfigAbTestGroupList(productId, versionGroupId, _.cloneDeep(groupWeightList));
+
+            }
+
+        }
+
+    }
+
+}
+
+// 导入广告版本条件分组
+async function testVersionGroup(DefineDir, XMLDir, project) {
+    console.log('begin execute function: readAdVersionGroup()');
+
+    // 版本条件分组表模型
+    const VersionGroupModel = model.versionGroup;
+
+    // 读取 ClientPackage xml 表
+    const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
+    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+    const productNameHashHash = await getProductNameHash(DefineDir);
+    // 广告 xml 表读取的哈希表，键为广告组，值为广告数据
+    const ad_IDControlHashHash = await getAd_IDControlHash(XMLDir, project);
+    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
+    const groupWeightHash = await getGroupWeightHash(XMLDir, project);
+    // condition xml 表读取的哈希表，获取 版本条件分组版本范围哈希，键为 condition，值为开始范围
+    const conditionHash = await getConditionHash(XMLDir, project);
+    // ClientPackage xml 表读取的版本条件分组哈希
+    const { adVersionGroupHashHash, gameVersionGroupHashHash }
+        = await getVersionGroupHash(clientPackage, productNameHashHash);
+
+    // 获取所有的广告类型哈希表
+    const adTypeHash = await getAdTypeHash();
+
+    // 应用主键列表
+    const productIdList = _.keys(adVersionGroupHashHash);
+
+    // 遍历应用
+    for (const productId of productIdList) {
+        const conditionList = _.keys(adVersionGroupHashHash[productId]);
+
+        // 遍历版本
+        for (const condition of conditionList) {
+            const groupNameList = _.keys(adVersionGroupHashHash[productId][condition]);
+            const configGroupNameList = gameVersionGroupHashHash[productId][condition];
+
+
+            const gameGroupWeightList = (_.cloneDeep(groupWeightHash[configGroupName])) || [{
+                toGroup: configGroupName,
+                weightGroup: '-1'
+            }];
             // 遍历 ab 分组
-            for (const groupName of groupNameList) {
+            for (let groupName of groupNameList) {
                 // xml 表中未配置，则取默认值
                 // 克隆数组，后面更改了数组
                 const groupWeightList = (_.cloneDeep(groupWeightHash[groupName])) || [{
@@ -602,39 +765,79 @@ async function readConfigVersionGroup(DefineDir, XMLDir, project) {
                     weightGroup: '-1'
                 }];
 
-                let nationCodeList = versionGroupHashHash[productId][condition][groupName];
-                let name = `${condition}_${groupName}`;
-                let description = `${condition}_${groupName}`;
+                let nationCodeList = _.cloneDeep(adVersionGroupHashHash[productId][condition][groupName]);
+                const name = `${condition}_${groupName}`;
+                const description = name;
                 const begin = conditionHash[condition] || conditionHash['default'];
+
                 // 存在 null，表示存在没有国家分组
                 if (_.indexOf(nationCodeList, null) !== -1) {
-                    nationCodeList = [];
+                    nationCodeList = _.compact(nationCodeList);
+
+                    // 版本条件分组表对象
+                    const noVersionGroupVo = {
+                        name: name + `_native`, begin, description, type: 0,
+                        code: '[]', include: 1, productId, active: 1
+                    };
+
+                    if (condition === 'default') {
+                        noVersionGroupVo.name = 'default';
+                        noVersionGroupVo.description = '默认组';
+
+                    }
+
+                    if (!noVersionGroupVo.name) {
+                        console.log('noVersionGroupVo: ', noVersionGroupVo);
+                    }
+
+                    // 查找或创建版本条件分组
+                    const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
+                        where: {
+                            name: noVersionGroupVo.name, type: 0, productId
+                        }, defaults: noVersionGroupVo
+                    });
+
+                    // 如果首次，则创建广告
+                    if (created) {
+                        const versionGroupId = currentVersionGroupVo.id;
+
+                        await createAdAbTestGroupList(
+                            productId, versionGroupId, _.cloneDeep(groupWeightList),
+                            _.cloneDeep(gameGroupWeightList), adTypeHash, ad_IDControlHashHash
+                        );
+
+                    }
 
                 }
-                // 版本条件分组的国家代码列表 json 字符串
-                const code = JSON.stringify(nationCodeList);
 
-                if (condition === 'default' && _.isEmpty(nationCodeList)) {
-                    name = 'default';
-                    description = '默认组';
+                if (!_.isEmpty(nationCodeList)) {
+                    // 版本条件分组的国家代码列表 json 字符串
+                    const code = JSON.stringify(nationCodeList);
 
-                }
+                    // 版本条件分组表对象
+                    const versionGroupVo = {
+                        name, begin, description, type: 0, code, include: 1, productId, active: 1
+                    };
+                    if (!name) {
+                        console.log('versionGroupVo: ', versionGroupVo);
+                    }
+                    // 查找或创建版本条件分组
+                    const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
+                        where: {
+                            name, type: 0, productId
+                        }, defaults: versionGroupVo
+                    });
 
-                // 版本条件分组表对象
-                const versionGroupVo = {
-                    name, begin, description, type: 1, code, include: 1, productId, active: 1
-                };
-                // 查找或创建版本条件分组
-                const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
-                    where: {
-                        name, type: 1, productId
-                    }, defaults: versionGroupVo
-                });
+                    // 如果首次，则创建广告
+                    if (created) {
+                        const versionGroupId = currentVersionGroupVo.id;
 
-                // 如果首次，则创建广告
-                if (created) {
-                    const versionGroupId = currentVersionGroupVo.id;
-                    await createConfigAbTestGroupList(productId, versionGroupId, groupWeightList);
+                        await createAdAbTestGroupList(
+                            productId, versionGroupId, _.cloneDeep(groupWeightList), _.cloneDeep(gameGroupWeightList),
+                            adTypeHash, ad_IDControlHashHash
+                        );
+
+                    }
 
                 }
 

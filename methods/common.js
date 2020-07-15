@@ -82,18 +82,19 @@ async function readChannelAndType(XMLDir, project) {
         ];
 
         // 忽略广告平台后面的数字
-        _.each(channelList, (channelItem) => {
-            if (channel.indexOf(channelItem) !== -1) {
-                channel = channelItem;
+        channel = channel.replace(/\d+$/, '');
+        // _.each(channelList, (channelItem) => {
+        //     if (channel.indexOf(channelItem) !== -1) {
+        //         channel = channelItem;
 
-            }
+        //     }
 
-        });
+        // });
         // fbhb 渠道即为 facebook
-        if (channel === 'fbhb') {
-            channel = 'facebook';
+        // if (channel === 'fbhb') {
+        //     channel = 'facebook';
 
-        }
+        // }
         // adomb 是拼写错误，即 admob
         if (channel !== 'adomb') {
             channels.push(channel);

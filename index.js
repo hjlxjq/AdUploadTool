@@ -25,14 +25,14 @@ const project = argv[2] || 'word';
 console.log(`project: ${project}`);
 
 async function init() {
-    await readChannelAndType(XMLDir, project);
-    await readNativeTmpl(XMLDir, project);
-    await readBaseConfig(DefineDir, project);
-    await readProduct(DefineDir, XMLDir, project);
-    await readConfigGroup(DefineDir, XMLDir, project);
-    await readAdGroup(DefineDir, XMLDir, project);
-    await readNativeTmplConfGroup(DefineDir, XMLDir, project);
-    await readConfigVersionGroup(DefineDir, XMLDir, project);
+    // await readChannelAndType(XMLDir, project);
+    // await readNativeTmpl(XMLDir, project);
+    // await readBaseConfig(DefineDir, project);
+    // await readProduct(DefineDir, XMLDir, project);
+    // await readConfigGroup(DefineDir, XMLDir, project);
+    // await readAdGroup(DefineDir, XMLDir, project);
+    // await readNativeTmplConfGroup(DefineDir, XMLDir, project);
+    // await readConfigVersionGroup(DefineDir, XMLDir, project);
     await readAdVersionGroup(DefineDir, XMLDir, project);
 }
 

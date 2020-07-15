@@ -58,29 +58,53 @@ async function getProductId(platform, packageName) {
 
 // 获取常量组哈希，键为常量组，值为常量数据
 async function getConfigConstantHash(XMLDir, project) {
-    const configConstantHash = {};    // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
+    const gameConfigConstantHash = {};    // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
+    const adConfigConstantHash = {};    // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
 
     try {
         const configConstant = await _readXMLFile('ConfigConstant.xml', XMLDir, project);
+        // 解析基础常量
+        const baseConfigList = await _readXLSXFile('常规常量.xlsx', DefineDir);
+
+        const baseConfigKeys = _.map(baseConfigList, (baseConfig) => {
+            return baseConfig.key;
+
+        });
+        console.log('baseConfigKeys: ', baseConfigKeys);
 
         _.each(configConstant, (item) => {
             if (item.status) {
-                if (!configConstantHash[item.groupName]) {
-                    configConstantHash[item.groupName] = [];
+                if (!gameConfigConstantHash[item.groupName]) {
+                    gameConfigConstantHash[item.groupName] = [];
 
                 }
-                configConstantHash[item.groupName].push({
-                    key: item.key,
-                    value: item.value,
-                    description: item.description
-                });
+                if (!adConfigConstantHash[item.groupName]) {
+                    adConfigConstantHash[item.groupName] = [];
+
+                }
+                if (_.indexOf(baseConfigKeys, item.key) === -1) {
+                    gameConfigConstantHash[item.groupName].push({
+                        key: item.key,
+                        value: item.value,
+                        description: item.description
+                    });
+
+                } else {
+                    adConfigConstantHash[item.groupName].push({
+                        key: item.key,
+                        value: item.value,
+                        description: item.description
+                    });
+
+                }
+
             }
 
         });
 
     } catch (e) { }
 
-    return configConstantHash;
+    return { gameConfigConstantHash, adConfigConstantHash };
 
 }
 
@@ -139,6 +163,32 @@ async function createConfig(configGroupId, configDataList = []) {
 
 }
 
+// 批量创建常量组下常量
+async function createConfigGroup(
+    name, description, type, productId, configConstantHash, defaultConfigGroupId = null
+) {
+    // 常量组表模型
+    const ConfigGroupModel = model.configGroup;
+
+    // 每个应用都存在的默认组
+    const configGroupVo = {
+        name, description, type, productId, dependentId: defaultConfigGroupId, active: 1
+    };
+    // 查找或创建默认常量组
+    const [currentConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
+        where: {
+            name, type, productId
+        }, defaults: configGroupVo
+    });
+
+    // 如果首次，则创建常量
+    if (created) {
+        await createConfig(currentConfigGroupVo.id, configConstantHash[name]);
+
+    }
+
+}
+
 // 导入常量组和常量
 async function readConfigGroup(DefineDir, XMLDir, project) {
     console.log('begin execute function: readConfigGroup()');
@@ -150,7 +200,7 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
     const productNameHashHash = await getProductNameHash(DefineDir);
     // 常量 xml 表读取的哈希表，键为常量组，值为常量数据
-    const configConstantHash = await getConfigConstantHash(XMLDir, project);
+    const { adConfigConstantHash, gameConfigConstantHash } = await getConfigConstantHash(XMLDir, project);
     // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的常量组，值为 ab 分组数组
     const groupWeightHash = await getGroupWeightHash(XMLDir, project);
 
@@ -160,15 +210,21 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
 
         let packageName = item.packageName;
         const { device } = item;
+        let nationCode = null;
 
         // 纸牌有个例外的包名
         if (packageName !== 'Classic-5xing') {
             const packageNameArr = _.split(packageName, '-');
             if (packageNameArr.length > 1) {
-                packageNameArr.pop();
+                nationCode = packageNameArr.pop();
 
             }
             packageName = packageNameArr.join('-');
+
+        }
+        // 只导入不分国家的常量
+        if (nationCode) {
+            continue;
 
         }
         // 导入指定包
@@ -185,22 +241,8 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
 
         // facebook 小游戏没有依赖默认组
         if (device !== 'web') {
-            // 每个应用都存在的默认组
-            const defaultConfigGroupVo = {
-                name: 'default', description: '默认游戏常量组', type: 1, productId, active: 1
-            };
-            // 查找或创建默认常量组
-            const [currentDefaultConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
-                where: {
-                    name: 'default', type: 1, productId
-                }, defaults: defaultConfigGroupVo
-            });
-
-            // 如果首次，则创建常量
-            if (created) {
-                await createConfig(currentDefaultConfigGroupVo.id, configConstantHash['default']);
-
-            }
+            await createConfigGroup('default', '默认游戏常量组', 1, productId, gameConfigConstantHash);
+            await createConfigGroup('default', '默认广告常量组', 0, productId, adConfigConstantHash);
 
         }
 
@@ -212,15 +254,21 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
 
         let packageName = item.packageName;
         const { device } = item;
+        let nationCode = null;
 
         // 纸牌有个例外的包名
         if (packageName !== 'Classic-5xing') {
             const packageNameArr = _.split(packageName, '-');
             if (packageNameArr.length > 1) {
-                packageNameArr.pop();
+                nationCode = packageNameArr.pop();
 
             }
             packageName = packageNameArr.join('-');
+
+        }
+        // 只导入不分国家的常量
+         if (nationCode) {
+            continue;
 
         }
         // 导入指定包
@@ -236,19 +284,31 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
         const productId = await getProductId(device, packageName);
 
         // 默认组主键 id，其他组依赖默认组
-        let defaultConfigGroupId = null;
+        let defaultGameConfigGroupId = null;
+        let defaultAdConfigGroupId = null;
 
         // facebook 小游戏没有依赖默认组
         if (device !== 'web') {
-            // 查找默认组
-            const currentDefaultConfigGroupVo = await ConfigGroupModel.findOne({
+            // 查找游戏默认组
+            const currentDefaultGameConfigGroupVo = await ConfigGroupModel.findOne({
                 where: {
                     name: 'default', type: 1, productId
                 }
             });
 
-            if (!_.isEmpty(currentDefaultConfigGroupVo)) {
-                defaultConfigGroupId = currentDefaultConfigGroupVo.id;
+            if (!_.isEmpty(currentDefaultGameConfigGroupVo)) {
+                defaultGameConfigGroupId = currentDefaultGameConfigGroupVo.id;
+
+            }
+            // 查找广告默认组
+            const currentDefaultAdConfigGroupVo = await ConfigGroupModel.findOne({
+                where: {
+                    name: 'default', type: 0, productId
+                }
+            });
+
+            if (!_.isEmpty(currentDefaultAdConfigGroupVo)) {
+                defaultAdConfigGroupId = currentDefaultAdConfigGroupVo.id;
 
             }
 
@@ -264,24 +324,12 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
             const configGroupName = groupWeight.toGroup;
 
             if (configGroupName !== 'default') {
-                const configDataList = configConstantHash[configGroupName];
-
-                const configGroupVo = {
-                    name: configGroupName, description: configGroupName,
-                    dependentId: defaultConfigGroupId, type: 1, productId, active: 1
-                };
-                // 查找或创建常量组
-                const [currentConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
-                    where: {
-                        name: configGroupName, type: 1, productId
-                    }, defaults: configGroupVo
-                });
-
-                // 如果首次，则创建常量
-                if (created) {
-                    await createConfig(currentConfigGroupVo.id, configDataList);
-
-                }
+                await createConfigGroup(
+                    configGroupName, configGroupName, 1, productId, gameConfigConstantHash, defaultGameConfigGroupId
+                );
+                await createConfigGroup(
+                    configGroupName, configGroupName, 0, productId, adConfigConstantHash, defaultAdConfigGroupId
+                );
 
             }
 

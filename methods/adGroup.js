@@ -251,6 +251,16 @@ async function createAd(
             name = placementIDArr[placementIDArr.length - 1];
 
         }
+
+        let newChannel = adChannel;
+        if (adChannel === 'fullfacebook' || adChannel === 'fbhb' || adChannel === 'fullfbhb') {
+            newChannel = 'facebook';
+
+        }
+        if (adChannel === 'admob-mediation') {
+            newChannel = 'admob';
+            
+        }
         if (!_.isEmpty(adNameHashHash[adChannel]) && adNameHashHash[adChannel][placementID]) {
             name = adNameHashHash[adChannel][placementID];
 

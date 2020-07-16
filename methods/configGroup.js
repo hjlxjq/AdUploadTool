@@ -11,8 +11,6 @@ const model = require('../tools/model');
 async function getProductNameHash(DefineDir) {
     // 去掉第一行的描述
     const productDataList = await _readXLSXFile('广告配置导入模板.xlsx', DefineDir, 1);
-    // 去掉第一行的描述
-    productDataList.shift();
 
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
     const productNameHashHash = {};

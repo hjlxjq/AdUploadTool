@@ -2,7 +2,7 @@ const db = require('../tools/db');
 
 module.exports = db.defineModel('configGroup', {
     name: {
-        type: db.STRING(20),
+        type: db.STRING(50),
         allowNull: false,
         unique: 'idx_name'
     },

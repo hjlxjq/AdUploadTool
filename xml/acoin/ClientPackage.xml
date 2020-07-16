@@ -10,7 +10,7 @@
   <Author>Microsoft Office 用户</Author>
   <LastAuthor>Microsoft Office User</LastAuthor>
   <Created>2018-09-27T09:25:24Z</Created>
-  <LastSaved>2020-07-14T08:10:31Z</LastSaved>
+  <LastSaved>2020-07-16T06:34:50Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -20,10 +20,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>15740</WindowHeight>
-  <WindowWidth>28240</WindowWidth>
-  <WindowTopX>4500</WindowTopX>
-  <WindowTopY>4920</WindowTopY>
+  <WindowHeight>15040</WindowHeight>
+  <WindowWidth>27040</WindowWidth>
+  <WindowTopX>3140</WindowTopX>
+  <WindowTopY>2220</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -755,7 +755,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:StyleID="s64">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1" ss:StyleID="s64">
     <Cell><Data ss:Type="String">com.acoin.ballz.bricks.breaker-RU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s65"><Data ss:Type="String">BallsRUAB3</Data><NamedCell
@@ -767,10 +767,10 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1" ss:StyleID="s64">
+   <Row ss:AutoFitHeight="0" ss:StyleID="s64">
     <Cell><Data ss:Type="String">com.acoin.ballz.bricks.breaker-IT</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITAB3</Data><NamedCell
+    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITA3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1026,7 +1026,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">Condition4</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:StyleID="s64">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1" ss:StyleID="s64">
     <Cell><Data ss:Type="String">com.acoin.ballz.bricks.breaker-RU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s65"><Data ss:Type="String">BallsRUAB3</Data><NamedCell
@@ -1039,10 +1039,10 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">Condition4</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1" ss:StyleID="s64">
+   <Row ss:AutoFitHeight="0" ss:StyleID="s64">
     <Cell><Data ss:Type="String">com.acoin.ballz.bricks.breaker-IT</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITAB3</Data><NamedCell
+    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITA3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1304,7 +1304,7 @@
     <Cell><Data ss:Type="String">Condition5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:StyleID="s64">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1" ss:StyleID="s64">
     <Cell><Data ss:Type="String">com.acoin.ballz.bricks.breaker-RU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s65"><Data ss:Type="String">BallsRUAB3</Data><NamedCell
@@ -1317,10 +1317,10 @@
     <Cell><Data ss:Type="String">Condition5</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1" ss:StyleID="s64">
+   <Row ss:AutoFitHeight="0" ss:StyleID="s64">
     <Cell><Data ss:Type="String">com.acoin.ballz.bricks.breaker-IT</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITAB3</Data><NamedCell
+    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITA3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1502,7 +1502,7 @@
     <Cell ss:StyleID="s64"><Data ss:Type="String">Condition7</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s64"><Data ss:Type="String">com.acoin.ballz.bricks.breaker-RU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s65"><Data ss:Type="String">BallsRUAB3</Data><NamedCell
@@ -1518,10 +1518,10 @@
     <Cell ss:StyleID="s64"><Data ss:Type="String">Condition7</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s64"><Data ss:Type="String">com.acoin.ballz.bricks.breaker-IT</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITAB3</Data><NamedCell
+    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITA3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1658,10 +1658,10 @@
     <Cell ss:StyleID="s64"><Data ss:Type="String">Condition8</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s64"><Data ss:Type="String">com.acoin.ballz.bricks.breaker-IT</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITAB3</Data><NamedCell
+    <Cell ss:StyleID="s65"><Data ss:Type="String">BallsITA3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1674,7 +1674,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">Condition8</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell ss:StyleID="s64"><Data ss:Type="String">com.acoin.ballz.bricks.breaker-RU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s65"><Data ss:Type="String">BallsRUAB3</Data><NamedCell
@@ -1723,7 +1723,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>123</ActiveRow>
+     <ActiveRow>108</ActiveRow>
      <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
@@ -1734,7 +1734,7 @@
    xmlns="urn:schemas-microsoft-com:office:excel">
    <AutoFilterColumn x:Type="Custom">
     <AutoFilterCondition x:Operator="Equals"
-     x:Value="com.acoin.ballz.bricks.breaker-RU"/>
+     x:Value="com.acoin.ballz.bricks.breaker-IT"/>
    </AutoFilterColumn>
   </AutoFilter>
  </Worksheet>

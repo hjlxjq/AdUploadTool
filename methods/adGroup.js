@@ -185,12 +185,17 @@ async function getAd_IDControlHash(XMLDir, project) {
 
                 }
                 if (!ad_IDControlHashHash[groupName][adType]) {
-                    ad_IDControlHashHash[groupName][adType] = [];
+                    ad_IDControlHashHash[groupName][adType] = {};
 
                 }
-                ad_IDControlHashHash[groupName][adType].push({
+                if (!ad_IDControlHashHash[groupName][adType][newChannel]) {
+                    ad_IDControlHashHash[groupName][adType][newChannel] = [];
+
+                }
+                ad_IDControlHashHash[groupName][adType][newChannel].push({
                     placementID, ecpm, loader, subloader, interval, weight, adChannel: newChannel, bidding
                 });
+
             }
         }
 
@@ -229,52 +234,72 @@ async function getGroupWeightHash(XMLDir, project) {
 
 // 批量创建广告组下广告
 async function createAd(
-    adGroupId, adTypeId, productId, adChannelHash, adDataList, adNameHashHash
+    adGroupId, adTypeId, productId, adChannelHash, adDataHash, adNameHashHash
 ) {
     const AdModel = model.ad;    // 广告表模型
 
+    // 广告渠道列表
+    const adChannelList = _.keys(adDataHash);
+
     // 批量创建广告
-    for (const adData of adDataList) {
-        const { placementID, ecpm, loader, subloader, interval, weight, adChannel, bidding } = adData;
+    for (const adChannel of adChannelList) {
+        // 渠道下的广告列表
+        const adDataList = adDataHash[adChannel];
+        // 同渠道下名称不相同
+        const nameList = [];
 
-        const adChannelId = adChannelHash[adChannel];
-        if (!adChannelId) {
-            console.log(`adChannel: ${adChannel}`);
+        for (const adData of adDataList) {
+            const { placementID, ecpm, loader, subloader, interval, weight, adChannel, bidding } = adData;
 
-        }
-        let name = placementID;
+            const adChannelId = adChannelHash[adChannel];
+            if (!adChannelId) {
+                console.log(`adChannel: ${adChannel}`);
 
-        if (adChannel === 'unity') {
-            const placementIDArr = _.split(placementID, '$');
-            name = placementIDArr[placementIDArr.length - 1];
+            }
+            let name = placementID;
 
-        }
+            if (adChannel === 'unity') {
+                const placementIDArr = _.split(placementID, '$');
+                name = placementIDArr[placementIDArr.length - 1];
 
-        let newChannel = adChannel;
-        if (adChannel === 'fullfacebook' || adChannel === 'fbhb' || adChannel === 'fullfbhb') {
-            newChannel = 'facebook';
+            }
 
-        }
-        if (adChannel === 'admob-mediation') {
-            newChannel = 'admob';
-            
-        }
-        if (!_.isEmpty(adNameHashHash[adChannel]) && adNameHashHash[adChannel][placementID]) {
-            name = adNameHashHash[adChannel][placementID];
+            let newChannel = adChannel;
+            if (adChannel === 'fullfacebook' || adChannel === 'fbhb' || adChannel === 'fullfbhb') {
+                newChannel = 'facebook';
 
-        }
-        const adVo = {
-            name, placementID, ecpm, loader, subloader, interval, weight, bidding,
-            adChannelId, adTypeId, adGroupId, productId, active: 1
-        };
+            }
+            if (adChannel === 'admob-mediation') {
+                newChannel = 'admob';
 
-        try {
-            await AdModel.create(adVo);
+            }
+            if (!_.isEmpty(adNameHashHash[adChannel]) && adNameHashHash[adChannel][placementID]) {
+                name = adNameHashHash[adChannel][placementID];
 
-        } catch (e) {
-            if (e.name !== 'SequelizeUniqueConstraintError') {
-                console.log('adVo: ', adVo);
-                throw e;
+            }
+            // 广告名称唯一
+            if (_.indexOf(nameList, name) === -1) {
+                nameList.push(name);
+
+                // 广告名称存在，则直接使用广告 ID
+            } else {
+                name = placementID;
+
+            }
+            const adVo = {
+                name, placementID, ecpm, loader, subloader, interval, weight, bidding,
+                adChannelId, adTypeId, adGroupId, productId, active: 1
+            };
+
+            try {
+                await AdModel.create(adVo);
+
+            } catch (e) {
+                if (e.name !== 'SequelizeUniqueConstraintError') {
+                    console.log('adVo: ', adVo);
+                    throw e;
+                }
+
             }
 
         }
@@ -371,10 +396,10 @@ async function readAdGroup(DefineDir, XMLDir, project) {
 
                     // 如果首次，则创建广告
                     if (created) {
-                        const adDataList = ad_IDControlHash[adType];
+                        const adDataHash = ad_IDControlHash[adType];
                         const currentAdGroupId = currentAdGroupVo.id;
                         await createAd(
-                            currentAdGroupId, adTypeId, productId, adChannelHash, adDataList, adNameHashHash
+                            currentAdGroupId, adTypeId, productId, adChannelHash, adDataHash, adNameHashHash
                         );
                     }
                 }

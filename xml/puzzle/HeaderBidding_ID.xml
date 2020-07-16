@@ -7,16 +7,16 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Microsoft Office 用户</Author>
-  <LastAuthor>Mafeng</LastAuthor>
+  <LastAuthor>fushuang</LastAuthor>
   <Created>2016-07-28T12:41:31Z</Created>
-  <LastSaved>2017-10-21T08:43:08Z</LastSaved>
+  <LastSaved>2020-07-08T04:15:08Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>8916</WindowHeight>
+  <WindowHeight>8928</WindowHeight>
   <WindowWidth>23040</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
@@ -62,7 +62,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R1C9"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="10" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="12" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="65.400000000000006"
    ss:DefaultRowHeight="16.05">
    <Column ss:AutoFitWidth="0" ss:Width="123.6"/>
@@ -201,6 +201,30 @@
     <Cell><Data ss:Type="String">Tap Color</Data></Cell>
     <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_9</Data></Cell>
+    <Cell><Data ss:Type="String">682072852175616</Data></Cell>
+    <Cell><Data ss:Type="String">682072852175616</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">682072852175616_1135805513469012</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">US-B1-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_10</Data></Cell>
+    <Cell><Data ss:Type="String">682072852175616</Data></Cell>
+    <Cell><Data ss:Type="String">682072852175616</Data></Cell>
+    <Cell><Data ss:Type="String">682072852175616_1135862083463355</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">US-B1-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -219,9 +243,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>7</ActiveRow>
-     <ActiveCol>6</ActiveCol>
-     <RangeSelection>R8C7:R10C7</RangeSelection>
+     <ActiveRow>16</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

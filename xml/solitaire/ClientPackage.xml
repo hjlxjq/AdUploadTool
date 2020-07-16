@@ -10,7 +10,7 @@
   <Author>Microsoft Office 用户</Author>
   <LastAuthor>fushuang</LastAuthor>
   <Created>2016-07-28T12:41:31Z</Created>
-  <LastSaved>2020-07-08T09:16:16Z</LastSaved>
+  <LastSaved>2020-07-15T08:49:51Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -56,10 +56,10 @@
  </Styles>
  <Worksheet ss:Name="工作表1">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R259C7"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R264C7"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="265" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="264" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="60" ss:DefaultRowHeight="16.05">
    <Column ss:AutoFitWidth="0" ss:Width="247.8"/>
    <Column ss:Width="157.19999999999999"/>
@@ -1718,7 +1718,7 @@
     <Cell><Data ss:Type="String">s27New</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.collection.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a23B1NewAdmobB2new</Data><NamedCell
@@ -1729,7 +1729,7 @@
     <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-CA</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a23B1t1NewAdmobB2new</Data><NamedCell
@@ -1740,7 +1740,7 @@
     <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a23B1t1NewAdmobB2new</Data><NamedCell
@@ -1751,7 +1751,7 @@
     <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-FR</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new</Data><NamedCell
@@ -1762,7 +1762,7 @@
     <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-DE</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new</Data><NamedCell
@@ -1773,7 +1773,7 @@
     <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-GB</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new</Data><NamedCell
@@ -2985,69 +2985,76 @@
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
-    <Cell><Data ss:Type="String">com.cardgames.solitaire.tournaments.free.klondike.classic</Data><NamedCell
+    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">Clubtest</Data><NamedCell
+    <Cell><Data ss:Type="String">a23B1NewAdmobB2new1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition109</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-CA</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">a23B1t1NewAdmobB2new1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition109</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-US</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">a23B1t1NewAdmobB2new1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition109</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom</Data></Cell>
-    <Cell><Data ss:Type="String">a23B1NewAdmobB2new1</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">s24new1</Data></Cell>
-    <Cell><Data ss:Type="String">condition109</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-FR</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition109</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-CA</Data></Cell>
-    <Cell><Data ss:Type="String">a23B1t1NewAdmobB2new1</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">s24new1</Data></Cell>
-    <Cell><Data ss:Type="String">condition109</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-DE</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition109</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-US</Data></Cell>
-    <Cell><Data ss:Type="String">a23B1t1NewAdmobB2new1</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">s24new1</Data></Cell>
-    <Cell><Data ss:Type="String">condition109</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-FR</Data></Cell>
-    <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new1</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">s24new1</Data></Cell>
-    <Cell><Data ss:Type="String">condition109</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-DE</Data></Cell>
-    <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new1</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">s24new1</Data></Cell>
-    <Cell><Data ss:Type="String">condition109</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-GB</Data></Cell>
-    <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new1</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">s24new1</Data></Cell>
-    <Cell><Data ss:Type="String">condition109</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.cardgame.collection.fishdom-GB</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">a23B1t2NewAdmobB2new1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition109</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -3076,20 +3083,23 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>266</ActiveRow>
+     <ActiveRow>268</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
-  <AutoFilter x:Range="R1C1:R259C7"
+  <AutoFilter x:Range="R1C1:R264C7"
    xmlns="urn:schemas-microsoft-com:office:excel">
    <AutoFilterColumn x:Type="Custom">
     <AutoFilterCondition x:Operator="Equals"
-     x:Value="com.cardgame.collection.fishdom"/>
+     x:Value="com.cardgames.solitaire.tournaments.free.klondike.classic"/>
    </AutoFilterColumn>
    <AutoFilterColumn x:Index="3" x:Type="Custom">
     <AutoFilterCondition x:Operator="Equals" x:Value="android"/>
+   </AutoFilterColumn>
+   <AutoFilterColumn x:Type="Custom">
+    <AutoFilterCondition x:Operator="Equals" x:Value="TRUE"/>
    </AutoFilterColumn>
   </AutoFilter>
  </Worksheet>

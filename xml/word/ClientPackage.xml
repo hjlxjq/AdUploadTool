@@ -8,9 +8,9 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Microsoft Office 用户</Author>
-  <LastAuthor>Allen-PC</LastAuthor>
+  <LastAuthor>Microsoft Office 用户</LastAuthor>
   <Created>2016-07-28T12:41:31Z</Created>
-  <LastSaved>2020-07-14T07:00:30Z</LastSaved>
+  <LastSaved>2020-07-16T05:10:34Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -21,10 +21,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>9480</WindowHeight>
-  <WindowWidth>20490</WindowWidth>
+  <WindowHeight>16940</WindowHeight>
+  <WindowWidth>27840</WindowWidth>
   <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
+  <WindowTopY>3040</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -32,7 +32,7 @@
   <Style ss:ID="Default" ss:Name="Normal">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -40,7 +40,7 @@
   <Style ss:ID="s62" ss:Name="常规 2">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -48,7 +48,7 @@
   <Style ss:ID="s63" ss:Name="常规 2 2">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -60,7 +60,7 @@
    <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
   </Style>
   <Style ss:ID="s66">
-   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
   </Style>
   <Style ss:ID="s71">
    <Alignment ss:Vertical="Center"/>
@@ -81,13 +81,13 @@
  </Styles>
  <Worksheet ss:Name="工作表1">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R846C7"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R849C7"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="18" ss:ExpandedRowCount="848" x:FullColumns="1"
-   x:FullRows="1" ss:DefaultColumnWidth="60" ss:DefaultRowHeight="15.9375">
+  <Table ss:ExpandedColumnCount="18" ss:ExpandedRowCount="850" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="60" ss:DefaultRowHeight="16">
    <Column ss:AutoFitWidth="0" ss:Width="330"/>
-   <Column ss:AutoFitWidth="0" ss:Width="131.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="131"/>
    <Column ss:AutoFitWidth="0" ss:Width="54"/>
    <Column ss:AutoFitWidth="0" ss:Width="69"/>
    <Column ss:AutoFitWidth="0" ss:Width="168"/>
@@ -399,7 +399,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w22ios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -512,7 +512,7 @@
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.nl</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">w29B</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w29AB2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -2618,7 +2618,7 @@
     <Cell><Data ss:Type="String">condition136</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w22iosA3</Data><NamedCell
@@ -2630,7 +2630,7 @@
     <Cell><Data ss:Type="String">condition138</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es-ES</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w22ios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -2640,7 +2640,7 @@
     <Cell><Data ss:Type="String">b1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es-ES</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w22iosESA3</Data><NamedCell
@@ -3110,7 +3110,7 @@
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.nl</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">w29BNew</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w29AB2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -8783,7 +8783,7 @@
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.nl-NL</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">w29Bt2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w29AB2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -8793,8 +8793,7 @@
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.nl-NL</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">w29Bt2New</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w29AB2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -10150,10 +10149,10 @@
     <Cell><Data ss:Type="String">condition256</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">com.wordgame.puzzle.restaurant.stroy</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">a1_test</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w65</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -10173,23 +10172,51 @@
     <Cell><Data ss:Type="String">condition244</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es</Data></Cell>
-    <Cell><Data ss:Type="String">w22iosAB4</Data></Cell>
-    <Cell><Data ss:Type="String">ios</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">w1</Data></Cell>
-    <Cell><Data ss:Type="String">b1</Data></Cell>
-    <Cell><Data ss:Type="String">condition257</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w22iosAB4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">ios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">b1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition257</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es-ES</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w22iosESAB4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">ios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">b1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition257</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.search-GB</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">w61B3GB</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">w1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SwipeBoardABtest1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">condition255</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es-ES</Data></Cell>
-    <Cell><Data ss:Type="String">w22iosESAB4</Data></Cell>
-    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.restaurant.stroy-US</Data></Cell>
+    <Cell><Data ss:Type="String">w65us</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
     <Cell><Data ss:Type="Boolean">1</Data></Cell>
     <Cell><Data ss:Type="String">w1</Data></Cell>
-    <Cell><Data ss:Type="String">b1</Data></Cell>
-    <Cell><Data ss:Type="String">condition257</Data></Cell>
+    <Cell><Data ss:Type="String">restaurant1</Data></Cell>
+    <Cell><Data ss:Type="String">default</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -10219,25 +10246,18 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>846</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>850</ActiveRow>
+     <ActiveCol>7</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
-  <AutoFilter x:Range="R1C1:R846C7"
+  <AutoFilter x:Range="R1C1:R849C7"
    xmlns="urn:schemas-microsoft-com:office:excel">
    <AutoFilterColumn x:Type="Custom">
-    <AutoFilterOr>
-     <AutoFilterCondition x:Operator="Equals"
-      x:Value="com.wordgame.puzzle.board.es"/>
-     <AutoFilterCondition x:Operator="Equals"
-      x:Value="com.wordgame.puzzle.board.es-ES"/>
-    </AutoFilterOr>
-   </AutoFilterColumn>
-   <AutoFilterColumn x:Index="3" x:Type="Custom">
-    <AutoFilterCondition x:Operator="Equals" x:Value="ios"/>
+    <AutoFilterCondition x:Operator="Equals"
+     x:Value="com.wordgame.puzzle.restaurant.stroy"/>
    </AutoFilterColumn>
   </AutoFilter>
   <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">

@@ -10,7 +10,7 @@
   <Author>Microsoft Office 用户</Author>
   <LastAuthor>fushuang</LastAuthor>
   <Created>2017-10-12T02:39:45Z</Created>
-  <LastSaved>2020-05-09T09:17:57Z</LastSaved>
+  <LastSaved>2020-07-01T06:31:21Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -20,7 +20,7 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>8916</WindowHeight>
+  <WindowHeight>8928</WindowHeight>
   <WindowWidth>23040</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
@@ -39,7 +39,7 @@
   <Style ss:ID="s62" ss:Name="常规 3">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -56,7 +56,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R377C4"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="398" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="410" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="52.199999999999996"
    ss:DefaultRowHeight="15">
    <Column ss:AutoFitWidth="0" ss:Width="139.80000000000001"/>
@@ -2991,6 +2991,78 @@
     <Cell ss:StyleID="s66"><Data ss:Type="String">groupB24</Data></Cell>
     <Cell><Data ss:Type="Boolean">1</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteAB1</Data></Cell>
+    <Cell><Data ss:Type="String">lite1</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteAB1</Data></Cell>
+    <Cell><Data ss:Type="String">liteA1</Data></Cell>
+    <Cell><Data ss:Type="String">groupA1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteAB1</Data></Cell>
+    <Cell><Data ss:Type="String">liteB1</Data></Cell>
+    <Cell><Data ss:Type="String">groupB1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteUSAB1</Data></Cell>
+    <Cell><Data ss:Type="String">lite1</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteUSAB1</Data></Cell>
+    <Cell><Data ss:Type="String">liteA1</Data></Cell>
+    <Cell><Data ss:Type="String">groupA1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteUSAB1</Data></Cell>
+    <Cell><Data ss:Type="String">liteUSB1</Data></Cell>
+    <Cell><Data ss:Type="String">groupB1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteT2AB1</Data></Cell>
+    <Cell><Data ss:Type="String">lite1</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteT2AB1</Data></Cell>
+    <Cell><Data ss:Type="String">liteA1</Data></Cell>
+    <Cell><Data ss:Type="String">groupA1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">liteT2AB1</Data></Cell>
+    <Cell><Data ss:Type="String">liteT2B1</Data></Cell>
+    <Cell><Data ss:Type="String">groupB1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">p5USAB25</Data></Cell>
+    <Cell><Data ss:Type="String">p5USB24</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">p5USAB25</Data></Cell>
+    <Cell><Data ss:Type="String">p5USA25</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">groupA25</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">p5USAB25</Data></Cell>
+    <Cell><Data ss:Type="String">p5USB25</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">groupB25</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -3010,7 +3082,7 @@
    <FrozenNoSplit/>
    <FilterOn/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>41</TopRowBottomPane>
+   <TopRowBottomPane>392</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
@@ -3018,8 +3090,7 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>396</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>407</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

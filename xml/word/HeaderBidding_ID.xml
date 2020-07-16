@@ -91,7 +91,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R232C9"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="359" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="363" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="65.25" ss:DefaultRowHeight="15.9375">
    <Column ss:AutoFitWidth="0" ss:Width="113.25"/>
    <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="233.25"/>
@@ -6233,6 +6233,54 @@
     <Cell ss:StyleID="s63"><Data ss:Type="String">Word Cross_ES-IOS</Data></Cell>
     <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_358</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270_2404018496564893</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A2-HB-Reward Video-001</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Shuffle_NL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_359</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270_2404018083231601</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A2-HB-Interstitial-001</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Shuffle_NL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_360</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270_2404018606564882</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B2-HB-RewardVideo-001</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Shuffle_NL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_361</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270</Data></Cell>
+    <Cell><Data ss:Type="String">1783484788618270_2404018289898247</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B2-HB-Interstitial-001</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Word Shuffle_NL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -6259,9 +6307,9 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>355</ActiveRow>
-     <ActiveCol>9</ActiveCol>
-     <RangeSelection>R356C10:R359C10</RangeSelection>
+     <ActiveRow>358</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+     <RangeSelection>R359C5:R363C6</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

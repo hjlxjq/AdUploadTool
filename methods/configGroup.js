@@ -9,7 +9,8 @@ const model = require('../tools/model');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
-    const productDataList = await _readXLSXFile('广告配置导入模板.xlsx', DefineDir);
+    // 去掉第一行的描述
+    const productDataList = await _readXLSXFile('广告配置导入模板.xlsx', DefineDir, 1);
     // 去掉第一行的描述
     productDataList.shift();
 
@@ -19,13 +20,12 @@ async function getProductNameHash(DefineDir) {
     _.each(productDataList, (productData) => {
         const { app_name, platform, group, package } = productData;
         const device = platform.toLowerCase();
-        const packageName = package.toLowerCase();
 
         if (!productNameHashHash[device]) {
             productNameHashHash[device] = {};
 
         }
-        productNameHashHash[device][packageName] = { productName: app_name, productGroupName: group };
+        productNameHashHash[device][package] = { productName: app_name, productGroupName: group };
 
     });
     return productNameHashHash;

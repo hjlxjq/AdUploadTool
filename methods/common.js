@@ -221,7 +221,7 @@ async function readBaseConfig(DefineDir) {
 
     // 保存基础常量
     for (const baseConfig of baseConfigList) {
-        const { key, value, description } = baseConfig;
+        const { key, value, 描述 } = baseConfig;
 
         let newValue = value;
         if (_.isUndefined(value)) {
@@ -231,7 +231,7 @@ async function readBaseConfig(DefineDir) {
 
         // 基础常量对象
         const baseConfigVo = {
-            key, value: newValue, description, test: 0, active: 1
+            key, value: newValue, description: 描述, test: 0, active: 1
         };
 
         try {

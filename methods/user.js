@@ -10,7 +10,7 @@ async function readUser() {
     const UserAuthModel = model.userAuth;    // 用户权限表
 
     const md5 = crypto.createHash('md5');
-    const defaultPassword = '1234567890';
+    const defaultPassword = 'ndf6kfggnk_jkgm';
     const password = md5.update(defaultPassword).digest('hex');
     // 用户表对象
     const userVo = {

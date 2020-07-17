@@ -3,6 +3,6 @@
     "database": "talefun_ad",
     "username": "addispatch_user",
     "password": "talefun@#$ADdispatcher",
-    "host": "rm-7go06o7588dmv0bfy.mysql.rds.aliyuncs.com",
+    "host": "34.94.165.8",
     "port": 3306
 }

@@ -273,8 +273,8 @@ async function createAd(
                 newChannel = 'admob';
 
             }
-            if (!_.isEmpty(adNameHashHash[adChannel]) && adNameHashHash[adChannel][placementID]) {
-                name = adNameHashHash[adChannel][placementID];
+            if (!_.isEmpty(adNameHashHash[newChannel]) && adNameHashHash[newChannel][placementID]) {
+                name = adNameHashHash[newChannel][placementID];
 
             }
             // 广告名称唯一

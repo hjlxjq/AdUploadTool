@@ -20,6 +20,7 @@ module.exports = db.defineModel('abTestGroup', {
     },
     nativeTmplConfGroupId: db.CHAR(36),
     configGroupId: db.CHAR(36),
+    goodsGroupId: db.CHAR(36),
     versionGroupId: {
         type: db.CHAR(36),
         allowNull: false,

@@ -2,7 +2,7 @@ const db = require('../tools/db');
 
 module.exports = db.defineModel('adChannel', {
     channel: {
-        type: db.STRING(20),
+        type: db.STRING(20),    // 目前存在的最大长度为 15, 'Admob-Mediation'
         allowNull: false,
         unique: true
     },

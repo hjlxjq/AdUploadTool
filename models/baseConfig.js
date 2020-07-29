@@ -2,7 +2,7 @@ const db = require('../tools/db');
 
 module.exports = db.defineModel('baseConfig', {
     key: {
-        type: db.STRING(50),
+        type: db.STRING(50),    // 目前存在的最大长度 21, 'InterstitialCoverTime'
         allowNull: false,
         unique: true
     },

@@ -2,7 +2,7 @@ const db = require('../tools/db');
 
 module.exports = db.defineModel('adType', {
     type: {
-        type: db.STRING(30),    // 目前存在的广告类型长度最长 13
+        type: db.STRING(30),    // 目前存在的广告类型长度最长 21, 'RewardVideo_MainScreen'
         allowNull: false,
         unique: true
     },

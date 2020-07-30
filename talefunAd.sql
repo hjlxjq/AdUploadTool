@@ -16,6 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Current Database: `talefun_ad`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `talefun_ad` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+
+USE `talefun_ad`;
+
+--
 -- Table structure for table `abTestGroup`
 --
 
@@ -867,68 +875,6 @@ LOCK TABLES `serverVersion` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `user`
---
-
-DROP TABLE IF EXISTS `user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user` (
-  `id` char(36) NOT NULL,
-  `email` varchar(36) NOT NULL,
-  `name` varchar(10) NOT NULL,
-  `password` char(32) NOT NULL,
-  `active` tinyint(1) NOT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user`
---
-
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('8f5f8a14-f943-46a9-b802-168ad2abd594','admin@talefun.com','admin','e807f1fcf82d132f9bb018ca6738a19f',1,'2020-07-30 20:24:49','2020-07-30 20:24:49');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `userAuth`
---
-
-DROP TABLE IF EXISTS `userAuth`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `userAuth` (
-  `id` char(36) NOT NULL,
-  `editComConf` tinyint(1) NOT NULL,
-  `viewComConf` tinyint(1) NOT NULL,
-  `createProductGroup` tinyint(1) NOT NULL,
-  `master` tinyint(1) NOT NULL,
-  `userId` char(36) NOT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `userId` (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `userAuth`
---
-
-LOCK TABLES `userAuth` WRITE;
-/*!40000 ALTER TABLE `userAuth` DISABLE KEYS */;
-INSERT INTO `userAuth` VALUES ('10a8c846-16a4-4d8d-abbf-554ace87594c',1,1,1,1,'8f5f8a14-f943-46a9-b802-168ad2abd594','2020-07-30 20:24:49','2020-07-30 20:24:49');
-/*!40000 ALTER TABLE `userAuth` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `versionGroup`
 --
 
@@ -973,4 +919,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-30 20:33:13
+-- Dump completed on 2020-07-30 20:39:43

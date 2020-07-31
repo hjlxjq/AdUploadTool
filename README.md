@@ -31,23 +31,42 @@
     ```
     mysql -uroot -p823234 -f talefun_ad <  baseTalefunAd1.sql
     ```
-
-    - 本地导入 阶段导入的应用（上面步骤十分钟后）
+    
+    - 本地导入通用配置
     
     ```
-    node index.js
+    <!-- index.js -->
+    await readChannelAndType(XMLDir, project);
+    await readNativeTmpl(XMLDir, project);
+    await readBaseConfig(DefineDir, project);
+    await readProductGroup(DefineDir);
+
+    <!-- 导入需要阶段性导入的应用的通用配置 -->
+    node index.js <project>
     ```
 
-    - 本地删除 线上导出通用配置 mysql 数据库
+    - 本地导出通用配置
     
     ```
-    数据库 按时间删
+    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine  > talefunAd.sql
+    ```
+
+    - 线上导入通用配置
+    
+    ```
+    mysql -h 35.202.106.22 -uhujianlong -phujianlong@talefun -f talefun_ad < talefunAd.sql
+    ```
+
+    - 本地导入 阶段导入的应用
+    
+    ```
+    node index.js <project>
     ```
 
     - 本地导出阶段导入的应用
     
     ```
-    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine --ignore-table=talefun_ad.baseConfig > talefunAd.sql
+    mysqldump -uroot -p823234 -t talefun_ad --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine --ignore-table=talefun_ad.baseConfig > talefunAd.sql
     ```
 
     - 线上导入阶段导入的应用

@@ -16,7 +16,7 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>8916</WindowHeight>
+  <WindowHeight>8928</WindowHeight>
   <WindowWidth>23040</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
@@ -60,7 +60,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R797C4"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="806" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="809" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="64.8" ss:DefaultRowHeight="15">
    <Column ss:AutoFitWidth="0" ss:Width="139.80000000000001"/>
    <Column ss:AutoFitWidth="0" ss:Width="148.80000000000001"/>
@@ -6426,6 +6426,24 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">groupB4</Data></Cell>
     <Cell><Data ss:Type="Boolean">1</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">a6NewBUSNewAdmobAB4</Data></Cell>
+    <Cell><Data ss:Type="String">a6NewBUSNewAdmobB2</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">a6NewBUSNewAdmobAB4</Data></Cell>
+    <Cell><Data ss:Type="String">a6NewBUSNewAdmobA4</Data></Cell>
+    <Cell><Data ss:Type="String">groupA4</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">a6NewBUSNewAdmobAB4</Data></Cell>
+    <Cell><Data ss:Type="String">a6NewBUSNewAdmobB4</Data></Cell>
+    <Cell><Data ss:Type="String">groupB4</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -6453,7 +6471,7 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>799</ActiveRow>
+     <ActiveRow>808</ActiveRow>
      <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>

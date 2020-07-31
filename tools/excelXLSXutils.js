@@ -5,21 +5,21 @@ const fsPromises = require('fs').promises;
 function readXLSX(path, shift) {
     const wb = xlsx.readFile(path);
 
-    // const sheet = _.keys(wb.Sheets).pop();
+    const sheet = _.keys(wb.Sheets).pop();
 
     let totalRows = [];
 
-    for (const sheet of _.keys(wb.Sheets)) {
-        const ws = wb.Sheets[sheet];
-        const rows = xlsx.utils.sheet_to_json(ws);
+    // for (const sheet of _.keys(wb.Sheets)) {
+    //     const ws = wb.Sheets[sheet];
+    //     const rows = xlsx.utils.sheet_to_json(ws);
 
-        // 去掉第一行的描述
-        if (shift === 1) {
-            rows.shift();
-        }
-        totalRows = _.concat(totalRows, rows);
+    //     // 去掉第一行的描述
+    //     if (shift === 1) {
+    //         rows.shift();
+    //     }
+    //     totalRows = _.concat(totalRows, rows);
 
-    }
+    // }
 
     // const ws1 = wb.Sheets['0'];
     // const rows1 = xlsx.utils.sheet_to_json(ws1);
@@ -39,14 +39,14 @@ function readXLSX(path, shift) {
     // }
     // totalRows = _.concat(totalRows, rows2);
 
-    // const ws = wb.Sheets[sheet];
-    // const rows = xlsx.utils.sheet_to_json(ws);
+    const ws = wb.Sheets[sheet];
+    const rows = xlsx.utils.sheet_to_json(ws);
 
-    // // 去掉第一行的描述
-    // if (shift === 1) {
-    //     rows.shift();
-    // }
-    // totalRows = _.concat(totalRows, rows);
+    // 去掉第一行的描述
+    if (shift === 1) {
+        rows.shift();
+    }
+    totalRows = _.concat(totalRows, rows);
 
     return totalRows;
 

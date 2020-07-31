@@ -21,6 +21,24 @@ function readXLSX(path, shift) {
 
     // }
 
+    // const ws1 = wb.Sheets['0'];
+    // const rows1 = xlsx.utils.sheet_to_json(ws1);
+
+    // // 去掉第一行的描述
+    // if (shift === 1) {
+    //     rows1.shift();
+    // }
+    // totalRows = _.concat(totalRows, rows1);
+
+    // const ws2 = wb.Sheets['1'];
+    // const rows2 = xlsx.utils.sheet_to_json(ws2);
+
+    // // 去掉第一行的描述
+    // if (shift === 1) {
+    //     rows2.shift();
+    // }
+    // totalRows = _.concat(totalRows, rows2);
+
     const ws = wb.Sheets[sheet];
     const rows = xlsx.utils.sheet_to_json(ws);
 

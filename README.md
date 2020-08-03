@@ -19,7 +19,7 @@
     - 线上导出通用配置 mysql 数据库
 
     ```
-    mysqldump -h 35.202.106.22 -uhujianlong -phujianlong@talefun --set-gtid-purged=OFF -t --tables talefun_ad baseConfig adChannel adType adChannelMap nativeTmpl productGroup nativeShop packParam > baseTalefunAd1.sql
+    mysqldump -h 35.202.106.22 -uhujianlong -phujianlong@talefun --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop packParam > baseTalefunAd-test.sql
     ```
 
     - 清空本地数据库
@@ -31,7 +31,7 @@
     -本地导入 线上导出通用配置 mysql 数据库
     
     ```
-    mysql -uroot -p823234 -f talefun_ad <  baseTalefunAd1.sql
+    mysql -uroot -p823234 -f talefun_ad <  baseTalefunAd-test.sql
     ```
     
     - 本地导入通用配置
@@ -40,7 +40,6 @@
     <!-- index.js -->
     await readChannelAndType(XMLDir, project);
     await readNativeTmpl(XMLDir, project);
-    await readBaseConfig(DefineDir, project);
     await readProductGroup(DefineDir);
 
     <!-- 导入需要阶段性导入的应用的通用配置 -->
@@ -50,13 +49,13 @@
     - 本地导出通用配置
     
     ```
-    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine  > talefunAd.sql
+    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth > talefunAd-com.sql
     ```
 
     - 线上导入通用配置
     
     ```
-    mysql -h 35.202.106.22 -uhujianlong -phujianlong@talefun -f talefun_ad < talefunAd.sql
+    mysql -h 35.202.106.22 -uhujianlong -phujianlong@talefun -f talefun_ad < talefunAd-com.sql
     ```
 
     - 本地导入 阶段导入的应用

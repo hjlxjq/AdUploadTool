@@ -20,6 +20,10 @@
 
     ```
     mysqldump -h 35.202.106.22 -uhujianlong -phujianlong@talefun --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop packParam > baseTalefunAd-test.sql
+
+    mysqldump -h 34.94.165.8 -uaddispatch_user -p --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop packParam > baseTalefunAd-test.sql
+
+    password: talefun@#$ADdispatcher
     ```
 
     - 清空本地数据库
@@ -31,7 +35,7 @@
     -本地导入 线上导出通用配置 mysql 数据库
     
     ```
-    mysql -uroot -p823234 -f talefun_ad <  baseTalefunAd-test.sql
+    mysql -uroot -p823234 -f talefun_ad < baseTalefunAd-test.sql
     ```
     
     - 本地导入通用配置
@@ -49,13 +53,17 @@
     - 本地导出通用配置
     
     ```
-    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth > talefunAd-com.sql
+    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine > talefunAd-com.sql
     ```
 
     - 线上导入通用配置
     
     ```
     mysql -h 35.202.106.22 -uhujianlong -phujianlong@talefun -f talefun_ad < talefunAd-com.sql
+
+    mysql -h 34.94.165.8 -uaddispatch_user -p -f talefun_ad < talefunAd-com.sql
+
+    password: talefun@#$ADdispatcher
     ```
 
     - 本地导入 阶段导入的应用
@@ -74,4 +82,8 @@
     
     ```
     mysql -h 35.202.106.22 -uhujianlong -phujianlong@talefun -f talefun_ad < talefunAd.sql
+
+    mysql -h 34.94.165.8 -uaddispatch_user -p -f talefun_ad < talefunAd.sql
+
+    password: talefun@#$ADdispatcher
     ```

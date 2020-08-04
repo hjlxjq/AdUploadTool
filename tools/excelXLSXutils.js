@@ -4,8 +4,8 @@ const fsPromises = require('fs').promises;
 
 function readXLSX(path, shift) {
     const wb = xlsx.readFile(path);
-
-    const sheet = _.keys(wb.Sheets).pop();
+    const sheets = _.keys(wb.Sheets);
+    const sheet = sheets[sheets.length - 1];
 
     let totalRows = [];
 

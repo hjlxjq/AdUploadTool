@@ -75,7 +75,7 @@
     - 本地导出阶段导入的应用
     
     ```
-    mysqldump -uroot -p823234 -t talefun_ad --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine --ignore-table=talefun_ad.baseConfig > talefunAd.sql
+    mysqldump -uroot -p823234 -t talefun_ad --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine --ignore-table=talefun_ad.baseConfig --ignore-table=talefun_ad.adChannel --ignore-table=talefun_ad.adType --ignore-table=talefun_ad.nativeTmpl --ignore-table=talefun_ad.productGroup --ignore-table=talefun_ad.nativeShop --ignore-table=talefun_ad.packParam > talefunAd.sql
     ```
 
     - 线上导入阶段导入的应用

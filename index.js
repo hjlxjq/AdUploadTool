@@ -28,8 +28,8 @@ console.log(`project: ${project}`);
 async function init() {
     await readChannelAndType(XMLDir, project);
     await readNativeTmpl(XMLDir, project);
-    await readBaseConfig(DefineDir, project);
     await readProductGroup(DefineDir);
+    await readBaseConfig(DefineDir, project);
     await readProduct(DefineDir, XMLDir, project);
     await readConfigGroup(DefineDir, XMLDir, project);
     await readAdGroup(DefineDir, XMLDir, project);

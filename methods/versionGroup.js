@@ -81,6 +81,12 @@ async function getConfigVersionGroupHash(clientPackage, productNameHashHash) {
         if (!item.status) continue;
 
         const { device, condition, config } = item;
+
+        if (config === 'null') {
+            continue;
+
+        }
+
         let packageName = item.packageName;
         let nationCode = null;
 
@@ -341,12 +347,23 @@ async function createAdAbTestGroup(
         }
     });
 
+    // 获取广告常量组主键
+    let configGroupId = null;
+    if (!_.isEmpty(configGroupVo)) {
+        configGroupId = configGroupVo.id;
+
+    }
     // 获取 native 模板配置组主键
-    let nativeTmplConfGroupId = defaultNativeTmplConfGroupVo.id;
+    let nativeTmplConfGroupId = null;
+    if (!_.isEmpty(defaultNativeTmplConfGroupVo)) {
+        nativeTmplConfGroupId = defaultNativeTmplConfGroupVo.id;
+
+    }
     if (!_.isEmpty(nativeTmplConfGroupVo)) {
         nativeTmplConfGroupId = nativeTmplConfGroupVo.id;
 
     }
+
     // 获取描述
     let description = name;
     if (description === 'default') {
@@ -356,7 +373,7 @@ async function createAdAbTestGroup(
 
     const abTestGroupVo = {
         name, begin, end, description,
-        configGroupId: configGroupVo.id, nativeTmplConfGroupId, versionGroupId, active: 1
+        configGroupId, nativeTmplConfGroupId, versionGroupId, active: 1
     }
     // 查找或创建 ab 测试分组
     const [currentAbTestGroupVo] = await AbTestGroupModel.findOrCreate({

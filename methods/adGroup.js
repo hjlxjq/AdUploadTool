@@ -372,6 +372,11 @@ async function readAdGroup(DefineDir, XMLDir, project) {
         // 循环 ab 分组创建广告组和广告
         for (const groupWeight of groupWeightList) {
             const adGroupName = groupWeight.toGroup;
+
+            if (adGroupName === 'null') {
+                continue;
+
+            }
             // 广告组下数据
             const ad_IDControlHash = ad_IDControlHashHash[adGroupName];
             // 广告组和广告类型组合为新后台的新广告组

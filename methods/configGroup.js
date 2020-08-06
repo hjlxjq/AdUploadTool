@@ -169,23 +169,26 @@ async function createConfig(configGroupId, configDataList = []) {
 async function createConfigGroup(
     name, description, type, productId, configConstantHash, defaultConfigGroupId = null
 ) {
-    // 常量组表模型
-    const ConfigGroupModel = model.configGroup;
+    if (!_.isEmpty(configConstantHash[name])) {
+        // 常量组表模型
+        const ConfigGroupModel = model.configGroup;
 
-    // 每个应用都存在的默认组
-    const configGroupVo = {
-        name, description, type, productId, dependentId: defaultConfigGroupId, active: 1
-    };
-    // 查找或创建默认常量组
-    const [currentConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
-        where: {
-            name, type, productId
-        }, defaults: configGroupVo
-    });
+        // 每个应用都存在的默认组
+        const configGroupVo = {
+            name, description, type, productId, dependentId: defaultConfigGroupId, active: 1
+        };
+        // 查找或创建默认常量组
+        const [currentConfigGroupVo, created] = await ConfigGroupModel.findOrCreate({
+            where: {
+                name, type, productId
+            }, defaults: configGroupVo
+        });
 
-    // 如果首次，则创建常量
-    if (created) {
-        await createConfig(currentConfigGroupVo.id, configConstantHash[name]);
+        // 如果首次，则创建常量
+        if (created) {
+            await createConfig(currentConfigGroupVo.id, configConstantHash[name]);
+
+        }
 
     }
 
@@ -314,6 +317,11 @@ async function readConfigGroup(DefineDir, XMLDir, project) {
 
         for (const groupWeight of groupWeightList) {
             const configGroupName = groupWeight.toGroup;
+
+            if (configGroupName === 'null') {
+                continue;
+
+            }
 
             if (configGroupName !== 'default') {
                 await createConfigGroup(

@@ -19,7 +19,7 @@
     - 线上导出通用配置 mysql 数据库
 
     ```
-    mysqldump -h 35.202.106.22 -uhujianlong -phujianlong@talefun --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop packParam > baseTalefunAd-test.sql
+    mysqldump -h 35.202.106.22 -uhujianlong -phujianlong@talefun --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop > baseTalefunAd-test.sql
 
     mysqldump -h 34.94.165.8 -uaddispatch_user -p --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop packParam > baseTalefunAd-test.sql
 
@@ -53,7 +53,7 @@
     - 本地导出通用配置
     
     ```
-    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine > talefunAd-com.sql
+    mysqldump -uroot -p823234 -t talefun_ad --skip-extended-insert --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine --ignore-table=talefun_ad.baseConfig > talefunAd-com.sql
     ```
 
     - 线上导入通用配置
@@ -75,7 +75,7 @@
     - 本地导出阶段导入的应用
     
     ```
-    mysqldump -uroot -p823234 -t talefun_ad --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine --ignore-table=talefun_ad.baseConfig --ignore-table=talefun_ad.adChannel --ignore-table=talefun_ad.adType --ignore-table=talefun_ad.nativeTmpl --ignore-table=talefun_ad.productGroup --ignore-table=talefun_ad.nativeShop --ignore-table=talefun_ad.packParam > talefunAd.sql
+    mysqldump -uroot -p823234 -t talefun_ad --ignore-table=talefun_ad.user --ignore-table=talefun_ad.userAuth --ignore-table=talefun_ad.nationDefine --ignore-table=talefun_ad.baseConfig --ignore-table=talefun_ad.adChannel --ignore-table=talefun_ad.adType --ignore-table=talefun_ad.nativeTmpl --ignore-table=talefun_ad.productGroup --ignore-table=talefun_ad.nativeShop > talefunAd.sql
     ```
 
     - 线上导入阶段导入的应用

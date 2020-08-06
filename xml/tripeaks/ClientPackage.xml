@@ -55,10 +55,10 @@
  </Styles>
  <Worksheet ss:Name="工作表1">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R2C1:R95C7"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R2C1:R93C7"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="95" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="93" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="64.8" ss:DefaultRowHeight="16.05">
    <Column ss:AutoFitWidth="0" ss:Width="394.8"/>
    <Column ss:Width="103.8"/>
@@ -827,18 +827,6 @@
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
-    <Cell><Data ss:Type="String">com.solitaire.tripeaks.free.card.games.dream.farm.animal</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">null</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">default</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">DF1AB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">condition37</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.cardgames.solitaire.fun.free.spider.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">G10B2new</Data><NamedCell
@@ -949,18 +937,6 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">SCF2</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">condition29</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
-    <Cell><Data ss:Type="String">com.solitaire.tripeaks.free.card.games.dream.farm.animal</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">null</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">default</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">DF2AB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">condition41</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
@@ -1172,7 +1148,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11USA2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11USAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1188,7 +1164,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-AU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11AUAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1204,7 +1180,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-DE</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11DEAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1220,7 +1196,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-JP</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11AUAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1236,7 +1212,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-GB</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11CAAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1252,7 +1228,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-FR</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11FRAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1268,7 +1244,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-RU</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11RUAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1284,7 +1260,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67"><Data ss:Type="String">com.cardgames.solitaire.fun.free.collection.classic-CA</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s68"><Data ss:Type="String">G11A2</Data><NamedCell
+    <Cell ss:StyleID="s68"><Data ss:Type="String">G11CAAB3</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">android</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1316,7 +1292,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>87</ActiveRow>
+     <ActiveRow>89</ActiveRow>
      <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
@@ -1324,7 +1300,7 @@
    <ProtectScenarios>False</ProtectScenarios>
    <x:PageLayoutZoom>0</x:PageLayoutZoom>
   </WorksheetOptions>
-  <AutoFilter x:Range="R2C1:R95C7"
+  <AutoFilter x:Range="R2C1:R93C7"
    xmlns="urn:schemas-microsoft-com:office:excel">
    <AutoFilterColumn x:Type="Custom">
     <AutoFilterCondition x:Operator="Equals"

@@ -191,6 +191,8 @@ async function readNativeTmplConfGroup(DefineDir, XMLDir, project) {
         let packageName = item.packageName;
         const { device, groupName } = item;
 
+        if (groupName === 'null') continue; 
+
         // 纸牌有个例外的包名
         if (packageName !== 'Classic-5xing') {
             const packageNameArr = _.split(packageName, '-');

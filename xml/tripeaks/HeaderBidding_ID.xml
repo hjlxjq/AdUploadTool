@@ -16,8 +16,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>4848</WindowHeight>
-  <WindowWidth>21936</WindowWidth>
+  <WindowHeight>8928</WindowHeight>
+  <WindowWidth>23040</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -27,7 +27,7 @@
   <Style ss:ID="Default" ss:Name="Normal">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -56,7 +56,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R1C9"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="28" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="34" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="64.8" ss:DefaultRowHeight="16.05">
    <Column ss:AutoFitWidth="0" ss:Width="124.80000000000001"/>
    <Column ss:StyleID="s62" ss:Width="115.80000000000001" ss:Span="1"/>
@@ -410,6 +410,78 @@
     <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
     <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_27</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">505759316817739_676939716366364</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A3-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_28</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">505759316817739_676939919699677</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A3-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_29</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">505759316817739_676940066366329</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A3-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_30</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">505759316817739_676940176366318</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B3-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_31</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">505759316817739_676940313032971</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B3-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_32</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell><Data ss:Type="String">505759316817739</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">505759316817739_676940366366299</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B3-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -426,12 +498,11 @@
    </Print>
    <Selected/>
    <TopRowVisible>9</TopRowVisible>
-   <LeftColumnVisible>3</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>23</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>26</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

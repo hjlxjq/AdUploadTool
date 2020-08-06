@@ -21,7 +21,7 @@
     ```
     mysqldump -h 35.202.106.22 -uhujianlong -phujianlong@talefun --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop > baseTalefunAd-test.sql
 
-    mysqldump -h 34.94.165.8 -uaddispatch_user -p --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop packParam > baseTalefunAd-test.sql
+    mysqldump -h 34.94.165.8 -uaddispatch_user -p --set-gtid-purged=OFF -t --tables talefun_ad adChannel adType nativeTmpl productGroup nativeShop > baseTalefunAd-test.sql
 
     password: talefun@#$ADdispatcher
     ```

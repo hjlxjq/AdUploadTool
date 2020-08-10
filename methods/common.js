@@ -249,8 +249,42 @@ async function readBaseConfig(DefineDir) {
 
 }
 
+// 通用内购字段表
+async function readNativeShop(DefineDir) {
+    console.log('begin execute function: readNativeShop()');
+    const NativeShopModel = model.nativeShop;    // 通用内购字段表模型
+
+    // 解析通用内购字段
+    const nativeShopList = await _readXLSXFile('nativeShop.xlsx', DefineDir);
+
+    // 保存通用内购字段
+    for (const nativeShop of nativeShopList) {
+        const { type, key, description } = nativeShop;
+
+        // 通用内购字段对象
+        const nativeShopVo = {
+            key, type, description, active: 1
+        };
+
+        try {
+            await NativeShopModel.create(nativeShopVo);
+
+        } catch (e) {
+            if (e.name !== 'SequelizeUniqueConstraintError') {
+                throw e;
+
+            }
+
+        }
+
+    }
+
+
+}
+
 module.exports = {
     readChannelAndType,
     readNativeTmpl,
-    readBaseConfig
+    readBaseConfig,
+    readNativeShop
 };

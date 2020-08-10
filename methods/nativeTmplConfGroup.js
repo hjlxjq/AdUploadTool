@@ -1,5 +1,5 @@
 /**
- * 导入 native 模板配置组合native 模板配置
+ * 导入 native 模板配置组和 native 模板配置
  */
 const _ = require('lodash');
 const _readXMLFile = require('../tools/excelXMLutils');

@@ -11,7 +11,7 @@ module.exports = db.defineModel('customShop', {
         allowNull: false,
     },
     description: {
-        type: db.STRING(50),
+        type: db.STRING(250),
         allowNull: false,
     },
     productId: {

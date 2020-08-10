@@ -48,11 +48,11 @@ function parseCSVInfo(csvArr) {
 				if (value !== '') {
 					if (value === '1' || _.lowerCase(value) === 'true') {
 						csvObject[key] = true;
-	
+
 					}
 					else {
 						csvObject[key] = false;
-	
+
 					}
 
 				}
@@ -80,16 +80,16 @@ function parseCSVInfo(csvArr) {
 
 // 解析读到的 CSV 对象，返回一个 CSV 表的行数据对象列表
 async function _readCSVFile(csvName, CSVDir) {
-    const filePath = `${CSVDir}/${csvName}`;
-  
-    const csvObject = await readCSV(filePath);
-    const rowDataList = parseCSVInfo(csvObject);
-  
-    if (!rowDataList) throw new Error('parse ' + csvName + ' failed.');
-  
-    // console.log('parse ' + csvName + ' completed, total number：' + rowDataList.length);
-    return rowDataList;
-  
-  }
-  
-  module.exports = _readCSVFile;
+	const filePath = `${CSVDir}/${csvName}`;
+
+	const csvObject = await readCSV(filePath);
+	const rowDataList = parseCSVInfo(csvObject);
+
+	if (!rowDataList) throw new Error('parse ' + csvName + ' failed.');
+
+	// console.log('parse ' + csvName + ' completed, total number：' + rowDataList.length);
+	return rowDataList;
+
+}
+
+module.exports = _readCSVFile;

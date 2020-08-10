@@ -372,7 +372,7 @@ async function createAdAbTestGroup(
     }
 
     const abTestGroupVo = {
-        name, begin, end, description,
+        name, begin, end, description, goodsGroupId: undefined,
         configGroupId, nativeTmplConfGroupId, versionGroupId, active: 1
     }
     // 查找或创建 ab 测试分组
@@ -497,7 +497,7 @@ async function createConfigAbTestGroup(
     }
 
     const abTestGroupVo = {
-        name, begin, end, description,
+        name, begin, end, description, goodsGroupId: undefined,
         configGroupId, nativeTmplConfGroupId: undefined, versionGroupId, active: 1
     }
     // 创建 ab 测试分组

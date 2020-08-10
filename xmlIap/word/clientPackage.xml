@@ -1,0 +1,787 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Microsoft Office 用户</Author>
+  <LastAuthor>梁 静雅</LastAuthor>
+  <Created>2016-07-28T12:41:31Z</Created>
+  <LastSaved>2019-06-24T10:54:11Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <WorkbookGuid dt:dt="string">70f767be-2950-40ff-af48-54deb6e5e422</WorkbookGuid>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8976</WindowHeight>
+  <WindowWidth>23040</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Interior ss:Color="#FCF305" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="工作表1">
+  <Names>
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R2C4"
+    ss:Hidden="1"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="114" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.05">
+   <Column ss:AutoFitWidth="0" ss:Width="220.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="85.8"/>
+   <Column ss:Width="105"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">packageName</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">device</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">shopGroup</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">status</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">String</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Boolean</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">word.tailor.match.game.en</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1EN</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">word.tailor.match.game.fr</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1FR</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.de </Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1DE</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.it </Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1IT</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.es </Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1ES</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.en</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle2ENios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.sushi.en</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle2EN</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.en</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1EN</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.word.game.find.en</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.sushi.de</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle2DE</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.sushi.fr</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle2FR</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.en</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1EN</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.de</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1DE</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.fr</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1FR</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.en</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1ENios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.wordcross.en</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi2</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.wordcross.en</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi3</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.fr</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1FR</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.fr</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1FRios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.de</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1DE</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.de</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1DEios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1ES</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.es</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1ESios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.it</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1IT</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.it</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1ITios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.pl</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1PL</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.pl</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1PLios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.pt</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1PT</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.pt</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1PTios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.sv</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi4</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.sv</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi5</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.no</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi6</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.no</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi7</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.da</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">weizhi8</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.id</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1IDios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.cs</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1CSios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.nl</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1NLios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.no.no</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1NO</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.sv.se</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1SV</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.da.dk</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1DA</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.cs</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1CS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.nl</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1NL</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.id</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">shuffle1ID</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.no</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1NO</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.no</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1NOios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.nl</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1NL</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.nl</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1NLios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.sv</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1SV</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.sv</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1SVios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.es</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1ES</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.sv</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1SV</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.es</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1ESios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.sv</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1SVios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.en</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1ENios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.no</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1NOios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.nl</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1NLios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.no</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1NO</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.nl</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1NL</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.cs</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1CS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.cs</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1CSios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.da</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1DA</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.da</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1DAios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.pl</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1PL</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.pl</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1PLios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.id</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1ID</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.id</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1IDios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.de</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1DEios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.fr</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1FRios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.cs</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1CSios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.cs</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1CS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.da</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">flat1DAios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.flat.da</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">flat1DA</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.de</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2DEios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.de</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2DE</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.fr</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2FRios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.fr</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2FR</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.en</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2ENios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.en</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2EN</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">word.instantgame.en</Data></Cell>
+    <Cell><Data ss:Type="String">web</Data></Cell>
+    <Cell><Data ss:Type="String">shuffleweb</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.es</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2ESios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.es</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2ES</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.nl</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2NLios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.nl</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2NL</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.it</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2ITios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.it</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2IT</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.pt</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2PTios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.pt</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2PT</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.pl</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross2PLios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordcross.plus.puzzle.pl</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross2PL</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgames.puzzle.board.bible</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross3ios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgames.puzzle.board.bible</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross3</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">swipeios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">swipe</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush</Data></Cell>
+    <Cell><Data ss:Type="String">web</Data></Cell>
+    <Cell><Data ss:Type="String">swipeweb</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.ja</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">cross1JAios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.board.ja</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">cross1JA</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.de</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">swipeDE</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.de</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">swipeDEios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.fr</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">swipeFR</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.fr</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">swipeFRios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.zh</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">swipeZHios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.es</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">swipeES</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.es</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">swipeESios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.ja</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">swipeJA</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.ja</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">swipeJAios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.pic.en</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">swipePIC_AB</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.crush.pic</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">swipePICiosB</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.addictive.story</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">dream</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.addictive.story</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">dreamios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.search</Data></Cell>
+    <Cell><Data ss:Type="String">android</Data></Cell>
+    <Cell><Data ss:Type="String">board</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">com.wordgame.puzzle.block.search</Data></Cell>
+    <Cell><Data ss:Type="String">ios</Data></Cell>
+    <Cell><Data ss:Type="String">boardios</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s65">
+    <Cell ss:StyleID="Default"><Data ss:Type="String">com.wordswipepic.huawei</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">android</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">swipePICHW</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>90</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>113</ActiveRow>
+     <RangeSelection>R114</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+   <x:PageLayoutZoom>0</x:PageLayoutZoom>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

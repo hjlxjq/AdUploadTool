@@ -100,7 +100,7 @@ async function getConfigConstantHash(DefineDir, XMLDir, project) {
         });
 
     } catch (e) { }
-
+console.log(gameConfigConstantHash['s24new1']);
     return { gameConfigConstantHash, adConfigConstantHash };
 
 }

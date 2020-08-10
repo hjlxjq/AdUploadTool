@@ -9,17 +9,17 @@
   <Author>Microsoft Office 用户</Author>
   <LastAuthor>Avalon _</LastAuthor>
   <Created>2016-10-24T10:42:08Z</Created>
-  <LastSaved>2020-07-30T06:39:49Z</LastSaved>
+  <LastSaved>2020-08-10T02:36:10Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>16940</WindowHeight>
-  <WindowWidth>28060</WindowWidth>
-  <WindowTopX>5360</WindowTopX>
-  <WindowTopY>2360</WindowTopY>
+  <WindowHeight>15940</WindowHeight>
+  <WindowWidth>27260</WindowWidth>
+  <WindowTopX>9620</WindowTopX>
+  <WindowTopY>7580</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -139,7 +139,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R2C1:R482C6"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="482" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="483" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s70" ss:DefaultColumnWidth="65"
    ss:DefaultRowHeight="21">
    <Column ss:Index="2" ss:StyleID="s70" ss:Width="183"/>
@@ -580,7 +580,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">openNativeBannerAddition</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -723,7 +723,7 @@
     <Cell><Data ss:Type="String">广告丢弃时间</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">discardBanner</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1098,7 +1098,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s19</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">bannerTimeCD</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5010,11 +5010,11 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s24new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15.5" ss:Hidden="1" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15.5" ss:StyleID="Default">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="Number">40</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">90</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Number">0</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">控制banner自刷新时间参数</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5035,7 +5035,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="Default"><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="Number">40</Data><NamedCell
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">90</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="Default"><Data ss:Type="Number">0</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5049,7 +5049,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="Default"><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="Number">40</Data><NamedCell
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">90</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="Default"><Data ss:Type="Number">0</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5105,7 +5105,7 @@
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="Number">40</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">90</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Number">0</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Banner更新时间</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5115,7 +5115,8 @@
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="Number">40</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">90</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Number">0</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Banner更新时间</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5225,7 +5226,8 @@
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="Number">40</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">90</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Number">0</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Banner更新时间</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5279,7 +5281,8 @@
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="Number">40</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">90</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Number">0</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Banner更新时间</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5375,7 +5378,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s25new1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:StyleID="s72">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1" ss:StyleID="s72">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">bannerRefreshTime</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5386,7 +5389,7 @@
     <Cell ss:StyleID="Default"><Data ss:Type="String">s27New1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15" ss:Hidden="1" ss:StyleID="Default">
     <Cell ss:StyleID="s72"><Data ss:Type="Boolean">1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">nativeAdsCloseTime</Data><NamedCell
@@ -5397,7 +5400,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s27New1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15" ss:Hidden="1" ss:StyleID="Default">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">config010</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5407,7 +5410,7 @@
     <Cell><Data ss:Type="String">gdprurl</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s27New1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15" ss:Hidden="1" ss:StyleID="Default">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">config011</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5417,7 +5420,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s27New1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15" ss:Hidden="1" ss:StyleID="Default">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">config048</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5428,7 +5431,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s27New1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15" ss:Hidden="1" ss:StyleID="Default">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s72"><Data ss:Type="String">config047</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5438,7 +5441,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s27New1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15" ss:Hidden="1" ss:StyleID="Default">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">config050</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5450,7 +5453,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s27New1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="Default">
+   <Row ss:AutoFitHeight="0" ss:Height="15" ss:Hidden="1" ss:StyleID="Default">
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">config051</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5487,6 +5490,14 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">s16new</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="Default"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">bannerRefreshTime</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">控制banner自刷新时间参数</Data></Cell>
+    <Cell><Data ss:Type="String">default</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -5506,8 +5517,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>491</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>482</ActiveRow>
+     <ActiveCol>5</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -5517,8 +5528,14 @@
   </WorksheetOptions>
   <AutoFilter x:Range="R2C1:R482C6"
    xmlns="urn:schemas-microsoft-com:office:excel">
+   <AutoFilterColumn x:Index="2" x:Type="Custom">
+    <AutoFilterCondition x:Operator="Equals" x:Value="bannerRefreshTime"/>
+   </AutoFilterColumn>
    <AutoFilterColumn x:Index="6" x:Type="Custom">
-    <AutoFilterCondition x:Operator="Equals" x:Value="s27New1"/>
+    <AutoFilterOr>
+     <AutoFilterCondition x:Operator="Equals" x:Value="default"/>
+     <AutoFilterCondition x:Operator="Equals" x:Value="s24new1"/>
+    </AutoFilterOr>
    </AutoFilterColumn>
   </AutoFilter>
  </Worksheet>

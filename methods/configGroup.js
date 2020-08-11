@@ -10,7 +10,7 @@ const model = require('../tools/model');
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
     // 去掉第一行的描述
-    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir, 1);
+    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
 
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
     const productNameHashHash = {};
@@ -70,6 +70,9 @@ async function getConfigConstantHash(DefineDir, XMLDir, project) {
         });
 
         _.each(configConstant, (item) => {
+            if (!item.description) {
+                console.log('key: ', item.key);
+            }
             if (item.status) {
                 if (!gameConfigConstantHash[item.groupName]) {
                     gameConfigConstantHash[item.groupName] = [];
@@ -100,7 +103,7 @@ async function getConfigConstantHash(DefineDir, XMLDir, project) {
         });
 
     } catch (e) { }
-console.log(gameConfigConstantHash['s24new1']);
+
     return { gameConfigConstantHash, adConfigConstantHash };
 
 }

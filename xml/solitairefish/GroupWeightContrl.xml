@@ -9,7 +9,7 @@
   <Author>Microsoft Office 用户</Author>
   <LastAuthor>Liutianxiang</LastAuthor>
   <Created>2018-09-13T09:26:11Z</Created>
-  <LastSaved>2020-07-16T06:57:43Z</LastSaved>
+  <LastSaved>2020-07-27T07:25:49Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
@@ -27,14 +27,14 @@
   <Style ss:ID="Default" ss:Name="Normal">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
   </Style>
  </Styles>
  <Worksheet ss:Name="GroupWeightContrl">
-  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="9" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="17" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="64.5" ss:DefaultRowHeight="15.9375">
    <Column ss:Width="87.75"/>
    <Column ss:Index="3" ss:Width="75"/>
@@ -72,25 +72,73 @@
     <Cell><Data ss:Type="String">fish_abtest_02</Data></Cell>
     <Cell><Data ss:Type="String">fish_02A</Data></Cell>
     <Cell><Data ss:Type="Number">-1</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">fish_abtest_02</Data></Cell>
     <Cell><Data ss:Type="String">fish_02A</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">fish_abtest_02</Data></Cell>
     <Cell><Data ss:Type="String">fish_02B</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">fish_abtest_02</Data></Cell>
     <Cell><Data ss:Type="String">fish_02C</Data></Cell>
     <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fishAB</Data></Cell>
+    <Cell><Data ss:Type="String">fish1</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
     <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fishAB</Data></Cell>
+    <Cell><Data ss:Type="String">fishA</Data></Cell>
+    <Cell><Data ss:Type="String">groupA1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fishAB</Data></Cell>
+    <Cell><Data ss:Type="String">fishB</Data></Cell>
+    <Cell><Data ss:Type="String">groupB1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fish_abtest_03</Data></Cell>
+    <Cell><Data ss:Type="String">fish_03A</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fish_abtest_03</Data></Cell>
+    <Cell><Data ss:Type="String">fish_03A</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fish_abtest_03</Data></Cell>
+    <Cell><Data ss:Type="String">fish_03A</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fish_abtest_03</Data></Cell>
+    <Cell><Data ss:Type="String">fish_03B</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">fish_abtest_03</Data></Cell>
+    <Cell><Data ss:Type="String">fish_03B</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -100,12 +148,18 @@
     <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
    </PageSetup>
    <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
    <Selected/>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>6</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>12</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

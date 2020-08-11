@@ -666,5 +666,17 @@
     {
         "PackageName": "com.wordgame.puzzle.block.crush.pic",
         "Platform": "ios"
+    },
+    {
+        "PackageName": "com.solitaire.klondike.patience.ocean.aquarium.fun",
+        "Platform": "ios"
+    },
+    {
+        "PackageName": "com.solitaire.klondike.patience.ocean.aquarium",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.tilefarm.match.puzzle",
+        "Platform": "android"
     }
 ]

@@ -418,7 +418,6 @@ async function readAdGroup(DefineDir, XMLDir, project) {
 
     }
     console.log('adGroupNameList uniq name：' + _.uniq(adGroupNameList));
-    console.log('adGroupNameList uniq name length: ' + _.uniq(adGroupNameList).length);
 
 }
 

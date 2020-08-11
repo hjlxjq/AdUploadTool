@@ -10,13 +10,14 @@ const model = require('../tools/model');
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
     // 去掉第一行的描述
-    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir, 1);
+    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
 
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
     const productNameHashHash = {};
 
     _.each(productDataList, (productData) => {
         const { app_name, platform, group, package } = productData;
+        // 平台名小写
         const device = platform.toLowerCase();
 
         if (!productNameHashHash[device]) {
@@ -83,9 +84,9 @@ async function getVersionGroupHash(clientPackage, productNameHashHash) {
 
 }
 
-// 获取 ab 分组哈希，键为 clientPackage xml读取的广告组，值为 ab 分组数组
+// 获取 ab 分组哈希，键为 clientPackage xml 读取的内购组，值为 ab 分组数组
 async function getGroupWeightHash(XMLDir, project) {
-    const groupWeightHash = {};    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml 读取的广告组，值为 ab 分组数组
+    const groupWeightHash = {};    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml 读取的内购组，值为 ab 分组数组
 
     try {
         const groupWeightContrl = await _readXMLFile('groupContrl.xml', XMLDir, project);
@@ -104,7 +105,10 @@ async function getGroupWeightHash(XMLDir, project) {
 
         });
 
-    } catch (e) { }
+    } catch (e) {
+        console.log(e);
+
+    }
 
     return groupWeightHash;
 
@@ -171,6 +175,10 @@ async function createAbTestGroupList(productId, versionGroupId, groupWeightList)
 
         // 循环创建 ab 测试分组和 ab 测试分组下的广告位
         for (let i = 0; i < groupNum; i++) {
+            if (i === groupNum - 1) {
+                end = 100;
+
+            }
             const abTestGroupName = 'group_' + nameList[i];
             const groupWeight = groupWeightList[i];
 
@@ -195,55 +203,61 @@ async function readIapVersionGroup(DefineDir, XMLDir, project) {
     // 版本条件分组表模型
     const VersionGroupModel = model.versionGroup;
 
-    // 读取 ClientPackage xml 表
-    const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
-    const productNameHashHash = await getProductNameHash(DefineDir);
-    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
-    const groupWeightHash = await getGroupWeightHash(XMLDir, project);
-    // ClientPackage xml 表读取的游戏版本条件分组哈希
-    const versionGroupHash = await getVersionGroupHash(clientPackage, productNameHashHash);
+    try {
+        // 读取 ClientPackage xml 表
+        const clientPackage = await _readXMLFile('clientPackage.xml', XMLDir, project);
+        // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+        const productNameHashHash = await getProductNameHash(DefineDir);
+        // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的广告组，值为 ab 分组数组
+        const groupWeightHash = await getGroupWeightHash(XMLDir, project);
+        // ClientPackage xml 表读取的游戏版本条件分组哈希
+        const versionGroupHash = await getVersionGroupHash(clientPackage, productNameHashHash);
 
-    // 应用主键列表
-    const productIdList = _.keys(versionGroupHash);
+        // 应用主键列表
+        const productIdList = _.keys(versionGroupHash);
 
-    // 遍历应用
-    for (const productId of productIdList) {
-        const groupName = versionGroupHash[productId];
+        // 遍历应用
+        for (const productId of productIdList) {
+            const groupName = versionGroupHash[productId];
 
-        // xml 表中未配置，则取默认值
-        // 克隆数组，后面更改了数组
-        const groupWeightList = (_.cloneDeep(groupWeightHash[groupName])) || [{
-            toGroup: groupName,
-            weightGroup: '-1'
-        }];
+            // xml 表中未配置，则取默认值
+            // 克隆数组，后面更改了数组
+            const groupWeightList = (_.cloneDeep(groupWeightHash[groupName])) || [{
+                toGroup: groupName,
+                weightGroup: '-1'
+            }];
 
-        const name = 'default';
-        const description = '默认组';
-        const begin = 0;
+            const name = 'default';
+            const description = '默认组';
+            const begin = 0;
 
-        // 版本条件分组表对象
-        const versionGroupVo = {
-            name, begin, description, type: 2,
-            code: '[]', include: 1, productId, active: 1
-        };
+            // 版本条件分组表对象
+            const versionGroupVo = {
+                name, begin, description, type: 2,
+                code: '[]', include: 1, productId, active: 1
+            };
 
-        // 查找或创建版本条件分组
-        const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
-            where: {
-                name, type: 2, productId
-            }, defaults: versionGroupVo
-        });
+            // 查找或创建版本条件分组
+            const [currentVersionGroupVo, created] = await VersionGroupModel.findOrCreate({
+                where: {
+                    name, type: 2, productId
+                }, defaults: versionGroupVo
+            });
 
-        // 如果首次，则创建广告
-        if (created) {
-            const versionGroupId = currentVersionGroupVo.id;
+            // 如果首次，则创建广告
+            if (created) {
+                const versionGroupId = currentVersionGroupVo.id;
 
-            await createAbTestGroupList(
-                productId, versionGroupId, _.cloneDeep(groupWeightList)
-            );
+                await createAbTestGroupList(
+                    productId, versionGroupId, _.cloneDeep(groupWeightList)
+                );
+
+            }
 
         }
+
+    } catch (e) {
+        console.log(e);
 
     }
 

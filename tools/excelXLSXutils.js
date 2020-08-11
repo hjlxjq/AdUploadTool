@@ -1,6 +1,5 @@
 const xlsx = require('xlsx');
 const _ = require('lodash');
-const fsPromises = require('fs').promises;
 
 function readXLSX(path, shift) {
     const wb = xlsx.readFile(path);

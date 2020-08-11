@@ -66,7 +66,6 @@ async function readChannelAndType(XMLDir, project) {
     const channels = [];    // 广告平台列表
     const adTypes = [];    // 广告类型
 
-
     await bluebird.map(Ad_IDControl, async (item) => {
         if (!item.status) return;
         if (adGroupNameList.indexOf(item.groupName) === -1) return;
@@ -104,7 +103,6 @@ async function readChannelAndType(XMLDir, project) {
     }, { concurrency: 2 });
 
     console.log('channelList：' + _.uniq(channels));
-    console.log('adTypeList：' + _.uniq(adTypes));
 
     // 保存广告类型
     for (const type of adTypes) {

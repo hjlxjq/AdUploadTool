@@ -12,7 +12,7 @@ const Bluebird = require('bluebird');
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
     // 去掉第一行的描述
-    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir, 1);
+    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
 
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
     const productNameHashHash = {};
@@ -76,11 +76,15 @@ async function getNativeShopHash() {
 }
 
 // 获取所有的自定义内购字段哈希表
-async function getCustomShopHash() {
+async function getCustomShopHash(productId) {
     // 自定义内购字段模型
     const CustomShopModel = model.customShop;
 
-    const customShopVoList = await CustomShopModel.findAll();
+    const customShopVoList = await CustomShopModel.findAll({
+        where: {
+            productId
+        }
+    });
 
     // 自定义内购字段哈希表，键为自定义内购字段，值为数据库自定义内购字段表主键
     const customShopHash = {};
@@ -134,9 +138,11 @@ async function getShopList(XMLDir, project) {
 
         _.pullAllWith(shopVoList, nativeShopVoList, _.isEqual);
 
-    } catch (e) { }
+    } catch (e) {
+        console.log(e);
 
-    // console.log(`shopVoList: ${JSON.stringify(shopVoList)}`);
+    }
+
     return shopVoList;
 
 }
@@ -174,9 +180,11 @@ async function getShopListHash(XMLDir, project) {
 
         }
 
-    } catch (e) { }
+    } catch (e) {
+        console.log(e);
 
-    // console.log('shopListHash: ', shopListHash['cross2NLios']);
+    }
+
     return shopListHash;
 
 }
@@ -203,9 +211,11 @@ async function getIapProductHashHash(XMLDir, project) {
 
         });
 
-    } catch (e) { }
+    } catch (e) {
+        console.log(e);
 
-    // console.log('iapProductHashHash: ', iapProductHashHash['android']);
+    }
+
     return iapProductHashHash;
 
 }
@@ -215,7 +225,7 @@ async function getGroupWeightHash(XMLDir, project) {
     const groupWeightHash = {};    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的native 模板配置组，值为 ab 分组数组
 
     try {
-        const groupWeightContrl = await _readXMLFile('GroupWeightContrl.xml', XMLDir, project);
+        const groupWeightContrl = await _readXMLFile('groupContrl.xml', XMLDir, project);
 
         _.each(groupWeightContrl, (item) => {
             if (item.status) {
@@ -225,15 +235,17 @@ async function getGroupWeightHash(XMLDir, project) {
                 }
                 groupWeightHash[item.key].push({
                     toGroup: item.toGroup,
-                    weightGroup: item.weightGroup
+                    weightGroup: String(item.index)
                 });
             }
 
         });
 
-    } catch (e) { }
+    } catch (e) {
+        console.log(e);
 
-    // console.log('groupWeightHash: ', groupWeightHash);
+    }
+
     return groupWeightHash;
 
 }
@@ -268,6 +280,7 @@ async function createGoods(
                     }
                     if (!shopId) {
                         console.log(`key: ${key}`);
+
                     }
                     let value = shop[key];
 
@@ -281,7 +294,7 @@ async function createGoods(
                     }
                     else {
                         value = String(value);
-                        
+
                     }
                     const goodsMapVo = {
                         value, shopId, goodsId, productId
@@ -313,134 +326,141 @@ async function readCustomShop(DefineDir, XMLDir, project) {
     // 自定义内购字段表模型
     const CustomShopModel = model.customShop;
 
-    // 读取 ClientPackage xml 表
-    const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
-    const productNameHashHash = await getProductNameHash(DefineDir);
-    // 获取自定义内购字段对象列表
-    const shopList = await getShopList(XMLDir, project);
-
-    // 创建获取自定义内购字段表
-    for (const item of clientPackage) {
-        if (!item.status) continue;
-
-        const { packageName, device, shopGroup } = item;
-
-        if (shopGroup === 'null') continue;
-
-        // 导入指定包
-        if (!productNameHashHash[device]) {
-            continue;
-
-        }
-        if (!productNameHashHash[device][packageName]) {
-            continue;
-
-        }
-
-        // 获取应用主键
-        const productId = await getProductId(device, packageName);
+    try {
+        // 读取 ClientPackage xml 表
+        const clientPackage = await _readXMLFile('clientPackage.xml', XMLDir, project);
+        // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+        const productNameHashHash = await getProductNameHash(DefineDir);
+        // 获取自定义内购字段对象列表
+        const shopList = await getShopList(XMLDir, project);
 
         // 没有描述自定义内购字段列表
-        shopNameList = [];
+        const shopNameList = [];
 
-        // 循环向数据库自定义内购字段表对象添加应用表主键和描述
-        for (const shop of shopList) {
-            const { key, type } = shop;
-            let description = key;
+        // 创建获取自定义内购字段表
+        for (const item of clientPackage) {
+            if (!item.status) continue;
 
-            if (key === 'type') {
-                description = '类型表示商品类型，1普通,2一次,3限时,4存钱罐,5周卡,6闯关助手礼包1,7闯关助手礼包2,8闯关助手礼包3';
+            const { packageName, device, shopGroup } = item;
 
-            }
-            else if (key === 'file') {
-                description = '用于展示图标的名称';
+            if (shopGroup === 'null') continue;
 
-            }
-            else if (key === 'order') {
-                description = '排序使用';
+            // 导入指定包
+            if (!productNameHashHash[device]) {
+                continue;
 
             }
-            else if (key === 'sign') {
-                description = '0表示无标识,1标识热销hot,2标识最好best。项目组可以自己定义具体含义';
+            if (!productNameHashHash[device][packageName]) {
+                continue;
 
             }
-            else if (key === 'desc') {
-                description = '用于描述信息';
 
-            }
-            else if (key === 'discount') {
-                description = '折扣比例 0-100';
+            // 获取应用主键
+            const productId = await getProductId(device, packageName);
 
-            }
-            else if (key === 'count') {
-                description = '购买后对应获得物品数量';
+            // 循环向数据库自定义内购字段表对象添加应用表主键和描述
+            for (const shop of shopList) {
+                const { key, type } = shop;
+                let description = key;
 
-            }
-            else if (key === 'obtain') {
-                description = '用于定义购买商品后,玩家获取的游戏内道具。如：1金币2普通提示；3可选提示。1|200;2|10;3|1 表示购买该商品获得200个金币,10个免费提示道具1和1个免费提示道具2';
+                if (key === 'type') {
+                    description = '类型表示商品类型，1普通,2一次,3限时,4存钱罐,5周卡,6闯关助手礼包1,7闯关助手礼包2,8闯关助手礼包3';
 
-            }
-            else if (key === 'cVersion') {
-                description = '控制该商品从哪个版本开始展示，当客户端版本大于等于该值的时候，会收到这个商品的信息';
+                }
+                else if (key === 'file') {
+                    description = '用于展示图标的名称';
 
-            }
-            else if (key === 'ad') {
-                description = 'TRUE/FALSE是否带去广告功能';
+                }
+                else if (key === 'order') {
+                    description = '排序使用';
 
-            }
-            else if (key === 'timer') {
-                description = '限时倒计时,-1表示永久';
+                }
+                else if (key === 'sign') {
+                    description = '0表示无标识,1标识热销hot,2标识最好best。项目组可以自己定义具体含义';
 
-            }
-            else if (key === 'typeSingle') {
-                description = '类型[0非一次性商品,1一次性商品]';
+                }
+                else if (key === 'desc') {
+                    description = '用于描述信息';
 
-            }
-            else if (key === 'gIndex') {
-                description = '商品组排序标识，替换，从0开始，当一组中的一个商品被购买且下一组商品存在，切换到下一组商品';
+                }
+                else if (key === 'discount') {
+                    description = '折扣比例 0-100';
 
-            }
-            else if (key === 'custom1') {
-                description = '自定义字段，项目组可以根据自己的需要来设置这个字段';
+                }
+                else if (key === 'count') {
+                    description = '购买后对应获得物品数量';
 
-            }
-            else if (key === 'custom2') {
-                description = '自定义字段，项目组可以根据自己的需要来设置这个字段';
+                }
+                else if (key === 'obtain') {
+                    description = '用于定义购买商品后,玩家获取的游戏内道具。如：1金币2普通提示；3可选提示。1|200;2|10;3|1 表示购买该商品获得200个金币,10个免费提示道具1和1个免费提示道具2';
 
-            }
-            else if (key === 'consumable') {
-                description = '0是消耗品,1是非消耗品,2是订购商品';
+                }
+                else if (key === 'cVersion') {
+                    description = '控制该商品从哪个版本开始展示，当客户端版本大于等于该值的时候，会收到这个商品的信息';
 
-            }
-            else if (key === 'userTag') {
-                description = '用户标签';
+                }
+                else if (key === 'ad') {
+                    description = 'TRUE/FALSE是否带去广告功能';
 
-            }
-            else {
-                shopNameList.push(key);
-            }
+                }
+                else if (key === 'timer') {
+                    description = '限时倒计时,-1表示永久';
 
-            const shopVo = { key, type, description, productId, active: 1 };
+                }
+                else if (key === 'typeSingle') {
+                    description = '类型[0非一次性商品,1一次性商品]';
 
-            try {
-                if (!_.isEmpty(shopVo)) {
-                    await CustomShopModel.create(shopVo);
+                }
+                else if (key === 'gIndex') {
+                    description = '商品组排序标识，替换，从0开始，当一组中的一个商品被购买且下一组商品存在，切换到下一组商品';
+
+                }
+                else if (key === 'custom1') {
+                    description = '自定义字段，项目组可以根据自己的需要来设置这个字段';
+
+                }
+                else if (key === 'custom2') {
+                    description = '自定义字段，项目组可以根据自己的需要来设置这个字段';
+
+                }
+                else if (key === 'consumable') {
+                    description = '0是消耗品,1是非消耗品,2是订购商品';
+
+                }
+                else if (key === 'userTag') {
+                    description = '用户标签';
+
+                }
+                else {
+                    shopNameList.push(key);
 
                 }
 
-            } catch (e) {
-                if (e.name !== 'SequelizeUniqueConstraintError') {
-                    throw e;
+                const shopVo = { key, type, description, productId, active: 1 };
+
+                try {
+                    if (!_.isEmpty(shopVo)) {
+                        await CustomShopModel.create(shopVo);
+
+                    }
+
+                } catch (e) {
+                    if (e.name !== 'SequelizeUniqueConstraintError') {
+                        throw e;
+
+                    }
 
                 }
 
             }
 
         }
+        console.log('shopNameList uniq name：' + _.uniq(shopNameList));
+
+    } catch (e) {
+        console.log(e);
 
     }
-    console.log('shopNameList uniq name：' + _.uniq(shopNameList));
 
 }
 
@@ -451,89 +471,101 @@ async function readGoodsGroup(DefineDir, XMLDir, project) {
     //商品组表模型
     const GoodsGroupModel = model.goodsGroup;
 
-    // 读取 ClientPackage xml 表
-    const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
-    const productNameHashHash = await getProductNameHash(DefineDir);
-    // 获取商品组哈希，键为商品组，值为商品数据
-    const shopListHash = await getShopListHash(XMLDir, project);
-    // 获取内购哈希，键为平台，值为内购数据哈希
-    const iapProductHashHash = await getIapProductHashHash(XMLDir, project);
-    // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的native 模板配置组，值为 ab 分组数组
-    const groupWeightHash = await getGroupWeightHash(XMLDir, project);
-    // 获取所有的通用内购字段哈希表
-    const nativeShopHash = await getNativeShopHash();
-    // 获取所有的自定义内购字段哈希表
-    const customShopHash = await getCustomShopHash();
+    try {
+        // 读取 ClientPackage xml 表
+        const clientPackage = await _readXMLFile('clientPackage.xml', XMLDir, project);
+        // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
+        const productNameHashHash = await getProductNameHash(DefineDir);
+        // 获取商品组哈希，键为商品组，值为商品数据
+        const shopListHash = await getShopListHash(XMLDir, project);
+        // 获取内购哈希，键为平台，值为内购数据哈希
+        const iapProductHashHash = await getIapProductHashHash(XMLDir, project);
+        // ab 分组 xml 表读取的哈希表，键为 clientPackage xml读取的native 模板配置组，值为 ab 分组数组
+        const groupWeightHash = await getGroupWeightHash(XMLDir, project);
+        // 获取所有的通用内购字段哈希表
+        const nativeShopHash = await getNativeShopHash();
 
-    // 不存在的商品组
-    const goodsGroupNameList = [];
+        // 不存在的商品组
+        const goodsGroupNameList = [];
 
-    // 创建所有商品组和商品组下商品
-    for (const item of clientPackage) {
-        if (!item.status) continue;
+        // 创建所有商品组和商品组下商品
+        for (const item of clientPackage) {
+            if (!item.status) continue;
 
-        const { packageName, device, shopGroup } = item;
+            const { packageName, device, shopGroup } = item;
 
-        if (shopGroup === 'null') continue;
+            if (shopGroup === 'null') continue;
 
-        // 导入指定包
-        if (!productNameHashHash[device]) {
-            continue;
+            // 导入指定包
+            if (!productNameHashHash[device]) {
+                continue;
 
-        }
-        if (!productNameHashHash[device][packageName]) {
-            continue;
+            }
+            if (!productNameHashHash[device][packageName]) {
+                continue;
 
-        }
+            }
 
-        // 获取应用主键
-        const productId = await getProductId(device, packageName);
+            // 获取应用主键
+            const productId = await getProductId(device, packageName);
 
-        // xml 表中未配置，则取默认值
-        const groupWeightList = groupWeightHash[shopGroup] || [{
-            toGroup: shopGroup,
-            weightGroup: '-1'
-        }];
+            // 获取所有的自定义内购字段哈希表
+            const customShopHash = await getCustomShopHash(productId);
 
-        // 循环 ab 分组,创建商品组和商品
-        for (const groupWeight of groupWeightList) {
-            const goodsGroupName = groupWeight.toGroup;
+            // xml 表中未配置，则取默认值
+            const groupWeightList = groupWeightHash[shopGroup] || [{
+                toGroup: shopGroup,
+                weightGroup: '-1'
+            }];
 
-            const shopList = shopListHash[goodsGroupName];
-            if (!_.isEmpty(shopList)) {
-                // 数据库商品组表对象
-                const goodsGroupVo = {
-                    name: goodsGroupName, description: goodsGroupName, productId, active: 1
-                };
+            // 循环 ab 分组,创建商品组和商品
+            for (const groupWeight of groupWeightList) {
+                const goodsGroupName = groupWeight.toGroup;
 
-                // 查找或创建商品组
-                const [currentGoodsGroupVo, created] = await GoodsGroupModel.findOrCreate({
-                    where: {
-                        name: goodsGroupName, productId
-                    }, defaults: goodsGroupVo
-                });
+                const shopList = shopListHash[goodsGroupName];
 
-                // 如果首次，则创建商品
-                if (created) {
-                    const currentGoodsGroupId = currentGoodsGroupVo.id;
+                if (!_.isEmpty(shopList)) {
+                    // 数据库商品组表对象
+                    const goodsGroupVo = {
+                        name: goodsGroupName, description: goodsGroupName, productId, active: 1
+                    };
 
-                    await createGoods(
-                        productId, currentGoodsGroupId, iapProductHashHash[device], shopList,
-                        nativeShopHash, customShopHash
-                    );
+                    // 查找或创建商品组
+                    const [currentGoodsGroupVo, created] = await GoodsGroupModel.findOrCreate({
+                        where: {
+                            name: goodsGroupName, productId
+                        }, defaults: goodsGroupVo
+                    });
+
+                    // 如果首次，则创建商品
+                    if (created) {
+                        const currentGoodsGroupId = currentGoodsGroupVo.id;
+
+                        if (goodsGroupName === 'swipeDEios') {
+                            console.log('shopList length: ', shopList.length);
+                        
+                        }
+
+                        await createGoods(
+                            productId, currentGoodsGroupId, iapProductHashHash[device], shopList,
+                            nativeShopHash, customShopHash
+                        );
+                    }
+
+                } else {
+                    goodsGroupNameList.push(adGroupName);
+
                 }
-
-            } else {
-                goodsGroupNameList.push(adGroupName);
 
             }
 
         }
+        console.log('goodsGroupNameList uniq name：' + _.uniq(goodsGroupNameList));
+
+    } catch (e) {
+        console.error(e);
 
     }
-    // console.log('goodsGroupNameList uniq name：' + _.uniq(goodsGroupNameList));
-    console.log('goodsGroupNameList uniq name：' + _.uniq(goodsGroupNameList).length);
 
 }
 

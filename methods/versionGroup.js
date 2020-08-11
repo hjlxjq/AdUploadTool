@@ -448,6 +448,10 @@ async function createAdAbTestGroupList(
 
         // 循环创建 ab 测试分组和 ab 测试分组下的广告位
         for (let i = 0; i < groupNum; i++) {
+            if (i === groupNum - 1) {
+                end = 100;
+
+            }
             const groupWeight = groupWeightList[i];
             const abTestGroupName = 'group_' + nameList[i];
 
@@ -527,6 +531,10 @@ async function createConfigAbTestGroupList(productId, versionGroupId, groupWeigh
 
         // 循环创建 ab 测试分组和 ab 测试分组下的广告位
         for (let i = 0; i < groupNum; i++) {
+            if (i === groupNum - 1) {
+                end = 100;
+
+            }
             const abTestGroupName = 'group_' + nameList[i];
             const groupWeight = groupWeightList[i];
 

@@ -6,6 +6,7 @@ const model = require('../tools/model');
 
 // 创建转发应用配置
 async function readAppConfig(DefineDir) {
+    // sequelize 数据库 model
     const AppConfigModel = model.appConfig;    // 转发应用配置表模型
 
     const appConfigPath = DefineDir + '/AppsConfig.json';

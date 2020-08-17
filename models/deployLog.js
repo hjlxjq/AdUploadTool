@@ -16,7 +16,6 @@ module.exports = db.defineModel('deployLog', {
     userId: {
         type: db.CHAR(36),
         allowNull: false,
-        unique: true
     }
 
 });

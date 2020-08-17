@@ -10,23 +10,29 @@ const model = require('../tools/model');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
-    // 去掉第一行的描述
-    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
-
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
-    const productNameHashHash = {};
+    let productNameHashHash = {};
 
-    _.each(productDataList, (productData) => {
-        const { app_name, platform, group, package } = productData;
-        const device = platform.toLowerCase();
+    try {
+        // 去掉第一行的描述
+        const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
 
-        if (!productNameHashHash[device]) {
-            productNameHashHash[device] = {};
+        _.each(productDataList, (productData) => {
+            const { app_name, platform, group, package } = productData;
+            const device = platform.toLowerCase();
 
-        }
-        productNameHashHash[device][package] = { productName: app_name, productGroupName: group };
+            if (!productNameHashHash[device]) {
+                productNameHashHash[device] = {};
 
-    });
+            }
+            productNameHashHash[device][package] = { productName: app_name, productGroupName: group };
+
+        });
+
+    } catch (e) {
+        productNameHashHash = {};
+
+    }
     return productNameHashHash;
 
 }
@@ -82,13 +88,17 @@ async function readProduct(DefineDir, XMLDir, project) {
             packageName = packageNameArr.join('-');
 
         }
-        // 导入指定包
-        if (!productNameHashHash[device]) {
-            return;
+        // 存在阶段导入
+        if (!_.isEmpty(productNameHashHash)) {
+            // 导入指定包
+            if (!productNameHashHash[device]) {
+                return;
 
-        }
-        if (!productNameHashHash[device][packageName]) {
-            return;
+            }
+            if (!productNameHashHash[device][packageName]) {
+                return;
+
+            }
 
         }
         // 平台列表

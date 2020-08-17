@@ -79,8 +79,12 @@ function parseCSVInfo(csvArr) {
 }
 
 // 解析读到的 CSV 对象，返回一个 CSV 表的行数据对象列表
-async function _readCSVFile(csvName, CSVDir) {
-	const filePath = `${CSVDir}/${csvName}`;
+async function _readCSVFile(csvName, CSVDir, project) {
+	let filePath = `${CSVDir}/${csvName}`;
+	if (project) {
+		filePath = `${CSVDir}/${project}/${csvName}`;
+
+	}
 
 	const csvObject = await readCSV(filePath);
 	const rowDataList = parseCSVInfo(csvObject);

@@ -1,5 +1,5 @@
 /**
- * 导入 adType, adChannel, nativeTmpl 三张表
+ * 导入 adType, adChannel, nativeTmpl, baseConfig, nativeShop 五张表
  */
 const _ = require('lodash');
 const bluebird = require('bluebird');
@@ -7,12 +7,14 @@ const _readXMLFile = require('../tools/excelXMLutils');
 const _readXLSXFile = require('../tools/excelXLSXutils');
 const model = require('../tools/model');
 
+// 默认图片地址
 const defaultPreview = 'http://adtest.weplayer.cc/opt/upload/preview/1/upload_8635bd7ad2b69b8627d79f33705238c1.jpg';
 
 // 创建广告平台和广告类型
 async function readChannelAndType(XMLDir, project) {
     console.log('begin execute function: readChannelAndType()');
 
+    // sequelize 数据库 model
     const AdTypeModel = model.adType;
     const AdChannelModel = model.adChannel;
 
@@ -20,7 +22,7 @@ async function readChannelAndType(XMLDir, project) {
     const Ad_IDControl = await _readXMLFile('Ad_IDControl.xml', XMLDir, project);
     // 解析产品
     const clientPackage = await _readXMLFile('ClientPackage.xml', XMLDir, project);
-    // 解析 ab 分组
+    // 解析 ab 分组，有些项目未配置 ab 分组
     let groupWeightContrl = [];
     try {
         groupWeightContrl = await _readXMLFile('GroupWeightContrl.xml', XMLDir, project);
@@ -29,8 +31,9 @@ async function readChannelAndType(XMLDir, project) {
         groupWeightContrl = [];
 
     }
-    const groupWeightContrlHash = {};    // ab 分组 哈希，key 为需要分组的 groupName, value 为 ab 分组对象
+    const groupWeightContrlHash = {};    // ab 分组 哈希，key 为需要分组的 groupName, value 为 ab 分组对象列表
     _.each(groupWeightContrl, (item) => {
+        // 只处理生效的
         if (item.status) {
             if (!groupWeightContrlHash[item.key]) {
                 groupWeightContrlHash[item.key] = [];
@@ -61,15 +64,18 @@ async function readChannelAndType(XMLDir, project) {
         }
 
     });
-    adGroupNameList = _.uniq(adGroupNameList);    // 消除重复组
+    adGroupNameList = _.uniq(adGroupNameList);    // 消除重复组，不同应用可能存在相同的 组（key）
 
     const channels = [];    // 广告平台列表
     const adTypes = [];    // 广告类型
 
     await bluebird.map(Ad_IDControl, async (item) => {
+        // 不处理关闭项
         if (!item.status) return;
+        // 不处理无用项
         if (adGroupNameList.indexOf(item.groupName) === -1) return;
 
+        // 广告渠道和类型均小写
         let channel = item.channel.toLowerCase();
         let adType = item.adType.toLowerCase();
 
@@ -166,20 +172,23 @@ async function readChannelAndType(XMLDir, project) {
 async function readNativeTmpl(XMLDir, project) {
     console.log('begin execute function: readNativeTmpl()');
 
+    // sequelize 数据库 model
     const NativeTmplModel = model.nativeTmpl;
 
-    // 解析 native 模板
+    // 解析 native 模板，模板不存在，直接返回不处理
     let nativeAdTemplate = [];
     try {
         nativeAdTemplate = await _readXMLFile('NativeAdTemplate.xml', XMLDir, project);
 
     } catch (e) {
         return;
+
     }
     // 模板编号列表
     const keyList = [];
 
     _.each(nativeAdTemplate, async (item) => {
+        // 不处理关闭项
         if (!item.status) return;
 
         keyList.push(item.key);
@@ -212,6 +221,7 @@ async function readNativeTmpl(XMLDir, project) {
 async function readBaseConfig(DefineDir) {
     console.log('begin execute function: readBaseConfig()');
 
+    // sequelize 数据库 model
     const BaseConfigModel = model.baseConfig;
 
     // 解析基础常量
@@ -250,6 +260,7 @@ async function readBaseConfig(DefineDir) {
 // 通用内购字段表
 async function readNativeShop(DefineDir) {
     console.log('begin execute function: readNativeShop()');
+    // sequelize 数据库 model
     const NativeShopModel = model.nativeShop;    // 通用内购字段表模型
 
     // 解析通用内购字段

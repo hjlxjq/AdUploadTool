@@ -58,7 +58,7 @@ function parseXMLInfo(xmlObject) {
 };
 
 // 解析读到的 XML 对象，返回一个 xml 表的行数据对象列表
-async function _readXMLFile(xmlName, XMLDir, project) {
+async function _readXMLHeader(xmlName, XMLDir, project) {
     const filePath = `${XMLDir}/${project}/${xmlName}`;
     const xmlObject = await readXML(filePath);
     const rowDataList = parseXMLInfo(xmlObject);
@@ -70,4 +70,4 @@ async function _readXMLFile(xmlName, XMLDir, project) {
 
 }
 
-module.exports = _readXMLFile;
+module.exports = _readXMLHeader;

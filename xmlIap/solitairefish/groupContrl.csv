@@ -1,0 +1,4 @@
+key,toGroup,index,status
+String,String,Number,Boolean
+fish_abtest_01,fish_01A,-1,FALSE
+fish_ios_abtest_01,fish_ios_01A,-1,FALSE

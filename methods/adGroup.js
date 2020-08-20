@@ -9,23 +9,29 @@ const model = require('../tools/model');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
-    // 去掉第一行的描述
-    const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
-
     // 应用名称哈希表，键为平台，值为包名对应应用名和项目组名哈希表
-    const productNameHashHash = {};
+    let productNameHashHash = {};
 
-    _.each(productDataList, (productData) => {
-        const { app_name, platform, group, package } = productData;
-        const device = platform.toLowerCase();
+    try {
+        // 去掉第一行的描述
+        const productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
 
-        if (!productNameHashHash[device]) {
-            productNameHashHash[device] = {};
+        _.each(productDataList, (productData) => {
+            const { app_name, platform, group, package } = productData;
+            const device = platform.toLowerCase();
 
-        }
-        productNameHashHash[device][package] = { productName: app_name, productGroupName: group };
+            if (!productNameHashHash[device]) {
+                productNameHashHash[device] = {};
 
-    });
+            }
+            productNameHashHash[device][package] = { productName: app_name, productGroupName: group };
+
+        });
+
+    } catch (e) {
+        productNameHashHash = {};
+
+    }
     return productNameHashHash;
 
 }
@@ -53,22 +59,28 @@ async function getAdNameHash(DefineDir) {
 
     _.each(admobDataList, (admobData) => {
         const { siteName, placementId, status } = admobData;
+        // 只处理生效的
         if (status) {
             adNameHashHash['admob'][placementId] = siteName;
+
         }
 
     });
     _.each(facebookDataList, (facebookData) => {
         const { siteName, placementId, status } = facebookData;
+        // 只处理生效的
         if (status) {
             adNameHashHash['facebook'][placementId] = siteName;
+
         }
 
     });
     _.each(tiktokDataList, (tiktokData) => {
         const { siteName, placementId, status } = tiktokData;
+
         if (status) {
             adNameHashHash['tiktok'][placementId] = siteName;
+
         }
 
     });
@@ -78,6 +90,7 @@ async function getAdNameHash(DefineDir) {
 
 // 根据 平台和包名获取应用在数据里的主键
 async function getProductId(platform, packageName) {
+    // sequelize 数据库 model
     const ProductModel = model.product;    // 应用表模型
 
     // 广告平台的平台名，android, ios, wenxin, instant
@@ -102,7 +115,7 @@ async function getProductId(platform, packageName) {
 
 // 获取所有的广告类型哈希表
 async function getAdTypeHash() {
-    // 广告类型模型
+    // 广告类型模型，sequelize 数据库 model
     const AdTypeModel = model.adType;
 
     const adTypeVoList = await AdTypeModel.findAll();
@@ -121,7 +134,7 @@ async function getAdTypeHash() {
 
 // 获取所有的广告平台哈希表
 async function getAdChannelHash() {
-    // 广告平台模型
+    // 广告平台模型，sequelize 数据库 model
     const AdChannelModel = model.adChannel;
 
     const adChannelVoList = await AdChannelModel.findAll();
@@ -138,18 +151,19 @@ async function getAdChannelHash() {
 
 }
 
-// 获取广告组哈希，键为广告组，值为广告数据
+// 获取广告组哈希，键为广告组，值为广告数据对象列表
 async function getAd_IDControlHash(XMLDir, project) {
     const ad_IDControlHashHash = {};    // 广告 xml 表读取的哈希表，键为广告组，值为广告数据
-
     const headerBiddingHash = {};    // bidding xml 表读取的哈希表，键为 hbkey，值为 placementID
 
     try {
         const headerBidding_ID = await _readXMLFile('HeaderBidding_ID.xml', XMLDir, project);
 
         _.each(headerBidding_ID, (item) => {
+            // 只处理生效的
             if (item.status) {
                 headerBiddingHash[item.hbkey] = item.placementID;
+
             }
 
         });
@@ -159,11 +173,13 @@ async function getAd_IDControlHash(XMLDir, project) {
     const ad_IDControl = await _readXMLFile('Ad_IDControl.xml', XMLDir, project);
 
     _.each(ad_IDControl, (item) => {
+        // 只处理生效的
         if (item.status) {
             const {
                 groupName, adID, ecpm, loader, subloader, interval, weight
             } = item;
 
+            // 广告类型和广告平台均为小写
             const channel = item.channel.toLowerCase();
             const adType = item.adType.toLowerCase();
             // 忽略广告平台后面的数字
@@ -197,6 +213,7 @@ async function getAd_IDControlHash(XMLDir, project) {
                 });
 
             }
+
         }
 
     });
@@ -213,6 +230,7 @@ async function getGroupWeightHash(XMLDir, project) {
         const groupWeightContrl = await _readXMLFile('GroupWeightContrl.xml', XMLDir, project);
 
         _.each(groupWeightContrl, (item) => {
+            // 只处理生效的
             if (item.status) {
                 if (!groupWeightHash[item.key]) {
                     groupWeightHash[item.key] = [];
@@ -222,6 +240,7 @@ async function getGroupWeightHash(XMLDir, project) {
                     toGroup: item.toGroup,
                     weightGroup: item.weightGroup
                 });
+
             }
 
         });
@@ -236,6 +255,7 @@ async function getGroupWeightHash(XMLDir, project) {
 async function createAd(
     adGroupId, adTypeId, productId, adChannelHash, adDataHash, adNameHashHash
 ) {
+    // sequelize 数据库 model
     const AdModel = model.ad;    // 广告表模型
 
     // 广告渠道列表
@@ -312,7 +332,7 @@ async function createAd(
 async function readAdGroup(DefineDir, XMLDir, project) {
     console.log('begin execute function: readAdGroup()');
 
-    // 广告组表模型
+    // 广告组表模型，sequelize 数据库 model
     const AdGroupModel = model.adGroup;
 
     // 读取 ClientPackage xml 表
@@ -335,6 +355,7 @@ async function readAdGroup(DefineDir, XMLDir, project) {
 
     // 创建所有广告组和广告组下广告
     for (const item of clientPackage) {
+        // 不处理生效的
         if (!item.status) continue;
 
         let packageName = item.packageName;
@@ -350,13 +371,17 @@ async function readAdGroup(DefineDir, XMLDir, project) {
             packageName = packageNameArr.join('-');
 
         }
-        // 导入指定包
-        if (!productNameHashHash[device]) {
-            continue;
+        // 存在阶段导入
+        if (!_.isEmpty(productNameHashHash)) {
+            // 导入指定包
+            if (!productNameHashHash[device]) {
+                continue;
 
-        }
-        if (!productNameHashHash[device][packageName]) {
-            continue;
+            }
+            if (!productNameHashHash[device][packageName]) {
+                continue;
+
+            }
 
         }
 

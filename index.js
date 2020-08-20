@@ -33,17 +33,16 @@ async function init() {
     await readChannelAndType(XMLDir, project);
     await readNativeTmpl(XMLDir, project);
     await readProductGroup(DefineDir);
-    await readAppConfig(DefineDir)
-    await readBaseConfig(DefineDir);
-    await readNativeShop(DefineDir);
-    await readBaseConfig(DefineDir, project);
+    await readAppConfig(DefineDir);
+    // await readBaseConfig(DefineDir);
+    // await readNativeShop(DefineDir);
     await readProduct(DefineDir, XMLDir, project);
     await readConfigGroup(DefineDir, XMLDir, project);
     await readAdGroup(DefineDir, XMLDir, project);
     await readNativeTmplConfGroup(DefineDir, XMLDir, project);
-    await readCustomShop(DefineDir, XMLIapDir, project);
-    await readGoodsGroup(DefineDir, XMLIapDir, project);
-    await readIapVersionGroup(DefineDir, XMLIapDir, project);
+    // await readCustomShop(DefineDir, XMLIapDir, project);
+    // await readGoodsGroup(DefineDir, XMLIapDir, project);
+    // await readIapVersionGroup(DefineDir, XMLIapDir, project);
     await readConfigVersionGroup(DefineDir, XMLDir, project);
     await readAdVersionGroup(DefineDir, XMLDir, project);
     // await testVersionGroup(XMLDir, project);

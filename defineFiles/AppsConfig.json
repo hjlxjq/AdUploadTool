@@ -678,5 +678,9 @@
     {
         "PackageName": "com.tilefarm.match.puzzle",
         "Platform": "android"
+    },
+    {
+        "PackageName": "com.towerdefense.magicblock",
+        "Platform": "android"
     }
 ]

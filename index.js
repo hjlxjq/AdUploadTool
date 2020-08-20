@@ -45,7 +45,7 @@ async function init() {
     await readIapVersionGroup(DefineDir, XMLIapDir, project);
     await readConfigVersionGroup(DefineDir, XMLDir, project);
     await readAdVersionGroup(DefineDir, XMLDir, project);
-    await testVersionGroup(XMLDir, project);
+    // await testVersionGroup(XMLDir, project);
 }
 
 init();

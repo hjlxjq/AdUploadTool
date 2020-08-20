@@ -56,7 +56,7 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R1C9"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="34" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="58" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="64.8" ss:DefaultRowHeight="16.05">
    <Column ss:AutoFitWidth="0" ss:Width="124.80000000000001"/>
    <Column ss:StyleID="s62" ss:Width="115.80000000000001" ss:Span="1"/>
@@ -64,7 +64,7 @@
    <Column ss:Width="114" ss:Span="1"/>
    <Column ss:Index="7" ss:Width="268.8"/>
    <Column ss:Width="124.80000000000001"/>
-   <Column ss:AutoFitWidth="0" ss:Width="109.19999999999999"/>
+   <Column ss:Width="153"/>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s63"><Data ss:Type="String">hbkey</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -482,6 +482,294 @@
     <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun</Data></Cell>
     <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_33</Data></Cell>
+    <Cell><Data ss:Type="String">1015107852153562</Data></Cell>
+    <Cell><Data ss:Type="String">1015107852153562</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">1015107852153562_1313748188956192</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B6-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_34</Data></Cell>
+    <Cell><Data ss:Type="String">1015107852153562</Data></Cell>
+    <Cell><Data ss:Type="String">1015107852153562</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">1015107852153562_1313748298956181</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B6-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_35</Data></Cell>
+    <Cell><Data ss:Type="String">1015107852153562</Data></Cell>
+    <Cell><Data ss:Type="String">1015107852153562</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">1015107852153562_1313748402289504</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B6-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_36</Data></Cell>
+    <Cell><Data ss:Type="String">2442356859221102</Data></Cell>
+    <Cell><Data ss:Type="String">2442356859221102</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">2442356859221102_3085991074857674</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B1-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_37</Data></Cell>
+    <Cell><Data ss:Type="String">2442356859221102</Data></Cell>
+    <Cell><Data ss:Type="String">2442356859221102</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">2442356859221102_3085991404857641</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B1-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_38</Data></Cell>
+    <Cell><Data ss:Type="String">2442356859221102</Data></Cell>
+    <Cell><Data ss:Type="String">2442356859221102</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">2442356859221102_3085991711524277</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B1-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Solitaire&#160;Collection&#160;Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_39</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_925965634590132</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A7-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_40</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_925965774590118</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A7-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_41</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_925965934590102</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A7-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_42</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_925966574590038</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B7-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_43</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_925966704590025</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B7-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_44</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_925966781256684</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B7-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_45</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">811094915975104_1032427847175142</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A6-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_46</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">811094915975104_1032427920508468</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A6-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_47</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">811094915975104_1032427997175127</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A6-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_48</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">811094915975104_1032428683841725</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B6-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_49</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">811094915975104_1032428767175050</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B6-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_50</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell><Data ss:Type="String">811094915975104</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">811094915975104_1032428870508373</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B6-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_51</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_931629527357076</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A8-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_52</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_931629667357062</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A8-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_53</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_931629747357054</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A8-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_54</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_931629867357042</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B8-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_55</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_931629937357035</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B8-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_56</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell><Data ss:Type="String">706328189887212</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">706328189887212_931630020690360</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">B8-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Spider Solitaire Fun</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -497,11 +785,11 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>9</TopRowVisible>
+   <TopRowVisible>36</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>26</ActiveRow>
+     <ActiveRow>55</ActiveRow>
      <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
@@ -515,6 +803,20 @@
    <Range>R23C4:R28C4</Range>
    <Condition>
     <Value1>AND(COUNTIF(R23C4:R28C4, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R35C4:R37C4</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R35C4:R37C4, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R47C4:R49C4</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R47C4:R49C4, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
     <Format Style='color:#9C0006;background:#FFC7CE'/>
    </Condition>
   </ConditionalFormatting>

@@ -7,19 +7,19 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Microsoft Office 用户</Author>
-  <LastAuthor>fushuang</LastAuthor>
+  <LastAuthor>Microsoft Office 用户</LastAuthor>
   <Created>2016-07-28T12:41:31Z</Created>
-  <LastSaved>2020-07-08T04:15:08Z</LastSaved>
+  <LastSaved>2020-08-18T13:09:17Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>8928</WindowHeight>
-  <WindowWidth>23040</WindowWidth>
+  <WindowHeight>15940</WindowHeight>
+  <WindowWidth>27040</WindowWidth>
   <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
+  <WindowTopY>720</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -27,7 +27,7 @@
   <Style ss:ID="Default" ss:Name="Normal">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -35,7 +35,7 @@
   <Style ss:ID="s62" ss:Name="常规 3">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:FontName="DengXian" ss:Size="12" ss:Color="#000000"/>
+   <Font ss:FontName="DengXian" x:CharSet="134" ss:Size="12" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -62,16 +62,15 @@
    <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R1C9"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="12" x:FullColumns="1"
-   x:FullRows="1" ss:DefaultColumnWidth="65.400000000000006"
-   ss:DefaultRowHeight="16.05">
-   <Column ss:AutoFitWidth="0" ss:Width="123.6"/>
-   <Column ss:StyleID="s63" ss:Width="116.4" ss:Span="1"/>
-   <Column ss:Index="4" ss:Width="234.6"/>
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="24" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="16">
+   <Column ss:AutoFitWidth="0" ss:Width="124"/>
+   <Column ss:StyleID="s63" ss:Width="116" ss:Span="1"/>
+   <Column ss:Index="4" ss:Width="235"/>
    <Column ss:Width="114" ss:Span="1"/>
-   <Column ss:Index="7" ss:Width="267.60000000000002"/>
-   <Column ss:Width="125.4"/>
-   <Column ss:Width="98.4"/>
+   <Column ss:Index="7" ss:Width="268"/>
+   <Column ss:Width="125"/>
+   <Column ss:Width="98"/>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s64"><Data ss:Type="String">hbkey</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -225,6 +224,150 @@
     <Cell><Data ss:Type="String">Tap Color</Data></Cell>
     <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_11</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3176308315748336</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">B2-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_12</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3176313069081194</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">B2-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_13</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3176314902414344</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">B2-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_14</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3192240274155140</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">T3-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_15</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3192240834155084</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">T3-Interstitial-002</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_16</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3192242864154881</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">T3-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_17</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">2997565110289325_3221540684558432</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A9-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_18</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3221541481225019</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A9-HB-full-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_19</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell><Data ss:Type="String">2997565110289325</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2997565110289325_3221542277891606</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A9-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_20</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289_306683370416770</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B1-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_21</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289_306683500416757</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B1-HB-full-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_22</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289</Data></Cell>
+    <Cell><Data ss:Type="String">272424850509289_306683657083408</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B1-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">Tap Color Lite-IOS</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -243,8 +386,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>16</ActiveRow>
-     <ActiveCol>3</ActiveCol>
+     <ActiveRow>25</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

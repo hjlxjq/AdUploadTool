@@ -2,11 +2,11 @@ const db = require('../tools/db');
 
 module.exports = db.defineModel('ad', {
     name: {
-        type: db.STRING(100),
+        type: db.STRING(150),
         allowNull: false,
     },
     placementID: {
-        type: db.STRING(100),
+        type: db.STRING(150),
         allowNull: false
     },
     ecpm: {

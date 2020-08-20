@@ -1,686 +1,146 @@
 [
     {
-        "PackageName": "com.queensgame.pyramid",
+        "PackageName": "com.towerdefense.magicblock",
         "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.fr",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.cs",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.BubbleShooter",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.pandoomobile.GemsJourney",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.BMX_Boy",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.hapogames.BubbleParadise",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.JewelsStar",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.SkaterBoy",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.coolmango.sudokufun",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.JewelsLegend",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.JewelsStar2",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.racingmoto",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.hapogames.BubbleParadise2",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.basketballshoot",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.boomanddoom",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.BubbleFarm",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.BubblePirate",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.BubbleShooter2",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.pandoomobile.BubbleSpace",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.BubbleTotem",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "org.candylegend",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.DragonGem",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "org.cocos2dx.FarmStory",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.pandoomobile.GemsJourney2",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.JewelsNinja",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.JewelsStar3",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.pandoomobile.MagicMania",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.MarbleSaga",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.MarbleSaga2",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.PoolMania",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.SkaterBoyLegend",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.msplash",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "org.mania2048",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.basketball",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.galaxybowling",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.games.SpeedRacing",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.smootem.letmeout",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.de",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.it",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.it",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.sv",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.sv",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.en",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.en",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "word.tailor.match.game.fr",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.pt",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.pt",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.cs",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.cs",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgames.puzzle.board.bible",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.de",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.de",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.es",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.es",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.fr",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.fr",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.it",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.it",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.nl",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.nl",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.pl",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordcross.plus.puzzle.pl",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.search",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.search",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.en",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.cs",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.da",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.es",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.es",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.id",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.id",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.nl",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.no",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.no",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.pl",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.pl",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.addictive.story",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.addictive.story",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.en",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.cs",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.da",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.de",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.de",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.es",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.es",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.fr",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.fr",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.nl",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.nl",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.no",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.no",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.sv",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.sv",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.wordcross.en",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.da.dk",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.da",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.id",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.id",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.nl",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.nl",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.no.no",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.no",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.pl",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.pl",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.sv.se",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.sv",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.sushi.en",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.word.game.find.en",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.sushi.de",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.sushi.fr",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "word.tailor.match.game.en",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.de",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.es",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.it",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.crush.fr",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.crush.fr",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.crush.ja",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.crush.ja",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.crush.es",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.crush.es",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.fun.pet",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.restaurant.story",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.solitaire",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.solitaire.dailyChallenge",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.freecell",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.hapogames.FreeCell",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.freecell",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.queensgame.collection",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.collection",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.cardgame.solitaire.flat",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgame.solitaire.lite",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgame.solitaire.basic1",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgame.solitaire.basic2",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.solitaire",
-        "Platform": "ios"
     },
     {
         "PackageName": "com.queensgame.spider",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.cardgames.solitaire.tournaments.free.klondike.classic",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.queensgame.solitaire.journey",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.queensgame.solitaire.journey",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.queensgame.spider2",
+        "PackageName": "com.cardgame.solitaire.discovery",
         "Platform": "android"
     },
     {
-        "PackageName": "com.cardgame.solitaire.full",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.tripeaks",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.patience.fish.go",
+        "PackageName": "com.cardgame.solitaire.discovery",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.solitaire.tripeaks.free.card.game.dream.farm.story",
+        "PackageName": "com.cardgame.classic.solitaire",
         "Platform": "android"
     },
     {
-        "PackageName": "com.solitaire.tripeaks.free.card.game.dream.farm.fun",
+        "PackageName": "com.cardgames.classic.solitaire.world",
         "Platform": "android"
     },
     {
-        "PackageName": "com.solitaire.tripeaks.free.card.games.dream.farm.animal",
+        "PackageName": "com.cardgames.solitaire.fun.free.klondike.classic.tt",
         "Platform": "android"
     },
     {
-        "PackageName": "com.solitaire.tripeaks.free.card.games.dream.farm.animal",
+        "PackageName": "com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.brick.ball.blast",
+        "PackageName": "com.cardgames.solitaire.fun.free.spider.classic",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.cardgames.solitaire.fun.free.spider.classic",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.cardgame.collection.fishdom",
+        "PackageName": "com.cardgames.solitaire.fun.free.pyramid.classic",
         "Platform": "android"
     },
     {
-        "PackageName": "com.cardgame.freecell.fishdom",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgame.pyramid.fishdom",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgame.solitaire.fishdom",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgame.spider.fishdom",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgame.tripeaks.fishdom",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.de",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgames.puzzle.board.bible",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.en",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.da",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.board.fr",
+        "PackageName": "com.cardgames.solitaire.fun.free.pyramid.classic",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.wordgame.puzzle.board.ja",
+        "PackageName": "com.cardgames.solitaire.fun.free.collection.classic",
         "Platform": "android"
     },
     {
-        "PackageName": "com.wordgame.puzzle.board.ja",
+        "PackageName": "com.cardgames.solitaire.fun.free.collection.classic",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.wordgame.puzzle.board.nl",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.flat.en",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.wordgame.puzzle.block.crush",
+        "PackageName": "com.cardgames.solitaire.fun.free.tripeaks.classic",
         "Platform": "android"
     },
     {
-        "PackageName": "com.wordgame.puzzle.block.crush",
+        "PackageName": "com.cardgames.solitaire.fun.free.tripeaks.classic",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.wordgame.puzzle.block.crush.zh",
+        "PackageName": "com.cardgames.solitaire.fun.free.freecell.classic",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.cardgames.solitaire.fun.free.freecell.classic",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.wordgame.puzzle.block.crush.de",
+        "PackageName": "com.cardgames.solitaire.patience.free.klondike.spider.collection.classic",
         "Platform": "android"
     },
     {
-        "PackageName": "com.wordgame.puzzle.block.crush.de",
+        "PackageName": "com.solitaire.classic.card.game.klondike.darkmode",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.puzzle.blockslider.jewel",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.wordgame.puzzle.block.crush.pic.en",
+        "PackageName": "com.puzzle.blockslider.jewel",
         "Platform": "android"
     },
     {
-        "PackageName": "com.wordgame.puzzle.block.crush.pic",
+        "PackageName": "com.brick.breaker.ball.shooting.blast",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.game.hexa.animation.images.picture.jigsaw.block.puzzle",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.blastball.general",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.blastball.ios",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.solitaire.klondike.patience.ocean.aquarium.fun",
+        "PackageName": "com.ball.brick.star",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.game.puzzle.nonogram",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.coloring.games.doodle.paint.number",
+        "Platform": "android"
+    },
+    {
+        "PackageName": "com.coloring.games.doodle.paint.number",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.solitaire.klondike.patience.ocean.aquarium",
+        "PackageName": "com.relax.coloring.games.color.by.number.colourpop",
         "Platform": "android"
     },
     {
-        "PackageName": "com.tilefarm.match.puzzle",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.towerdefense.magicblock",
-        "Platform": "android"
+        "PackageName": "com.relax.coloring.games.color.by.number.colourpop",
+        "Platform": "ios"
     }
 ]

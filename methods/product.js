@@ -71,6 +71,7 @@ async function readProduct(DefineDir, XMLDir, project) {
 
     const packageNameList = [];
     const platformList = [];
+    const noExistAppList = [];
 
     await bluebird.map(clientPackage, async (item) => {
         if (!item.status) return;

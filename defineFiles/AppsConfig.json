@@ -1,146 +1,26 @@
 [
     {
-        "PackageName": "com.towerdefense.magicblock",
+        "PackageName": "com.acoin.ballz.bricks.breaker",
         "Platform": "android"
     },
     {
-        "PackageName": "com.queensgame.spider",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.tournaments.free.klondike.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.solitaire.journey",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.queensgame.solitaire.journey",
+        "PackageName": "com.ball.brick.break",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.cardgame.solitaire.discovery",
+        "PackageName": "com.pixel.art.coloring.by.number",
         "Platform": "android"
     },
     {
-        "PackageName": "com.cardgame.solitaire.discovery",
+        "PackageName": "com.pixel.art.coloring.by.number",
         "Platform": "ios"
     },
     {
-        "PackageName": "com.cardgame.classic.solitaire",
+        "PackageName": "coloring.color.number.happy.paint.art.drawing.puzzle",
         "Platform": "android"
     },
     {
-        "PackageName": "com.cardgames.classic.solitaire.world",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.klondike.classic.tt",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.klondike.spider.freecell.classic",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.spider.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.spider.classic",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.pyramid.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.pyramid.classic",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.collection.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.collection.classic",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.tripeaks.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.tripeaks.classic",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.freecell.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.fun.free.freecell.classic",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.cardgames.solitaire.patience.free.klondike.spider.collection.classic",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.solitaire.classic.card.game.klondike.darkmode",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.puzzle.blockslider.jewel",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.puzzle.blockslider.jewel",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.brick.breaker.ball.shooting.blast",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.hexa.animation.images.picture.jigsaw.block.puzzle",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.blastball.general",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.blastball.ios",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.ball.brick.star",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.game.puzzle.nonogram",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.coloring.games.doodle.paint.number",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.coloring.games.doodle.paint.number",
-        "Platform": "ios"
-    },
-    {
-        "PackageName": "com.relax.coloring.games.color.by.number.colourpop",
-        "Platform": "android"
-    },
-    {
-        "PackageName": "com.relax.coloring.games.color.by.number.colourpop",
+        "PackageName": "coloring.color.number.happy.paint.art.drawing.puzzle",
         "Platform": "ios"
     }
 ]

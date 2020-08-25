@@ -17,6 +17,7 @@ async function readProductGroup(DefineDir) {
         productDataList = await _readXLSXFile('广告配置阶段导入.xlsx', DefineDir);
 
     } catch (e) {
+        // 不存在则默认创建的项目组名
         productDataList = [
             {group: 'Solitaire Fish'}, {group: 'Solitaire Fishdom'}, {group: 'Word Cross'},
             {group: 'Word Flat'}, {group: 'Word Swipe'}, {group: '老纸牌'}, {group: 'Solitaire Farm'},

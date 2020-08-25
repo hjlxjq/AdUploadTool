@@ -1,8 +1,8 @@
-# 刷新广告常量数据到mysql
+# 刷新广告常量数据到 mysql
 
-1. 复制各项目的xml表到本项目的/xml目录下
+1. 复制各项目的xml表到本项目的 /xml 目录下
 
-2. 数据库配置文件在/config下
+2. 数据库配置文件在 /config 下
 
 3. 执行顺序
 
@@ -14,7 +14,7 @@
 
 4. 阶段导入流程
 
-    - 更新上传 xml表 --- 非常重要
+    - 更新上传 xml 表 --- 非常重要
 
     - 线上导出通用配置 mysql 数据库
 
@@ -41,13 +41,7 @@
     - 本地导入通用配置
     
     ```
-    <!-- index.js -->
-    await readChannelAndType(XMLDir, project);
-    await readNativeTmpl(XMLDir, project);
-    await readProductGroup(DefineDir);
-
-    <!-- 导入需要阶段性导入的应用的通用配置 -->
-    node index.js <project>
+    node talefunCom.js <project>
     ```
 
     - 本地导出通用配置

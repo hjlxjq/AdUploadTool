@@ -8,9 +8,9 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Microsoft Office 用户</Author>
-  <LastAuthor>Microsoft Office User</LastAuthor>
+  <LastAuthor>Microsoft Office 用户</LastAuthor>
   <Created>2018-09-14T01:26:24Z</Created>
-  <LastSaved>2020-07-06T09:31:59Z</LastSaved>
+  <LastSaved>2020-08-21T10:40:06Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -20,10 +20,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>13040</WindowHeight>
-  <WindowWidth>25440</WindowWidth>
-  <WindowTopX>8120</WindowTopX>
-  <WindowTopY>1000</WindowTopY>
+  <WindowHeight>14940</WindowHeight>
+  <WindowWidth>26240</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>860</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -57,7 +57,7 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="HeaderBidding_ID">
-  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="22" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="34" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s62" ss:DefaultColumnWidth="65"
    ss:DefaultRowHeight="16">
    <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="112"/>
@@ -332,6 +332,150 @@
     <Cell><Data ss:Type="String">BallzBricks_ios</Data></Cell>
     <Cell><Data ss:Type="Boolean">0</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_21</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_949459855495725</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_Interstitial_Bid_B15</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_22</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_949459705495740</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_RewardVideo_Bid_B15</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_23</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_949459492162428</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_RewardVideo_Bid_A15</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_24</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_949459198829124</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks_Interstitial_Bid_A15</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_25</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_958259364615774</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A20-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_26</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_958259571282420</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">A20-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_27</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_958259741282403</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B20-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_28</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_958259877949056</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B20-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_29</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_958260054615705</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">B20-HB-full-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_30</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_971321919976185</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">20-new-HB-RewardVideo-001</Data></Cell>
+    <Cell><Data ss:Type="String">RewardVideo</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_31</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_971322153309495</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">20-new-HB-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">HeaderBidding_32</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">643291502779230</Data></Cell>
+    <Cell><Data ss:Type="String">643291502779230_971322369976140</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">20-new-HB-full-Interstitial-001</Data></Cell>
+    <Cell><Data ss:Type="String">Interstitial</Data></Cell>
+    <Cell><Data ss:Type="String">BallzBricks</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -341,11 +485,12 @@
    </PageSetup>
    <Unsynced/>
    <Selected/>
-   <LeftColumnVisible>2</LeftColumnVisible>
+   <TopRowVisible>10</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>21</ActiveRow>
+     <ActiveRow>37</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

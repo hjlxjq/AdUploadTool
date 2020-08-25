@@ -50,9 +50,11 @@ async function readChannelAndType(XMLDir, project) {
 
     // 线上生效的广告组
     let adGroupNameList = [];
+
     _.each(clientPackage, (item) => {
         if (item.status) {
             const key = item.groupName;
+            // 不存在，即表示没有进行 ab 分组
             if (!groupWeightContrlHash[key]) {
                 adGroupNameList.push(key);
 
@@ -60,7 +62,9 @@ async function readChannelAndType(XMLDir, project) {
                 _.each(groupWeightContrlHash[key], (subItem) => {
                     adGroupNameList.push(subItem.toGroup);
                 });
+
             }
+
         }
 
     });

@@ -10,7 +10,7 @@
   <Author>Microsoft Office 用户</Author>
   <LastAuthor>Microsoft Office 用户</LastAuthor>
   <Created>2016-07-28T12:41:31Z</Created>
-  <LastSaved>2020-08-20T03:31:00Z</LastSaved>
+  <LastSaved>2020-08-21T11:02:05Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -20,10 +20,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>15940</WindowHeight>
-  <WindowWidth>27040</WindowWidth>
+  <WindowHeight>16440</WindowHeight>
+  <WindowWidth>27440</WindowWidth>
   <WindowTopX>32767</WindowTopX>
-  <WindowTopY>400</WindowTopY>
+  <WindowTopY>6340</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -56,7 +56,7 @@
  </Styles>
  <Worksheet ss:Name="工作表1">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R420C7"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=工作表1!R1C1:R422C7"
     ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="422" x:FullColumns="1"
@@ -4596,7 +4596,7 @@
    <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.pixel.art.coloring.by.number-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">p5iosUSB19new</Data><NamedCell
+    <Cell><Data ss:Type="String">p5ios_US_AB20</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">ios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -4886,7 +4886,7 @@
     <Cell><Data ss:Type="String">condition157</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">coloring.color.number.happy.paint.art.drawing.puzzle</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">liteios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -4961,10 +4961,10 @@
     <Cell><Data ss:Type="String">condition135</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">coloring.color.number.happy.paint.art.drawing.puzzle-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s62"><Data ss:Type="String">liteUSios</Data><NamedCell
+    <Cell ss:StyleID="s62"><Data ss:Type="String">liteIOS_US_AB1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">ios</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -4972,7 +4972,7 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.brick.breaker.ball.shooting.blast</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">blast</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -4983,7 +4983,7 @@
     <Cell><Data ss:Type="String">condition158</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
     <Cell><Data ss:Type="String">com.brick.breaker.ball.shooting.blast-US</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">blast_us</Data><NamedCell
@@ -5116,23 +5116,27 @@
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.brick.breaker.ball.shooting.blast</Data></Cell>
-    <Cell><Data ss:Type="String">a1_test</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">blast1</Data></Cell>
-    <Cell><Data ss:Type="String">condition159</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.brick.breaker.ball.shooting.blast</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">a1_test</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">blast1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition159</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">com.brick.breaker.ball.shooting.blast-US</Data></Cell>
-    <Cell><Data ss:Type="String">a1_test</Data></Cell>
-    <Cell><Data ss:Type="String">android</Data></Cell>
-    <Cell><Data ss:Type="Boolean">1</Data></Cell>
-    <Cell><Data ss:Type="String">default</Data></Cell>
-    <Cell><Data ss:Type="String">blast1</Data></Cell>
-    <Cell><Data ss:Type="String">condition159</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Hidden="1">
+    <Cell><Data ss:Type="String">com.brick.breaker.ball.shooting.blast-US</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">a1_test</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">android</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">default</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">blast1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">condition159</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -5154,7 +5158,7 @@
    <FrozenNoSplit/>
    <FilterOn/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>373</TopRowBottomPane>
+   <TopRowBottomPane>215</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
@@ -5162,22 +5166,25 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>428</ActiveRow>
-     <ActiveCol>5</ActiveCol>
+     <ActiveRow>423</ActiveRow>
+     <ActiveCol>8</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
-  <AutoFilter x:Range="R1C1:R420C7"
+  <AutoFilter x:Range="R1C1:R422C7"
    xmlns="urn:schemas-microsoft-com:office:excel">
    <AutoFilterColumn x:Type="Custom">
     <AutoFilterOr>
      <AutoFilterCondition x:Operator="Equals"
-      x:Value="com.brick.breaker.ball.shooting.blast"/>
+      x:Value="coloring.color.number.happy.paint.art.drawing.puzzle"/>
      <AutoFilterCondition x:Operator="Equals"
-      x:Value="com.brick.breaker.ball.shooting.blast-US"/>
+      x:Value="coloring.color.number.happy.paint.art.drawing.puzzle-US"/>
     </AutoFilterOr>
+   </AutoFilterColumn>
+   <AutoFilterColumn x:Index="3" x:Type="Custom">
+    <AutoFilterCondition x:Operator="Equals" x:Value="ios"/>
    </AutoFilterColumn>
   </AutoFilter>
  </Worksheet>

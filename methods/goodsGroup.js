@@ -9,6 +9,7 @@ const _readCSVFile = require('../tools/excelCSVutils');
 const _readXLSXFile = require('../tools/excelXLSXutils');
 const model = require('../tools/model');
 const Bluebird = require('bluebird');
+const product = require('./product');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
@@ -53,13 +54,17 @@ async function getProductId(platform, packageName) {
 
     }
     // 数据里库该应用 主键
-    const productId = (await ProductModel.findOne({
+    const productVo = (await ProductModel.findOne({
         where: {
             platform, packageName
         }
-    })).id;
+    }));
 
-    return productId;
+    if (_.isEmpty(productVo)) {
+        return;
+
+    }
+    return productVo.id;
 
 }
 
@@ -398,6 +403,8 @@ async function readCustomShop(DefineDir, XMLDir, project) {
         // 获取应用主键
         const productId = await getProductId(device, packageName);
 
+        if (!productId) continue;
+
         // 循环向数据库自定义内购字段表对象添加应用表主键和描述
         for (const shop of shopList) {
             const { key, type } = shop;
@@ -557,6 +564,8 @@ async function readGoodsGroup(DefineDir, XMLDir, project) {
         // 获取应用主键
         const productId = await getProductId(device, packageName);
 
+        if (!productId) continue;
+
         // 获取所有的自定义内购字段哈希表
         const customShopHash = await getCustomShopHash(productId);
 
@@ -588,11 +597,6 @@ async function readGoodsGroup(DefineDir, XMLDir, project) {
                 // 如果首次，则创建商品
                 if (created) {
                     const currentGoodsGroupId = currentGoodsGroupVo.id;
-
-                    if (goodsGroupName === 'swipeDEios') {
-                        console.log('shopList length: ', shopList.length);
-
-                    }
 
                     await createGoods(
                         productId, currentGoodsGroupId, iapProductHashHash[device], shopList,

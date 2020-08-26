@@ -6,6 +6,7 @@ const DefineDir = process.cwd() + '/defineFiles';
 const { readProduct } = require('./methods/product');
 const { readCustomShop, readGoodsGroup } = require('./methods/goodsGroup');
 const { readIapVersionGroup } = require('./methods/iapVersionGroup');
+const { readNativeShop } = require('./methods/common');
 
 // 命令行输入 node index ${project}
 // 读取 project
@@ -22,7 +23,8 @@ const project = argv[2] || 'word';
 console.log(`project: ${project}`);
 
 async function init() {
-    await readProduct(DefineDir, XMLIapDir, project);
+    // await readProduct(DefineDir, XMLIapDir, project);
+    await readNativeShop(DefineDir);
     await readCustomShop(DefineDir, XMLIapDir, project);
     await readGoodsGroup(DefineDir, XMLIapDir, project);
     await readIapVersionGroup(DefineDir, XMLIapDir, project);

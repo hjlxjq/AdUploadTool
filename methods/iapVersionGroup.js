@@ -50,13 +50,17 @@ async function getProductId(platform, packageName) {
 
     }
     // 数据里库该应用 主键
-    const productId = (await ProductModel.findOne({
+    const productVo = (await ProductModel.findOne({
         where: {
             platform, packageName
         }
-    })).id;
+    }));
 
-    return productId;
+    if (_.isEmpty(productVo)) {
+        return;
+
+    }
+    return productVo.id;
 
 }
 
@@ -85,6 +89,8 @@ async function getVersionGroupHash(clientPackage, productNameHashHash) {
 
         // 获取应用主键
         const productId = await getProductId(device, packageName);
+
+        if (!productId) continue;
 
         versionGroupHash[productId] = shopGroup;
 

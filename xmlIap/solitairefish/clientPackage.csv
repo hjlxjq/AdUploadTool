@@ -2,3 +2,5 @@ packageName,device,shopGroup,status
 String,String,String,Boolean
 com.solitaire.klondike.patience.ocean.aquarium,android,fish_01A,TRUE
 com.solitaire.klondike.patience.ocean.aquarium.ios,ios,fish_ios_01A,TRUE
+com.solitaire.spider.patience.ocean.aquarium,ios,spiderfish_ios_01A,TRUE
+com.solitaire.spider.patience.ocean.aquarium,android,spiderfish_01A,TRUE

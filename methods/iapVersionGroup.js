@@ -90,7 +90,10 @@ async function getVersionGroupHash(clientPackage, productNameHashHash) {
         // 获取应用主键
         const productId = await getProductId(device, packageName);
 
-        if (!productId) continue;
+        if (!productId) {
+            console.log(`不存在的app: ${device}-${packageName}`);
+            continue;
+        };
 
         versionGroupHash[productId] = shopGroup;
 

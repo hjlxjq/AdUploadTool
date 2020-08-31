@@ -22,11 +22,11 @@ const project = argv[2] || 'word';
 console.log(`project: ${project}`);
 
 async function init() {
-    await readChannelAndType(XMLDir, project);
-    await readNativeTmpl(XMLDir, project);
-    await readProductGroup(DefineDir);
-    await readAppConfig(DefineDir);
-    await readBaseConfig(DefineDir);
+    // await readChannelAndType(XMLDir, project);
+    // await readNativeTmpl(XMLDir, project);
+    // await readProductGroup(DefineDir);
+    // await readAppConfig(DefineDir);
+    // await readBaseConfig(DefineDir);
     await readNativeShop(DefineDir);
 }
 

@@ -13,14 +13,6 @@ module.exports = db.defineModel('channelParamConf', {
         type: db.CHAR(36),
         allowNull: false,
         unique: 'pid_channel'
-    },
-    test: {
-        type: db.BOOLEAN,
-        allowNull: false
-    },
-    active: {
-        type: db.BOOLEAN,
-        allowNull: false
     }
 
 });

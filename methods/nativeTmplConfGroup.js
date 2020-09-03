@@ -286,8 +286,8 @@ async function readNativeTmplConfGroup(DefineDir, XMLDir, project) {
         }
 
     }
-    // console.log('nativeTmplConfGroupNameList uniq name：' + _.uniq(nativeTmplConfGroupNameList));
-    // console.log('nativeTmplConfGroupNameList uniq name length: ' + _.uniq(nativeTmplConfGroupNameList).length);
+    // console.log('nativeTmplConfGroupNameList uniq name：' , _.uniq(nativeTmplConfGroupNameList));
+    // console.log('nativeTmplConfGroupNameList uniq name length: ' , _.uniq(nativeTmplConfGroupNameList).length);
 
 }
 

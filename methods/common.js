@@ -112,7 +112,7 @@ async function readChannelAndType(XMLDir, project) {
 
     }, { concurrency: 2 });
 
-    console.log('channelList：' + _.uniq(channels));
+    console.log('channelList：',  _.uniq(channels));
 
     // 保存广告类型
     for (const type of adTypes) {
@@ -198,7 +198,7 @@ async function readNativeTmpl(XMLDir, project) {
         keyList.push(item.key);
 
     });
-    console.log('nativeAdTemplate uniq total keys：' + _.uniq(keyList));
+    console.log('nativeAdTemplate uniq total keys：', _.uniq(keyList));
 
     // 保存 native 模板
     for (const key of keyList) {

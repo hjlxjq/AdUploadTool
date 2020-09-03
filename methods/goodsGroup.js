@@ -9,7 +9,6 @@ const _readCSVFile = require('../tools/excelCSVutils');
 const _readXLSXFile = require('../tools/excelXLSXutils');
 const model = require('../tools/model');
 const Bluebird = require('bluebird');
-const product = require('./product');
 
 // 获取指定导入的应用哈希表
 async function getProductNameHash(DefineDir) {
@@ -502,7 +501,7 @@ async function readCustomShop(DefineDir, XMLDir, project) {
         }
 
     }
-    console.log('shopNameList uniq name：' + _.uniq(shopNameList));
+    console.log('shopNameList uniq name：',  _.uniq(shopNameList));
 
 }
 
@@ -612,7 +611,7 @@ async function readGoodsGroup(DefineDir, XMLDir, project) {
         }
 
     }
-    console.log('goodsGroupNameList uniq name：' + _.uniq(goodsGroupNameList));
+    console.log('goodsGroupNameList uniq name：',  _.uniq(goodsGroupNameList));
 
 }
 

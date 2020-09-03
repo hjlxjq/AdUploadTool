@@ -138,9 +138,9 @@ async function readProduct(DefineDir, XMLDir, project) {
 
     }, { concurrency: 2 });
 
-    console.log('packageNameList length: ' + _.uniq(packageNameList).length);
+    console.log('packageNameList length: ' , _.uniq(packageNameList).length);
     // 输出平台名 
-    console.log('platformList: ' + _.uniq(platformList));
+    console.log('platformList: ' , _.uniq(platformList));
 
 }
 

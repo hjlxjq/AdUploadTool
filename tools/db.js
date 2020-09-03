@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const uuid = require('node-uuid');
+const uuid = require('uuid');
 const moment = require('moment');
 const _ = require('lodash');
 

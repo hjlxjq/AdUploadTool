@@ -28,7 +28,7 @@ async function getNativeShopId(key, type, description) {
     };
     const [currentNativeShopVo, created] = await NativeShopModel.findOrCreate({
         where: {
-            key: 'consumableTest'
+            key
         }, defaults: nativeShopVo
     });
 
@@ -41,18 +41,21 @@ async function renameNativeShop(oldKey, newKey) {
     // 通用内购字段模型
     const NativeShopModel = model.nativeShop;
 
-    await NativeShopModel.update(
-        {
-            key: oldKey
-        },
-        {
-            where: {
-                key: newKey
+    try {
+        await NativeShopModel.update(
+            {
+                key: oldKey
+            },
+            {
+                where: {
+                    key: newKey
+                }
+
             }
 
-        }
+        );
 
-    );;
+    } catch (e) { }
 
 }
 
